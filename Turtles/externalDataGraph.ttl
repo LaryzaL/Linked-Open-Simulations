@@ -1,0 +1,1412 @@
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#vocab/> .
+@prefix ns11: <https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/#vocab/> .
+@prefix ns12: <https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/vocab/Average_carbon_dioxide_levels_COâ‚‚> .
+@prefix ns4: <https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/vocab/> .
+@prefix ns41: <http://schema.org/> .
+@prefix ns5: <https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/vocab/> .
+@prefix ns7: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix ns71: <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/> .
+@prefix ns8: <http://www.nanopub.org/nschema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/0> ns4:Emissivity_eCO2 0.194 ;
+    ns4:Level_of_Carbon_Dioxide "200"^^xsd:int .
+
+<https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/1> ns4:Emissivity_eCO2 0.14 ;
+    ns4:Level_of_Carbon_Dioxide "400"^^xsd:int .
+
+<https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/2> ns4:Emissivity_eCO2 0.108 ;
+    ns4:Level_of_Carbon_Dioxide "600"^^xsd:int .
+
+<https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/3> ns4:Emissivity_eCO2 0.085 ;
+    ns4:Level_of_Carbon_Dioxide "800"^^xsd:int .
+
+<https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/ChrisBuddMathsOfClimateChangeTpdf/nanopublication/062601dd/2024-06-19T12:34> a ns8:Nanopublication ;
+    ns8:hasAssertion <https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/ChrisBuddMathsOfClimateChangeTpdf/assertion/062601dd/2024-06-19T12:34> ;
+    ns8:hasProvenance <https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/ChrisBuddMathsOfClimateChangeTpdf/provenance/062601dd/2024-06-19T12:34> ;
+    ns8:hasPublicationInfo <https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/ChrisBuddMathsOfClimateChangeTpdf/pubinfo/062601dd/2024-06-19T12:34> ;
+    prov:generatedAtTime "2024-06-19T12:34:00"^^xsd:dateTime ;
+    prov:wasGeneratedBy <https://github.com/CLARIAH/wp4-converters> .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1/nanopublication/6ddcca98/2024-06-18T21:58> a ns8:Nanopublication ;
+    ns8:hasAssertion <https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1/assertion/6ddcca98/2024-06-18T21:58> ;
+    ns8:hasProvenance <https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1/provenance/6ddcca98/2024-06-18T21:58> ;
+    ns8:hasPublicationInfo <https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1/pubinfo/6ddcca98/2024-06-18T21:58> ;
+    prov:generatedAtTime "2024-06-18T21:58:00"^^xsd:dateTime ;
+    prov:wasGeneratedBy <https://github.com/CLARIAH/wp4-converters> .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/0> ns1:Year "1959"^^xsd:gYear ;
+    ns1:atmospheric_growth 2.04 ;
+    ns1:budget_imbalance 0.93 ;
+    ns1:cement_carbonation_sink 0.01 ;
+    ns1:fossil_emissions_excluding_carbonation 2.42 ;
+    ns1:land-use_change_emissions 1.94 ;
+    ns1:land_sink 0.40 ;
+    ns1:ocean_sink 0.98 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/1> ns1:Year "1960"^^xsd:gYear ;
+    ns1:atmospheric_growth 1.51 ;
+    ns1:budget_imbalance 0.64 ;
+    ns1:cement_carbonation_sink 0.01 ;
+    ns1:fossil_emissions_excluding_carbonation 2.56 ;
+    ns1:land-use_change_emissions 1.79 ;
+    ns1:land_sink 1.23 ;
+    ns1:ocean_sink 0.96 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/10> ns1:Year "1969"^^xsd:gYear ;
+    ns1:atmospheric_growth 2.80 ;
+    ns1:budget_imbalance 0.22 ;
+    ns1:cement_carbonation_sink 0.02 ;
+    ns1:fossil_emissions_excluding_carbonation 3.76 ;
+    ns1:land-use_change_emissions 1.27 ;
+    ns1:land_sink 0.71 ;
+    ns1:ocean_sink 1.27 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/11> ns1:Year "1970"^^xsd:gYear ;
+    ns1:atmospheric_growth 2.40 ;
+    ns1:budget_imbalance 1.06 ;
+    ns1:cement_carbonation_sink 0.03 ;
+    ns1:fossil_emissions_excluding_carbonation 4.07 ;
+    ns1:land-use_change_emissions 1.26 ;
+    ns1:land_sink 0.71 ;
+    ns1:ocean_sink 1.13 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/12> ns1:Year "1971"^^xsd:gYear ;
+    ns1:atmospheric_growth 1.55 ;
+    ns1:budget_imbalance 0.24 ;
+    ns1:cement_carbonation_sink 0.03 ;
+    ns1:fossil_emissions_excluding_carbonation 4.23 ;
+    ns1:land-use_change_emissions 1.25 ;
+    ns1:land_sink 2.45 ;
+    ns1:ocean_sink 1.21 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/13> ns1:Year "1972"^^xsd:gYear ;
+    ns1:atmospheric_growth 3.12 ;
+    ns1:budget_imbalance -0.20 ;
+    ns1:cement_carbonation_sink 0.03 ;
+    ns1:fossil_emissions_excluding_carbonation 4.43 ;
+    ns1:land-use_change_emissions 1.25 ;
+    ns1:land_sink 1.25 ;
+    ns1:ocean_sink 1.48 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/14> ns1:Year "1973"^^xsd:gYear ;
+    ns1:atmospheric_growth 3.10 ;
+    ns1:budget_imbalance -0.50 ;
+    ns1:cement_carbonation_sink 0.03 ;
+    ns1:fossil_emissions_excluding_carbonation 4.66 ;
+    ns1:land-use_change_emissions 1.21 ;
+    ns1:land_sink 1.89 ;
+    ns1:ocean_sink 1.35 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/15> ns1:Year "1974"^^xsd:gYear ;
+    ns1:atmospheric_growth 1.44 ;
+    ns1:budget_imbalance -1.15 ;
+    ns1:cement_carbonation_sink 0.03 ;
+    ns1:fossil_emissions_excluding_carbonation 4.64 ;
+    ns1:land-use_change_emissions 1.18 ;
+    ns1:land_sink 4.19 ;
+    ns1:ocean_sink 1.31 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/16> ns1:Year "1975"^^xsd:gYear ;
+    ns1:atmospheric_growth 2.61 ;
+    ns1:budget_imbalance -0.70 ;
+    ns1:cement_carbonation_sink 0.03 ;
+    ns1:fossil_emissions_excluding_carbonation 4.65 ;
+    ns1:land-use_change_emissions 1.19 ;
+    ns1:land_sink 2.65 ;
+    ns1:ocean_sink 1.26 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/17> ns1:Year "1976"^^xsd:gYear ;
+    ns1:atmospheric_growth 2.06 ;
+    ns1:budget_imbalance -0.42 ;
+    ns1:cement_carbonation_sink 0.04 ;
+    ns1:fossil_emissions_excluding_carbonation 4.91 ;
+    ns1:land-use_change_emissions 1.17 ;
+    ns1:land_sink 2.99 ;
+    ns1:ocean_sink 1.42 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/18> ns1:Year "1977"^^xsd:gYear ;
+    ns1:atmospheric_growth 4.08 ;
+    ns1:budget_imbalance -0.88 ;
+    ns1:cement_carbonation_sink 0.04 ;
+    ns1:fossil_emissions_excluding_carbonation 5.05 ;
+    ns1:land-use_change_emissions 1.20 ;
+    ns1:land_sink 1.51 ;
+    ns1:ocean_sink 1.50 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/19> ns1:Year "1978"^^xsd:gYear ;
+    ns1:atmospheric_growth 2.74 ;
+    ns1:budget_imbalance -0.74 ;
+    ns1:cement_carbonation_sink 0.04 ;
+    ns1:fossil_emissions_excluding_carbonation 5.21 ;
+    ns1:land-use_change_emissions 1.15 ;
+    ns1:land_sink 2.78 ;
+    ns1:ocean_sink 1.54 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/2> ns1:Year "1961"^^xsd:gYear ;
+    ns1:atmospheric_growth 1.66 ;
+    ns1:budget_imbalance 0.92 ;
+    ns1:cement_carbonation_sink 0.01 ;
+    ns1:fossil_emissions_excluding_carbonation 2.57 ;
+    ns1:land-use_change_emissions 1.67 ;
+    ns1:land_sink 0.84 ;
+    ns1:ocean_sink 0.81 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/20> ns1:Year "1979"^^xsd:gYear ;
+    ns1:atmospheric_growth 4.55 ;
+    ns1:budget_imbalance -1.03 ;
+    ns1:cement_carbonation_sink 0.04 ;
+    ns1:fossil_emissions_excluding_carbonation 5.35 ;
+    ns1:land-use_change_emissions 1.11 ;
+    ns1:land_sink 1.42 ;
+    ns1:ocean_sink 1.49 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/21> ns1:Year "1980"^^xsd:gYear ;
+    ns1:atmospheric_growth 3.63 ;
+    ns1:budget_imbalance 0.61 ;
+    ns1:cement_carbonation_sink 0.04 ;
+    ns1:fossil_emissions_excluding_carbonation 5.32 ;
+    ns1:land-use_change_emissions 1.11 ;
+    ns1:land_sink 0.41 ;
+    ns1:ocean_sink 1.74 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/22> ns1:Year "1981"^^xsd:gYear ;
+    ns1:atmospheric_growth 2.44 ;
+    ns1:budget_imbalance -0.04 ;
+    ns1:cement_carbonation_sink 0.04 ;
+    ns1:fossil_emissions_excluding_carbonation 5.20 ;
+    ns1:land-use_change_emissions 1.20 ;
+    ns1:land_sink 2.22 ;
+    ns1:ocean_sink 1.72 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/23> ns1:Year "1982"^^xsd:gYear ;
+    ns1:atmospheric_growth 2.10 ;
+    ns1:budget_imbalance 0.65 ;
+    ns1:cement_carbonation_sink 0.05 ;
+    ns1:fossil_emissions_excluding_carbonation 5.15 ;
+    ns1:land-use_change_emissions 1.20 ;
+    ns1:land_sink 1.67 ;
+    ns1:ocean_sink 1.89 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/24> ns1:Year "1983"^^xsd:gYear ;
+    ns1:atmospheric_growth 3.89 ;
+    ns1:budget_imbalance 0.28 ;
+    ns1:cement_carbonation_sink 0.05 ;
+    ns1:fossil_emissions_excluding_carbonation 5.19 ;
+    ns1:land-use_change_emissions 1.31 ;
+    ns1:land_sink 0.28 ;
+    ns1:ocean_sink 2.01 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/25> ns1:Year "1984"^^xsd:gYear ;
+    ns1:atmospheric_growth 2.61 ;
+    ns1:budget_imbalance -0.60 ;
+    ns1:cement_carbonation_sink 0.05 ;
+    ns1:fossil_emissions_excluding_carbonation 5.37 ;
+    ns1:land-use_change_emissions 1.45 ;
+    ns1:land_sink 2.89 ;
+    ns1:ocean_sink 1.87 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/26> ns1:Year "1985"^^xsd:gYear ;
+    ns1:atmospheric_growth 3.50 ;
+    ns1:budget_imbalance -1.16 ;
+    ns1:cement_carbonation_sink 0.05 ;
+    ns1:fossil_emissions_excluding_carbonation 5.55 ;
+    ns1:land-use_change_emissions 1.39 ;
+    ns1:land_sink 2.77 ;
+    ns1:ocean_sink 1.78 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/27> ns1:Year "1986"^^xsd:gYear ;
+    ns1:atmospheric_growth 2.17 ;
+    ns1:budget_imbalance 0.67 ;
+    ns1:cement_carbonation_sink 0.05 ;
+    ns1:fossil_emissions_excluding_carbonation 5.63 ;
+    ns1:land-use_change_emissions 1.40 ;
+    ns1:land_sink 2.31 ;
+    ns1:ocean_sink 1.83 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/28> ns1:Year "1987"^^xsd:gYear ;
+    ns1:atmospheric_growth 5.63 ;
+    ns1:budget_imbalance -0.75 ;
+    ns1:cement_carbonation_sink 0.05 ;
+    ns1:fossil_emissions_excluding_carbonation 5.81 ;
+    ns1:land-use_change_emissions 1.40 ;
+    ns1:land_sink 0.35 ;
+    ns1:ocean_sink 1.92 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/29> ns1:Year "1988"^^xsd:gYear ;
+    ns1:atmospheric_growth 4.61 ;
+    ns1:budget_imbalance -1.11 ;
+    ns1:cement_carbonation_sink 0.06 ;
+    ns1:fossil_emissions_excluding_carbonation 6.03 ;
+    ns1:land-use_change_emissions 1.38 ;
+    ns1:land_sink 2.06 ;
+    ns1:ocean_sink 1.79 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/3> ns1:Year "1962"^^xsd:gYear ;
+    ns1:atmospheric_growth 1.19 ;
+    ns1:budget_imbalance 0.85 ;
+    ns1:cement_carbonation_sink 0.02 ;
+    ns1:fossil_emissions_excluding_carbonation 2.66 ;
+    ns1:land-use_change_emissions 1.61 ;
+    ns1:land_sink 1.32 ;
+    ns1:ocean_sink 0.90 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/30> ns1:Year "1989"^^xsd:gYear ;
+    ns1:atmospheric_growth 3.10 ;
+    ns1:budget_imbalance -1.10 ;
+    ns1:cement_carbonation_sink 0.06 ;
+    ns1:fossil_emissions_excluding_carbonation 6.12 ;
+    ns1:land-use_change_emissions 1.33 ;
+    ns1:land_sink 3.57 ;
+    ns1:ocean_sink 1.82 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/31> ns1:Year "1990"^^xsd:gYear ;
+    ns1:atmospheric_growth 2.59 ;
+    ns1:budget_imbalance 0.55 ;
+    ns1:cement_carbonation_sink 0.06 ;
+    ns1:fossil_emissions_excluding_carbonation 6.21 ;
+    ns1:land-use_change_emissions 1.33 ;
+    ns1:land_sink 2.33 ;
+    ns1:ocean_sink 2.01 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/32> ns1:Year "1991"^^xsd:gYear ;
+    ns1:atmospheric_growth 1.59 ;
+    ns1:budget_imbalance 1.61 ;
+    ns1:cement_carbonation_sink 0.06 ;
+    ns1:fossil_emissions_excluding_carbonation 6.34 ;
+    ns1:land-use_change_emissions 1.30 ;
+    ns1:land_sink 2.25 ;
+    ns1:ocean_sink 2.12 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/33> ns1:Year "1992"^^xsd:gYear ;
+    ns1:atmospheric_growth 1.53 ;
+    ns1:budget_imbalance 1.38 ;
+    ns1:cement_carbonation_sink 0.06 ;
+    ns1:fossil_emissions_excluding_carbonation 6.16 ;
+    ns1:land-use_change_emissions 1.33 ;
+    ns1:land_sink 2.26 ;
+    ns1:ocean_sink 2.27 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/34> ns1:Year "1993"^^xsd:gYear ;
+    ns1:atmospheric_growth 2.61 ;
+    ns1:budget_imbalance -0.20 ;
+    ns1:cement_carbonation_sink 0.07 ;
+    ns1:fossil_emissions_excluding_carbonation 6.23 ;
+    ns1:land-use_change_emissions 1.33 ;
+    ns1:land_sink 2.86 ;
+    ns1:ocean_sink 2.22 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/35> ns1:Year "1994"^^xsd:gYear ;
+    ns1:atmospheric_growth 3.53 ;
+    ns1:budget_imbalance 0.64 ;
+    ns1:cement_carbonation_sink 0.07 ;
+    ns1:fossil_emissions_excluding_carbonation 6.27 ;
+    ns1:land-use_change_emissions 1.45 ;
+    ns1:land_sink 1.47 ;
+    ns1:ocean_sink 2.01 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/36> ns1:Year "1995"^^xsd:gYear ;
+    ns1:atmospheric_growth 4.25 ;
+    ns1:budget_imbalance -0.25 ;
+    ns1:cement_carbonation_sink 0.07 ;
+    ns1:fossil_emissions_excluding_carbonation 6.40 ;
+    ns1:land-use_change_emissions 1.44 ;
+    ns1:land_sink 1.77 ;
+    ns1:ocean_sink 2.00 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/37> ns1:Year "1996"^^xsd:gYear ;
+    ns1:atmospheric_growth 2.23 ;
+    ns1:budget_imbalance 0.33 ;
+    ns1:cement_carbonation_sink 0.08 ;
+    ns1:fossil_emissions_excluding_carbonation 6.59 ;
+    ns1:land-use_change_emissions 1.44 ;
+    ns1:land_sink 3.40 ;
+    ns1:ocean_sink 2.01 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/38> ns1:Year "1997"^^xsd:gYear ;
+    ns1:atmospheric_growth 4.18 ;
+    ns1:budget_imbalance -1.03 ;
+    ns1:cement_carbonation_sink 0.08 ;
+    ns1:fossil_emissions_excluding_carbonation 6.63 ;
+    ns1:land-use_change_emissions 1.94 ;
+    ns1:land_sink 3.19 ;
+    ns1:ocean_sink 2.16 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/39> ns1:Year "1998"^^xsd:gYear ;
+    ns1:atmospheric_growth 6.03 ;
+    ns1:budget_imbalance -1.71 ;
+    ns1:cement_carbonation_sink 0.08 ;
+    ns1:fossil_emissions_excluding_carbonation 6.61 ;
+    ns1:land-use_change_emissions 1.50 ;
+    ns1:land_sink 1.51 ;
+    ns1:ocean_sink 2.20 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/4> ns1:Year "1963"^^xsd:gYear ;
+    ns1:atmospheric_growth 1.21 ;
+    ns1:budget_imbalance 1.19 ;
+    ns1:cement_carbonation_sink 0.02 ;
+    ns1:fossil_emissions_excluding_carbonation 2.80 ;
+    ns1:land-use_change_emissions 1.54 ;
+    ns1:land_sink 0.87 ;
+    ns1:ocean_sink 1.06 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/40> ns1:Year "1999"^^xsd:gYear ;
+    ns1:atmospheric_growth 2.82 ;
+    ns1:budget_imbalance -0.22 ;
+    ns1:cement_carbonation_sink 0.08 ;
+    ns1:fossil_emissions_excluding_carbonation 6.75 ;
+    ns1:land-use_change_emissions 1.50 ;
+    ns1:land_sink 3.59 ;
+    ns1:ocean_sink 1.97 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/41> ns1:Year "2000"^^xsd:gYear ;
+    ns1:atmospheric_growth 2.66 ;
+    ns1:budget_imbalance -0.06 ;
+    ns1:cement_carbonation_sink 0.09 ;
+    ns1:fossil_emissions_excluding_carbonation 6.95 ;
+    ns1:land-use_change_emissions 1.40 ;
+    ns1:land_sink 3.75 ;
+    ns1:ocean_sink 1.91 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/42> ns1:Year "2001"^^xsd:gYear ;
+    ns1:atmospheric_growth 3.93 ;
+    ns1:budget_imbalance 0.08 ;
+    ns1:cement_carbonation_sink 0.09 ;
+    ns1:fossil_emissions_excluding_carbonation 7.01 ;
+    ns1:land-use_change_emissions 1.29 ;
+    ns1:land_sink 2.38 ;
+    ns1:ocean_sink 1.82 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/43> ns1:Year "2002"^^xsd:gYear ;
+    ns1:atmospheric_growth 5.03 ;
+    ns1:budget_imbalance 0.30 ;
+    ns1:cement_carbonation_sink 0.09 ;
+    ns1:fossil_emissions_excluding_carbonation 7.17 ;
+    ns1:land-use_change_emissions 1.41 ;
+    ns1:land_sink 0.99 ;
+    ns1:ocean_sink 2.17 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/44> ns1:Year "2003"^^xsd:gYear ;
+    ns1:atmospheric_growth 4.86 ;
+    ns1:budget_imbalance -0.50 ;
+    ns1:cement_carbonation_sink 0.10 ;
+    ns1:fossil_emissions_excluding_carbonation 7.55 ;
+    ns1:land-use_change_emissions 1.54 ;
+    ns1:land_sink 2.31 ;
+    ns1:ocean_sink 2.31 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/45> ns1:Year "2004"^^xsd:gYear ;
+    ns1:atmospheric_growth 3.29 ;
+    ns1:budget_imbalance 0.14 ;
+    ns1:cement_carbonation_sink 0.11 ;
+    ns1:fossil_emissions_excluding_carbonation 7.82 ;
+    ns1:land-use_change_emissions 1.46 ;
+    ns1:land_sink 3.47 ;
+    ns1:ocean_sink 2.27 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/46> ns1:Year "2005"^^xsd:gYear ;
+    ns1:atmospheric_growth 5.25 ;
+    ns1:budget_imbalance -0.20 ;
+    ns1:cement_carbonation_sink 0.12 ;
+    ns1:fossil_emissions_excluding_carbonation 8.08 ;
+    ns1:land-use_change_emissions 1.29 ;
+    ns1:land_sink 1.88 ;
+    ns1:ocean_sink 2.33 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/47> ns1:Year "2006"^^xsd:gYear ;
+    ns1:atmospheric_growth 3.76 ;
+    ns1:budget_imbalance 0.31 ;
+    ns1:cement_carbonation_sink 0.13 ;
+    ns1:fossil_emissions_excluding_carbonation 8.35 ;
+    ns1:land-use_change_emissions 1.38 ;
+    ns1:land_sink 3.11 ;
+    ns1:ocean_sink 2.43 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/48> ns1:Year "2007"^^xsd:gYear ;
+    ns1:atmospheric_growth 4.50 ;
+    ns1:budget_imbalance 0.10 ;
+    ns1:cement_carbonation_sink 0.14 ;
+    ns1:fossil_emissions_excluding_carbonation 8.60 ;
+    ns1:land-use_change_emissions 1.21 ;
+    ns1:land_sink 2.71 ;
+    ns1:ocean_sink 2.36 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/49> ns1:Year "2008"^^xsd:gYear ;
+    ns1:atmospheric_growth 3.78 ;
+    ns1:budget_imbalance 0.09 ;
+    ns1:cement_carbonation_sink 0.14 ;
+    ns1:fossil_emissions_excluding_carbonation 8.76 ;
+    ns1:land-use_change_emissions 1.27 ;
+    ns1:land_sink 3.63 ;
+    ns1:ocean_sink 2.38 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/5> ns1:Year "1964"^^xsd:gYear ;
+    ns1:atmospheric_growth 1.04 ;
+    ns1:budget_imbalance 0.49 ;
+    ns1:cement_carbonation_sink 0.02 ;
+    ns1:fossil_emissions_excluding_carbonation 2.96 ;
+    ns1:land-use_change_emissions 1.49 ;
+    ns1:land_sink 1.69 ;
+    ns1:ocean_sink 1.21 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/50> ns1:Year "2009"^^xsd:gYear ;
+    ns1:atmospheric_growth 3.36 ;
+    ns1:budget_imbalance 0.96 ;
+    ns1:cement_carbonation_sink 0.15 ;
+    ns1:fossil_emissions_excluding_carbonation 8.61 ;
+    ns1:land-use_change_emissions 1.37 ;
+    ns1:land_sink 2.99 ;
+    ns1:ocean_sink 2.54 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/51> ns1:Year "2010"^^xsd:gYear ;
+    ns1:atmospheric_growth 5.14 ;
+    ns1:budget_imbalance -0.70 ;
+    ns1:cement_carbonation_sink 0.16 ;
+    ns1:fossil_emissions_excluding_carbonation 9.11 ;
+    ns1:land-use_change_emissions 1.32 ;
+    ns1:land_sink 3.32 ;
+    ns1:ocean_sink 2.51 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/52> ns1:Year "2011"^^xsd:gYear ;
+    ns1:atmospheric_growth 3.57 ;
+    ns1:budget_imbalance 0.37 ;
+    ns1:cement_carbonation_sink 0.17 ;
+    ns1:fossil_emissions_excluding_carbonation 9.41 ;
+    ns1:land-use_change_emissions 1.35 ;
+    ns1:land_sink 4.11 ;
+    ns1:ocean_sink 2.55 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/53> ns1:Year "2012"^^xsd:gYear ;
+    ns1:atmospheric_growth 5.12 ;
+    ns1:budget_imbalance 0.64 ;
+    ns1:cement_carbonation_sink 0.18 ;
+    ns1:fossil_emissions_excluding_carbonation 9.55 ;
+    ns1:land-use_change_emissions 1.32 ;
+    ns1:land_sink 2.32 ;
+    ns1:ocean_sink 2.62 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/54> ns1:Year "2013"^^xsd:gYear ;
+    ns1:atmospheric_growth 5.20 ;
+    ns1:budget_imbalance -0.69 ;
+    ns1:cement_carbonation_sink 0.18 ;
+    ns1:fossil_emissions_excluding_carbonation 9.64 ;
+    ns1:land-use_change_emissions 1.26 ;
+    ns1:land_sink 3.56 ;
+    ns1:ocean_sink 2.65 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/55> ns1:Year "2014"^^xsd:gYear ;
+    ns1:atmospheric_growth 4.33 ;
+    ns1:budget_imbalance 0.08 ;
+    ns1:cement_carbonation_sink 0.19 ;
+    ns1:fossil_emissions_excluding_carbonation 9.71 ;
+    ns1:land-use_change_emissions 1.34 ;
+    ns1:land_sink 3.66 ;
+    ns1:ocean_sink 2.78 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/56> ns1:Year "2015"^^xsd:gYear ;
+    ns1:atmospheric_growth 6.27 ;
+    ns1:budget_imbalance -0.14 ;
+    ns1:cement_carbonation_sink 0.20 ;
+    ns1:fossil_emissions_excluding_carbonation 9.70 ;
+    ns1:land-use_change_emissions 1.47 ;
+    ns1:land_sink 2.01 ;
+    ns1:ocean_sink 2.85 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/57> ns1:Year "2016"^^xsd:gYear ;
+    ns1:atmospheric_growth 6.03 ;
+    ns1:budget_imbalance -0.97 ;
+    ns1:cement_carbonation_sink 0.20 ;
+    ns1:fossil_emissions_excluding_carbonation 9.70 ;
+    ns1:land-use_change_emissions 1.24 ;
+    ns1:land_sink 2.69 ;
+    ns1:ocean_sink 2.98 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/58> ns1:Year "2017"^^xsd:gYear ;
+    ns1:atmospheric_growth 4.55 ;
+    ns1:budget_imbalance -0.12 ;
+    ns1:cement_carbonation_sink 0.20 ;
+    ns1:fossil_emissions_excluding_carbonation 9.85 ;
+    ns1:land-use_change_emissions 1.18 ;
+    ns1:land_sink 3.56 ;
+    ns1:ocean_sink 2.85 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/59> ns1:Year "2018"^^xsd:gYear ;
+    ns1:atmospheric_growth 5.03 ;
+    ns1:budget_imbalance -0.65 ;
+    ns1:cement_carbonation_sink 0.21 ;
+    ns1:fossil_emissions_excluding_carbonation 10.05 ;
+    ns1:land-use_change_emissions 1.14 ;
+    ns1:land_sink 3.65 ;
+    ns1:ocean_sink 2.95 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/6> ns1:Year "1965"^^xsd:gYear ;
+    ns1:atmospheric_growth 2.34 ;
+    ns1:budget_imbalance 0.45 ;
+    ns1:cement_carbonation_sink 0.02 ;
+    ns1:fossil_emissions_excluding_carbonation 3.09 ;
+    ns1:land-use_change_emissions 1.38 ;
+    ns1:land_sink 0.34 ;
+    ns1:ocean_sink 1.32 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/60> ns1:Year "2019"^^xsd:gYear ;
+    ns1:atmospheric_growth 5.44 ;
+    ns1:budget_imbalance -0.32 ;
+    ns1:cement_carbonation_sink 0.21 ;
+    ns1:fossil_emissions_excluding_carbonation 10.12 ;
+    ns1:land-use_change_emissions 1.24 ;
+    ns1:land_sink 3.04 ;
+    ns1:ocean_sink 2.99 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/61> ns1:Year "2020"^^xsd:gYear ;
+    ns1:atmospheric_growth 4.99 ;
+    ns1:budget_imbalance -0.58 ;
+    ns1:cement_carbonation_sink 0.22 ;
+    ns1:fossil_emissions_excluding_carbonation 9.62 ;
+    ns1:land-use_change_emissions 1.11 ;
+    ns1:land_sink 3.11 ;
+    ns1:ocean_sink 3.00 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/62> ns1:Year "2021"^^xsd:gYear ;
+    ns1:atmospheric_growth 5.23 ;
+    ns1:budget_imbalance -0.58 ;
+    ns1:cement_carbonation_sink 0.23 ;
+    ns1:fossil_emissions_excluding_carbonation 10.13 ;
+    ns1:land-use_change_emissions 1.08 ;
+    ns1:land_sink 3.45 ;
+    ns1:ocean_sink 2.88 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/7> ns1:Year "1966"^^xsd:gYear ;
+    ns1:atmospheric_growth 2.34 ;
+    ns1:budget_imbalance -0.47 ;
+    ns1:cement_carbonation_sink 0.02 ;
+    ns1:fossil_emissions_excluding_carbonation 3.24 ;
+    ns1:land-use_change_emissions 1.32 ;
+    ns1:land_sink 1.40 ;
+    ns1:ocean_sink 1.28 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/8> ns1:Year "1967"^^xsd:gYear ;
+    ns1:atmospheric_growth 1.30 ;
+    ns1:budget_imbalance 0.57 ;
+    ns1:cement_carbonation_sink 0.02 ;
+    ns1:fossil_emissions_excluding_carbonation 3.34 ;
+    ns1:land-use_change_emissions 1.34 ;
+    ns1:land_sink 1.68 ;
+    ns1:ocean_sink 1.13 .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/9> ns1:Year "1968"^^xsd:gYear ;
+    ns1:atmospheric_growth 2.10 ;
+    ns1:budget_imbalance -0.83 ;
+    ns1:cement_carbonation_sink 0.02 ;
+    ns1:fossil_emissions_excluding_carbonation 3.52 ;
+    ns1:land-use_change_emissions 1.36 ;
+    ns1:land_sink 2.40 ;
+    ns1:ocean_sink 1.18 .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/#statistic_id1048518_global-land-temperature-anomalies-1880-2023/nanopublication/1470200f/2024-06-19T12:55> a ns8:Nanopublication ;
+    ns8:hasAssertion <https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/#statistic_id1048518_global-land-temperature-anomalies-1880-2023/assertion/1470200f/2024-06-19T12:55> ;
+    ns8:hasProvenance <https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/#statistic_id1048518_global-land-temperature-anomalies-1880-2023/provenance/1470200f/2024-06-19T12:55> ;
+    ns8:hasPublicationInfo <https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/#statistic_id1048518_global-land-temperature-anomalies-1880-2023/pubinfo/1470200f/2024-06-19T12:55> ;
+    prov:generatedAtTime "2024-06-19T12:55:00"^^xsd:dateTime ;
+    prov:wasGeneratedBy <https://github.com/CLARIAH/wp4-converters> .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/0> ns11:Temperature_departure -0.51 ;
+    ns11:Years "1880"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/1> ns11:Temperature_departure -0.4 ;
+    ns11:Years "1881"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/10> ns11:Temperature_departure -0.55 ;
+    ns11:Years "1890"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/100> ns11:Temperature_departure 0.37 ;
+    ns11:Years "1980"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/101> ns11:Temperature_departure 0.58 ;
+    ns11:Years "1981"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/102> ns11:Temperature_departure 0.02 ;
+    ns11:Years "1982"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/103> ns11:Temperature_departure 0.41 ;
+    ns11:Years "1983"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/104> ns11:Temperature_departure 0.14 ;
+    ns11:Years "1984"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/105> ns11:Temperature_departure 0.11 ;
+    ns11:Years "1985"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/106> ns11:Temperature_departure 0.23 ;
+    ns11:Years "1986"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/107> ns11:Temperature_departure 0.27 ;
+    ns11:Years "1987"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/108> ns11:Temperature_departure 0.57 ;
+    ns11:Years "1988"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/109> ns11:Temperature_departure 0.3 ;
+    ns11:Years "1989"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/11> ns11:Temperature_departure -0.53 ;
+    ns11:Years "1891"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/110> ns11:Temperature_departure 0.62 ;
+    ns11:Years "1990"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/111> ns11:Temperature_departure 0.6 ;
+    ns11:Years "1991"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/112> ns11:Temperature_departure 0.21 ;
+    ns11:Years "1992"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/113> ns11:Temperature_departure 0.29 ;
+    ns11:Years "1993"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/114> ns11:Temperature_departure 0.4 ;
+    ns11:Years "1994"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/115> ns11:Temperature_departure 0.79 ;
+    ns11:Years "1995"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/116> ns11:Temperature_departure 0.43 ;
+    ns11:Years "1996"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/117> ns11:Temperature_departure 0.53 ;
+    ns11:Years "1997"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/118> ns11:Temperature_departure 0.88 ;
+    ns11:Years "1998"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/119> ns11:Temperature_departure 0.64 ;
+    ns11:Years "1999"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/12> ns11:Temperature_departure -0.55 ;
+    ns11:Years "1892"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/120> ns11:Temperature_departure 0.6 ;
+    ns11:Years "2000"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/121> ns11:Temperature_departure 0.78 ;
+    ns11:Years "2001"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/122> ns11:Temperature_departure 0.94 ;
+    ns11:Years "2002"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/123> ns11:Temperature_departure 0.91 ;
+    ns11:Years "2003"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/124> ns11:Temperature_departure 0.72 ;
+    ns11:Years "2004"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/125> ns11:Temperature_departure 1.16 ;
+    ns11:Years "2005"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/126> ns11:Temperature_departure 1.04 ;
+    ns11:Years "2006"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/127> ns11:Temperature_departure 1.19 ;
+    ns11:Years "2007"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/128> ns11:Temperature_departure 0.89 ;
+    ns11:Years "2008"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/129> ns11:Temperature_departure 0.99 ;
+    ns11:Years "2009"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/13> ns11:Temperature_departure -0.66 ;
+    ns11:Years "1893"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/130> ns11:Temperature_departure 1.2 ;
+    ns11:Years "2010"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/131> ns11:Temperature_departure 1.07 ;
+    ns11:Years "2011"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/132> ns11:Temperature_departure 1.06 ;
+    ns11:Years "2012"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/133> ns11:Temperature_departure 1.05 ;
+    ns11:Years "2013"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/134> ns11:Temperature_departure 1.1 ;
+    ns11:Years "2014"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/135> ns11:Temperature_departure 1.34 ;
+    ns11:Years "2015"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/136> ns11:Temperature_departure 1.65 ;
+    ns11:Years "2016"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/137> ns11:Temperature_departure 1.49 ;
+    ns11:Years "2017"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/138> ns11:Temperature_departure 1.35 ;
+    ns11:Years "2018"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/139> ns11:Temperature_departure 1.52 ;
+    ns11:Years "2019"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/14> ns11:Temperature_departure -0.6 ;
+    ns11:Years "1894"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/140> ns11:Temperature_departure 1.66 ;
+    ns11:Years "2020"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/141> ns11:Temperature_departure 1.39 ;
+    ns11:Years "2021"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/142> ns11:Temperature_departure 1.41 ;
+    ns11:Years "2022"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/143> ns11:Temperature_departure 1.81 ;
+    ns11:Years "2023"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/15> ns11:Temperature_departure -0.49 ;
+    ns11:Years "1895"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/16> ns11:Temperature_departure -0.44 ;
+    ns11:Years "1896"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/17> ns11:Temperature_departure -0.29 ;
+    ns11:Years "1897"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/18> ns11:Temperature_departure -0.45 ;
+    ns11:Years "1898"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/19> ns11:Temperature_departure -0.29 ;
+    ns11:Years "1899"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/2> ns11:Temperature_departure -0.57 ;
+    ns11:Years "1882"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/20> ns11:Temperature_departure -0.15 ;
+    ns11:Years "1900"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/21> ns11:Temperature_departure -0.09 ;
+    ns11:Years "1901"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/22> ns11:Temperature_departure -0.3 ;
+    ns11:Years "1902"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/23> ns11:Temperature_departure -0.42 ;
+    ns11:Years "1903"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/24> ns11:Temperature_departure -0.43 ;
+    ns11:Years "1904"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/25> ns11:Temperature_departure -0.35 ;
+    ns11:Years "1905"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/26> ns11:Temperature_departure -0.11 ;
+    ns11:Years "1906"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/27> ns11:Temperature_departure -0.52 ;
+    ns11:Years "1907"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/28> ns11:Temperature_departure -0.46 ;
+    ns11:Years "1908"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/29> ns11:Temperature_departure -0.4 ;
+    ns11:Years "1909"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/3> ns11:Temperature_departure -0.53 ;
+    ns11:Years "1883"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/30> ns11:Temperature_departure -0.28 ;
+    ns11:Years "1910"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/31> ns11:Temperature_departure -0.41 ;
+    ns11:Years "1911"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/32> ns11:Temperature_departure -0.51 ;
+    ns11:Years "1912"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/33> ns11:Temperature_departure -0.35 ;
+    ns11:Years "1913"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/34> ns11:Temperature_departure -0.12 ;
+    ns11:Years "1914"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/35> ns11:Temperature_departure -0.1 ;
+    ns11:Years "1915"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/36> ns11:Temperature_departure -0.39 ;
+    ns11:Years "1916"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/37> ns11:Temperature_departure -0.66 ;
+    ns11:Years "1917"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/38> ns11:Temperature_departure -0.59 ;
+    ns11:Years "1918"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/39> ns11:Temperature_departure -0.29 ;
+    ns11:Years "1919"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/4> ns11:Temperature_departure -0.7 ;
+    ns11:Years "1884"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/40> ns11:Temperature_departure -0.27 ;
+    ns11:Years "1920"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/41> ns11:Temperature_departure -0.12 ;
+    ns11:Years "1921"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/42> ns11:Temperature_departure -0.23 ;
+    ns11:Years "1922"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/43> ns11:Temperature_departure -0.28 ;
+    ns11:Years "1923"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/44> ns11:Temperature_departure -0.2 ;
+    ns11:Years "1924"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/45> ns11:Temperature_departure -0.2 ;
+    ns11:Years "1925"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/46> ns11:Temperature_departure 0.0 ;
+    ns11:Years "1926"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/47> ns11:Temperature_departure -0.18 ;
+    ns11:Years "1927"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/48> ns11:Temperature_departure -0.05 ;
+    ns11:Years "1928"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/49> ns11:Temperature_departure -0.44 ;
+    ns11:Years "1929"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/5> ns11:Temperature_departure -0.56 ;
+    ns11:Years "1885"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/50> ns11:Temperature_departure -0.06 ;
+    ns11:Years "1930"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/51> ns11:Temperature_departure 0.05 ;
+    ns11:Years "1931"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/52> ns11:Temperature_departure -0.01 ;
+    ns11:Years "1932"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/53> ns11:Temperature_departure -0.28 ;
+    ns11:Years "1933"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/54> ns11:Temperature_departure 0.03 ;
+    ns11:Years "1934"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/55> ns11:Temperature_departure -0.12 ;
+    ns11:Years "1935"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/56> ns11:Temperature_departure -0.06 ;
+    ns11:Years "1936"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/57> ns11:Temperature_departure 0.05 ;
+    ns11:Years "1937"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/58> ns11:Temperature_departure 0.25 ;
+    ns11:Years "1938"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/59> ns11:Temperature_departure 0.13 ;
+    ns11:Years "1939"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/6> ns11:Temperature_departure -0.55 ;
+    ns11:Years "1886"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/60> ns11:Temperature_departure 0.14 ;
+    ns11:Years "1940"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/61> ns11:Temperature_departure 0.11 ;
+    ns11:Years "1941"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/62> ns11:Temperature_departure 0.07 ;
+    ns11:Years "1942"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/63> ns11:Temperature_departure 0.08 ;
+    ns11:Years "1943"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/64> ns11:Temperature_departure 0.25 ;
+    ns11:Years "1944"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/65> ns11:Temperature_departure 0.02 ;
+    ns11:Years "1945"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/66> ns11:Temperature_departure -0.02 ;
+    ns11:Years "1946"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/67> ns11:Temperature_departure 0.14 ;
+    ns11:Years "1947"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/68> ns11:Temperature_departure 0.02 ;
+    ns11:Years "1948"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/69> ns11:Temperature_departure -0.04 ;
+    ns11:Years "1949"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/7> ns11:Temperature_departure -0.66 ;
+    ns11:Years "1887"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/70> ns11:Temperature_departure -0.22 ;
+    ns11:Years "1950"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/71> ns11:Temperature_departure -0.08 ;
+    ns11:Years "1951"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/72> ns11:Temperature_departure 0.0 ;
+    ns11:Years "1952"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/73> ns11:Temperature_departure 0.22 ;
+    ns11:Years "1953"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/74> ns11:Temperature_departure -0.04 ;
+    ns11:Years "1954"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/75> ns11:Temperature_departure -0.11 ;
+    ns11:Years "1955"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/76> ns11:Temperature_departure -0.31 ;
+    ns11:Years "1956"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/77> ns11:Temperature_departure -0.02 ;
+    ns11:Years "1957"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/78> ns11:Temperature_departure 0.05 ;
+    ns11:Years "1958"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/79> ns11:Temperature_departure 0.12 ;
+    ns11:Years "1959"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/8> ns11:Temperature_departure -0.33 ;
+    ns11:Years "1888"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/80> ns11:Temperature_departure -0.09 ;
+    ns11:Years "1960"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/81> ns11:Temperature_departure 0.08 ;
+    ns11:Years "1961"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/82> ns11:Temperature_departure 0.04 ;
+    ns11:Years "1962"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/83> ns11:Temperature_departure 0.05 ;
+    ns11:Years "1963"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/84> ns11:Temperature_departure -0.35 ;
+    ns11:Years "1964"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/85> ns11:Temperature_departure -0.16 ;
+    ns11:Years "1965"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/86> ns11:Temperature_departure -0.15 ;
+    ns11:Years "1966"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/87> ns11:Temperature_departure 0.02 ;
+    ns11:Years "1967"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/88> ns11:Temperature_departure -0.21 ;
+    ns11:Years "1968"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/89> ns11:Temperature_departure -0.08 ;
+    ns11:Years "1969"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/9> ns11:Temperature_departure -0.16 ;
+    ns11:Years "1889"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/90> ns11:Temperature_departure 0.02 ;
+    ns11:Years "1970"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/91> ns11:Temperature_departure -0.05 ;
+    ns11:Years "1971"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/92> ns11:Temperature_departure -0.07 ;
+    ns11:Years "1972"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/93> ns11:Temperature_departure 0.31 ;
+    ns11:Years "1973"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/94> ns11:Temperature_departure -0.13 ;
+    ns11:Years "1974"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/95> ns11:Temperature_departure 0.08 ;
+    ns11:Years "1975"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/96> ns11:Temperature_departure -0.22 ;
+    ns11:Years "1976"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/97> ns11:Temperature_departure 0.21 ;
+    ns11:Years "1977"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/98> ns11:Temperature_departure 0.04 ;
+    ns11:Years "1978"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/99> ns11:Temperature_departure 0.05 ;
+    ns11:Years "1979"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/0> ns12:ppm_ 315.98 ;
+    ns5:Year "1959"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/1> ns12:ppm_ 316.91 ;
+    ns5:Year "1960"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/10> ns12:ppm_ 324.62 ;
+    ns5:Year "1969"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/11> ns12:ppm_ 325.68 ;
+    ns5:Year "1970"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/12> ns12:ppm_ 326.32 ;
+    ns5:Year "1971"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/13> ns12:ppm_ 327.46 ;
+    ns5:Year "1972"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/14> ns12:ppm_ 329.68 ;
+    ns5:Year "1973"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/15> ns12:ppm_ 330.19 ;
+    ns5:Year "1974"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/16> ns12:ppm_ 331.13 ;
+    ns5:Year "1975"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/17> ns12:ppm_ 332.03 ;
+    ns5:Year "1976"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/18> ns12:ppm_ 333.84 ;
+    ns5:Year "1977"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/19> ns12:ppm_ 335.41 ;
+    ns5:Year "1978"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/2> ns12:ppm_ 317.64 ;
+    ns5:Year "1961"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/20> ns12:ppm_ 336.84 ;
+    ns5:Year "1979"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/21> ns12:ppm_ 338.76 ;
+    ns5:Year "1980"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/22> ns12:ppm_ 340.12 ;
+    ns5:Year "1981"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/23> ns12:ppm_ 341.48 ;
+    ns5:Year "1982"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/24> ns12:ppm_ 343.15 ;
+    ns5:Year "1983"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/25> ns12:ppm_ 344.87 ;
+    ns5:Year "1984"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/26> ns12:ppm_ 346.35 ;
+    ns5:Year "1985"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/27> ns12:ppm_ 347.61 ;
+    ns5:Year "1986"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/28> ns12:ppm_ 349.31 ;
+    ns5:Year "1987"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/29> ns12:ppm_ 351.69 ;
+    ns5:Year "1988"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/3> ns12:ppm_ 318.45 ;
+    ns5:Year "1962"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/30> ns12:ppm_ 353.2 ;
+    ns5:Year "1989"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/31> ns12:ppm_ 354.45 ;
+    ns5:Year "1990"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/32> ns12:ppm_ 355.7 ;
+    ns5:Year "1991"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/33> ns12:ppm_ 356.54 ;
+    ns5:Year "1992"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/34> ns12:ppm_ 357.21 ;
+    ns5:Year "1993"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/35> ns12:ppm_ 358.96 ;
+    ns5:Year "1994"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/36> ns12:ppm_ 360.97 ;
+    ns5:Year "1995"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/37> ns12:ppm_ 362.74 ;
+    ns5:Year "1996"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/38> ns12:ppm_ 363.88 ;
+    ns5:Year "1997"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/39> ns12:ppm_ 366.84 ;
+    ns5:Year "1998"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/4> ns12:ppm_ 318.99 ;
+    ns5:Year "1963"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/40> ns12:ppm_ 368.54 ;
+    ns5:Year "1999"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/41> ns12:ppm_ 369.71 ;
+    ns5:Year "2000"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/42> ns12:ppm_ 371.32 ;
+    ns5:Year "2001"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/43> ns12:ppm_ 373.45 ;
+    ns5:Year "2002"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/44> ns12:ppm_ 375.98 ;
+    ns5:Year "2003"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/45> ns12:ppm_ 377.7 ;
+    ns5:Year "2004"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/46> ns12:ppm_ 379.98 ;
+    ns5:Year "2005"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/47> ns12:ppm_ 382.09 ;
+    ns5:Year "2006"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/48> ns12:ppm_ 384.02 ;
+    ns5:Year "2007"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/49> ns12:ppm_ 385.83 ;
+    ns5:Year "2008"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/5> ns12:ppm_ 319.62 ;
+    ns5:Year "1964"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/50> ns12:ppm_ 387.64 ;
+    ns5:Year "2009"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/51> ns12:ppm_ 390.1 ;
+    ns5:Year "2010"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/52> ns12:ppm_ 391.85 ;
+    ns5:Year "2011"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/53> ns12:ppm_ 394.06 ;
+    ns5:Year "2012"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/54> ns12:ppm_ 396.74 ;
+    ns5:Year "2013"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/55> ns12:ppm_ 398.81 ;
+    ns5:Year "2014"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/56> ns12:ppm_ 401.01 ;
+    ns5:Year "2015"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/57> ns12:ppm_ 404.41 ;
+    ns5:Year "2016"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/58> ns12:ppm_ 406.76 ;
+    ns5:Year "2017"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/59> ns12:ppm_ 408.72 ;
+    ns5:Year "2018"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/6> ns12:ppm_ 320.04 ;
+    ns5:Year "1965"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/60> ns12:ppm_ 411.65 ;
+    ns5:Year "2019"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/61> ns12:ppm_ 414.21 ;
+    ns5:Year "2020"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/62> ns12:ppm_ 416.41 ;
+    ns5:Year "2021"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/63> ns12:ppm_ 418.53 ;
+    ns5:Year "2022"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/64> ns12:ppm_ 421.08 ;
+    ns5:Year "2023"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/7> ns12:ppm_ 321.37 ;
+    ns5:Year "1966"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/8> ns12:ppm_ 322.18 ;
+    ns5:Year "1967"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/9> ns12:ppm_ 323.05 ;
+    ns5:Year "1968"^^xsd:gYear .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/statistic_id1091926_global-atmospheric-carbon-dioxide-concentration-1959-2023/nanopublication/21f3e811/2024-06-19T13:10> a ns8:Nanopublication ;
+    ns8:hasAssertion <https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/statistic_id1091926_global-atmospheric-carbon-dioxide-concentration-1959-2023/assertion/21f3e811/2024-06-19T13:10> ;
+    ns8:hasProvenance <https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/statistic_id1091926_global-atmospheric-carbon-dioxide-concentration-1959-2023/provenance/21f3e811/2024-06-19T13:10> ;
+    ns8:hasPublicationInfo <https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/statistic_id1091926_global-atmospheric-carbon-dioxide-concentration-1959-2023/pubinfo/21f3e811/2024-06-19T13:10> ;
+    prov:generatedAtTime "2024-06-19T13:10:00"^^xsd:dateTime ;
+    prov:wasGeneratedBy <https://github.com/CLARIAH/wp4-converters> .
+
+<https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf> dcterms:license <http://opendefinition.org/licenses/cc-by/> ;
+    dcterms:modified "2024-06-19"^^xsd:date ;
+    dcterms:publisher [ ns41:name "CLARIAH Structured Data Hub - Datalegend"@en ;
+            ns41:url <http://datalegend.net/> ] ;
+    dcterms:title "ChrisBuddMathsOfClimateChangeTpdf.csv"@en ;
+    csvw:dialect [ csvw:delimiter "," ;
+            csvw:encoding "UTF-8-SIG" ;
+            csvw:quoteChar "\"" ] ;
+    csvw:tableSchema [ csvw:aboutUrl <https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/__row_> ;
+            csvw:column ( <https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/column/Level_of_Carbon_Dioxide_ppm> <https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/column/Emissivity_eCO2> ) ;
+            csvw:primaryKey "Level of Carbon Dioxide" ] ;
+    csvw:url "ChrisBuddMathsOfClimateChangeTpdf.csv"^^xsd:anyURI .
+
+<https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/062601dd46c1f10131a28b9d58d7de1d137d530f> ns4:path "C:/Users/loafo/Documenten/University/Courses, Lectures/Thesis Project/Ontology/Climate Change/ChrisBuddMathsOfClimateChangeTpdf.csv"^^xsd:string ;
+    ns4:sha1_hash "062601dd46c1f10131a28b9d58d7de1d137d530f"^^xsd:string .
+
+<https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/ChrisBuddMathsOfClimateChangeTpdf/assertion/062601dd/2024-06-19T12:34> a ns8:Assertion ;
+    prov:generatedAtTime "2024-06-19T12:34:00"^^xsd:dateTime ;
+    prov:wasDerivedFrom <https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf>,
+        <https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/062601dd46c1f10131a28b9d58d7de1d137d530f> .
+
+<https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/ChrisBuddMathsOfClimateChangeTpdf/provenance/062601dd/2024-06-19T12:34> a ns8:Provenance .
+
+<https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/ChrisBuddMathsOfClimateChangeTpdf/pubinfo/062601dd/2024-06-19T12:34> a ns8:PublicationInfo .
+
+<https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/__row_> prov:wasDerivedFrom "https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/{_row}"^^xsd:string .
+
+<https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/column/Emissivity_eCO2> ns71:hasUnit "quantity:Emissivity"@en ;
+    csvw:datatype xsd:decimal ;
+    csvw:name "Emissivity eCO2" .
+
+<https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf/column/Level_of_Carbon_Dioxide_ppm> ns71:hasUnit "unit:PPM"@en ;
+    csvw:datatype xsd:int ;
+    csvw:name "Level of Carbon Dioxide" .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#6ddcca985a51f9c4c9aa07c4534b272db7c997fb> ns1:path "C:/Users/loafo/Documenten/University/Courses, Lectures/Thesis Project/Ontology/Climate Change/Global_Carbon_Budget_2022v1.0.csv"^^xsd:string ;
+    ns1:sha1_hash "6ddcca985a51f9c4c9aa07c4534b272db7c997fb"^^xsd:string .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1.0.xls/> dcterms:license <http://opendefinition.org/licenses/cc-by/> ;
+    dcterms:modified "2024-06-10"^^xsd:date ;
+    dcterms:publisher [ ns41:name "CLARIAH Structured Data Hub - Datalegend"@en ;
+            ns41:url <http://datalegend.net/> ] ;
+    dcterms:title "Global_Carbon_Budget_2022v1.0.csv"@en ;
+    csvw:dialect [ csvw:delimiter "," ;
+            csvw:encoding "UTF-8-SIG" ;
+            csvw:quoteChar "\"" ] ;
+    csvw:tableSchema [ csvw:aboutUrl <https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/__row_> ;
+            csvw:column ( <https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1.0.xls/column/Year> <https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1.0.xls/column/fossil_emissions_excluding_carbonation> <https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1.0.xls/column/land-use_change_emissions> <https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1.0.xls/column/atmospheric_growth> <https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1.0.xls/column/ocean_sink> <https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1.0.xls/column/land_sink> <https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1.0.xls/column/cement_carbonation_sink> <https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1.0.xls/column/budget_imbalance> ) ;
+            csvw:primaryKey "Year" ] ;
+    csvw:url "Global_Carbon_Budget_2022v1.0.csv"^^xsd:anyURI .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1.0.xls/column/Year> csvw:datatype xsd:gYear ;
+    csvw:name "Year" .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1.0.xls/column/atmospheric_growth> ns7:unitMeasure [ ] ;
+    csvw:datatype xsd:decimal ;
+    csvw:name "atmospheric growth" .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1.0.xls/column/budget_imbalance> ns7:unitMeasure [ ] ;
+    csvw:datatype xsd:decimal ;
+    csvw:name "budget imbalance" .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1.0.xls/column/cement_carbonation_sink> ns7:unitMeasure [ ] ;
+    csvw:datatype xsd:decimal ;
+    csvw:name "cement carbonation sink" .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1.0.xls/column/fossil_emissions_excluding_carbonation> ns7:unitMeasure [ ] ;
+    csvw:datatype xsd:decimal ;
+    csvw:name "fossil emissions excluding carbonation" .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1.0.xls/column/land-use_change_emissions> ns7:unitMeasure [ ] ;
+    csvw:datatype xsd:decimal ;
+    csvw:name "land-use change emissions" .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1.0.xls/column/land_sink> ns7:unitMeasure [ ] ;
+    csvw:datatype xsd:decimal ;
+    csvw:name "land sink" .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1.0.xls/column/ocean_sink> ns7:unitMeasure [ ] ;
+    csvw:datatype xsd:decimal ;
+    csvw:name "ocean sink" .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1/assertion/6ddcca98/2024-06-18T21:58> a ns8:Assertion ;
+    prov:generatedAtTime "2024-06-18T21:58:00"^^xsd:dateTime ;
+    prov:wasDerivedFrom <https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#6ddcca985a51f9c4c9aa07c4534b272db7c997fb>,
+        <https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1.0.xls/> .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1/provenance/6ddcca98/2024-06-18T21:58> a ns8:Provenance .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/#Global_Carbon_Budget_2022v1/pubinfo/6ddcca98/2024-06-18T21:58> a ns8:PublicationInfo .
+
+<https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/__row_> prov:wasDerivedFrom "https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022/{_row}"^^xsd:string .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/> dcterms:license <http://opendefinition.org/licenses/cc-by/> ;
+    dcterms:modified "2024-06-19"^^xsd:date ;
+    dcterms:publisher [ ns41:name "CLARIAH Structured Data Hub - Datalegend"@en ;
+            ns41:url <http://datalegend.net/> ] ;
+    dcterms:title "statistic_id1048518_global-land-temperature-anomalies-1880-2023.csv"@en ;
+    csvw:dialect [ csvw:delimiter "," ;
+            csvw:encoding "UTF-8-SIG" ;
+            csvw:quoteChar "\"" ] ;
+    csvw:tableSchema [ csvw:aboutUrl <https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/__row_> ;
+            csvw:column ( <https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/column/Years> <https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/column/Temperature_departure> ) ;
+            csvw:primaryKey "Years" ] ;
+    csvw:url "statistic_id1048518_global-land-temperature-anomalies-1880-2023.csv"^^xsd:anyURI .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/#1470200f4f8d6c6132bb4bf7348ac8e51b652add> ns11:path "C:/Users/loafo/Documenten/University/Courses, Lectures/Thesis Project/Ontology/Climate Change/statistic_id1048518_global-land-temperature-anomalies-1880-2023.csv"^^xsd:string ;
+    ns11:sha1_hash "1470200f4f8d6c6132bb4bf7348ac8e51b652add"^^xsd:string .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/#statistic_id1048518_global-land-temperature-anomalies-1880-2023/assertion/1470200f/2024-06-19T12:55> a ns8:Assertion ;
+    prov:generatedAtTime "2024-06-19T12:55:00"^^xsd:dateTime ;
+    prov:wasDerivedFrom <https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/>,
+        <https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/#1470200f4f8d6c6132bb4bf7348ac8e51b652add> .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/#statistic_id1048518_global-land-temperature-anomalies-1880-2023/provenance/1470200f/2024-06-19T12:55> a ns8:Provenance .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/#statistic_id1048518_global-land-temperature-anomalies-1880-2023/pubinfo/1470200f/2024-06-19T12:55> a ns8:PublicationInfo .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/__row_> prov:wasDerivedFrom "https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/{_row}"^^xsd:string .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/column/Temperature_departure> ns71:hasUnit "unit:DEG_C"@en ;
+    csvw:datatype xsd:decimal ;
+    csvw:name "Temperature departure" .
+
+<https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/column/Years> ns71:hasUnit "unit:YR"@en ;
+    csvw:datatype xsd:gYear ;
+    csvw:name "Years" .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/> dcterms:license <http://opendefinition.org/licenses/cc-by/> ;
+    dcterms:modified "2024-06-19"^^xsd:date ;
+    dcterms:publisher [ ns41:name "CLARIAH Structured Data Hub - Datalegend"@en ;
+            ns41:url <http://datalegend.net/> ] ;
+    dcterms:title "statistic_id1091926_global-atmospheric-carbon-dioxide-concentration-1959-2023.csv"@en ;
+    csvw:dialect [ csvw:delimiter "," ;
+            csvw:encoding "UTF-8-SIG" ;
+            csvw:quoteChar "\"" ] ;
+    csvw:tableSchema [ csvw:aboutUrl <https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/__row_> ;
+            csvw:column ( <https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/column/Year> <https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/column/Average_carbon_dioxide_levels_COâ‚‚ppm_> ) ;
+            csvw:primaryKey "Year" ] ;
+    csvw:url "statistic_id1091926_global-atmospheric-carbon-dioxide-concentration-1959-2023.csv"^^xsd:anyURI .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/21f3e81129c934d68a14766bef2c39e84c43450b> ns5:path "C:/Users/loafo/Documenten/University/Courses, Lectures/Thesis Project/Ontology/Climate Change/statistic_id1091926_global-atmospheric-carbon-dioxide-concentration-1959-2023.csv"^^xsd:string ;
+    ns5:sha1_hash "21f3e81129c934d68a14766bef2c39e84c43450b"^^xsd:string .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/__row_> prov:wasDerivedFrom "https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/{_row}"^^xsd:string .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/column/Average_carbon_dioxide_levels_COâ‚‚ppm_> ns71:hasUnit "unit:PPM"@en ;
+    csvw:datatype xsd:decimal ;
+    csvw:name "Average carbon dioxide levels COâ‚‚ppm " .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/column/Year> ns71:hasUnit "unit:YR"@en ;
+    csvw:datatype xsd:gYear ;
+    csvw:name "Year" .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/statistic_id1091926_global-atmospheric-carbon-dioxide-concentration-1959-2023/assertion/21f3e811/2024-06-19T13:10> a ns8:Assertion ;
+    prov:generatedAtTime "2024-06-19T13:10:00"^^xsd:dateTime ;
+    prov:wasDerivedFrom <https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/>,
+        <https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/21f3e81129c934d68a14766bef2c39e84c43450b> .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/statistic_id1091926_global-atmospheric-carbon-dioxide-concentration-1959-2023/provenance/21f3e811/2024-06-19T13:10> a ns8:Provenance .
+
+<https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/statistic_id1091926_global-atmospheric-carbon-dioxide-concentration-1959-2023/pubinfo/21f3e811/2024-06-19T13:10> a ns8:PublicationInfo .
+

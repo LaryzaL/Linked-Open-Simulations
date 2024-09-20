@@ -1,0 +1,1004 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf1: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdm: <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/> .
+@prefix sdm1: <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sdm1: a owl:Ontology ;
+    rdf1:comment "SDMOnto is an ontology describing the underlying structure of System Dynamics models available on the Insight Maker platform. Its goal is to improve the modularity and accessibility of these models."@en .
+
+sdm:CDFChiSquared a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CDFExponential a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CDFF a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CDFLognormal a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CDFNormal a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CDFPoisson a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CDFt a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:PDFChiSquared a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:PDFExponential a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:PDFF a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:PDFLognormal a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:PDFNormal a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:PDFt a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:PMFPoisson a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:alert a sdm:UserInput,
+        owl:NamedIndividual .
+
+sdm:anonymousFunction a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:anonymousFunctionSingleLine a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:arcCos a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:arcSin a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:arcTan a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:beta a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:binary a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:binomial a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:confirm a sdm:UserInput,
+        owl:NamedIndividual .
+
+sdm:contains a sdm:String,
+        sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:correlation a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:cos a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:custom a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:days a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:delay a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:delay1 a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:delay3 a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:delayN a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:difference a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:e a sdm:Constant,
+        sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:errorHandling a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:exp a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:expit a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:exponential a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:filter a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:fix a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:flatten a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:forIn a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:function a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:gamma a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:hasData a owl:DatatypeProperty ;
+    rdf1:domain sdm:Converter ;
+    rdf1:range rdf1:Literal .
+
+sdm:hasDataSource a owl:ObjectProperty ;
+    rdf1:domain sdm:Converter ;
+    rdf1:range sdm:DataSource .
+
+sdm:hasEnd a owl:ObjectProperty ;
+    rdf1:domain sdm:Flow ;
+    rdf1:range sdm:Stock ;
+    owl:inverseOf sdm:hasInflow .
+
+sdm:hasExpression a owl:ObjectProperty ;
+    rdf1:domain sdm:Variable ;
+    rdf1:range sdm:Expression .
+
+sdm:hasFlowrate a owl:ObjectProperty ;
+    rdf1:domain sdm:Flow ;
+    rdf1:range sdm:Expression .
+
+sdm:hasID a owl:DatatypeProperty ;
+    rdf1:domain sdm:Primitive ;
+    rdf1:range xsd:int .
+
+sdm:hasInitialValue a owl:ObjectProperty ;
+    rdf1:domain sdm:Stock ;
+    rdf1:range sdm:Expression .
+
+sdm:hasInputSource a owl:ObjectProperty ;
+    rdf1:domain sdm:Converter .
+
+sdm:hasName a owl:DatatypeProperty ;
+    rdf1:domain sdm:Primitive ;
+    rdf1:range rdf1:Literal .
+
+sdm:hasOutflow a owl:ObjectProperty ;
+    rdf1:domain sdm:Stock ;
+    rdf1:range sdm:Flow ;
+    owl:inverseOf sdm:hasStart .
+
+sdm:hasPrimitive a owl:ObjectProperty ;
+    rdf1:domain sdm:Model ;
+    rdf1:range sdm:Primitive ;
+    owl:inverseOf sdm:primitiveOf .
+
+sdm:hasSourceURL a owl:DatatypeProperty ;
+    rdf1:domain sdm:DataSource ;
+    rdf1:range rdf1:Literal .
+
+sdm:hasStrExpression a owl:DatatypeProperty ;
+    rdf1:domain sdm:Expression ;
+    rdf1:range rdf1:Literal .
+
+sdm:hasSymbol a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdf1:domain sdm:Expression ;
+    rdf1:range sdm:Symbol .
+
+sdm:hasTimeLength a owl:DatatypeProperty ;
+    rdf1:domain sdm:Model ;
+    rdf1:range xsd:decimal .
+
+sdm:hasTimeStart a owl:DatatypeProperty ;
+    rdf1:domain sdm:Model ;
+    rdf1:range xsd:decimal .
+
+sdm:hasTimeStep a owl:DatatypeProperty ;
+    rdf1:domain sdm:Model ;
+    rdf1:range xsd:decimal .
+
+sdm:hasTimeUnit a owl:ObjectProperty ;
+    rdf1:domain sdm:Model ;
+    rdf1:range sdm:Unit .
+
+sdm:hasUnit a owl:ObjectProperty ;
+    rdf1:domain sdm:Primitive ;
+    rdf1:range sdm:Unit .
+
+sdm:hours a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:indexOf a sdm:String,
+        sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:intersection a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:invChiSquared a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:invExponential a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:invF a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:invLognormal a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:invNormal a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:invt a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:isNonNegative a owl:DatatypeProperty ;
+    rdf1:domain sdm:Stock ;
+    rdf1:range xsd:boolean .
+
+sdm:isOnlyPositive a owl:DatatypeProperty ;
+    rdf1:domain sdm:Flow ;
+    rdf1:range xsd:boolean .
+
+sdm:join a sdm:String,
+        sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:keys a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:length a sdm:String,
+        sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:ln a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:log a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:logit a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:lognormal a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:lookup a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:lowercase a sdm:String,
+        owl:NamedIndividual .
+
+sdm:map a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:max a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:mean a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:median a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:min a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:minutes a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:mod a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:months a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:negativeBinomial a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:normal a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:parse a sdm:String,
+        owl:NamedIndividual .
+
+sdm:pastMax a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:pastMean a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:pastMedian a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:pastMin a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:pastStd a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:pastValues a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:pause a sdm:General,
+        owl:NamedIndividual .
+
+sdm:pi a sdm:Constant,
+        sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:poisson a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:product a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:prompt a sdm:UserInput,
+        owl:NamedIndividual .
+
+sdm:pulse a sdm:General,
+        owl:NamedIndividual .
+
+sdm:ramp a sdm:General,
+        owl:NamedIndividual .
+
+sdm:range a sdm:String,
+        sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:repeat a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:reverse a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:round a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:roundDown a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:roundUp a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:sample a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:seasonal a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:select a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:setRandSeed a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:sign a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:smooth a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:smoothN a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:sort a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:split a sdm:String,
+        owl:NamedIndividual .
+
+sdm:sqrt a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:std a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:step a sdm:General,
+        owl:NamedIndividual .
+
+sdm:stop a sdm:General,
+        owl:NamedIndividual .
+
+sdm:sum a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:tan a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:throwError a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:timeEnd a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:timeLength a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:timeStart a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:timeStep a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:triangular a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:trim a sdm:String,
+        owl:NamedIndividual .
+
+sdm:uniform a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:union a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:unique a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:uppercase a sdm:String,
+        owl:NamedIndividual .
+
+sdm:usesAlgorithm a owl:DatatypeProperty ;
+    rdf1:domain sdm:Model ;
+    rdf1:range rdf1:Literal .
+
+sdm:values a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:variable a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:weeks a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:while a sdm:Programming,
+        owl:NamedIndividual .
+
+owl:Thing rdf1:comment "IM maakt gebruik van Comments. -> Zou dit dan als rdfs:comment (annotation) worden verbonden aan een instance van de class Equation?"@en .
+
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/.3> a sdm:Constant .
+
+sdm:10.55 a sdm:Constant .
+
+sdm:12.64 a sdm:Constant .
+
+sdm:3.94 a sdm:Constant .
+
+sdm:36.7 a sdm:Constant .
+
+sdm:Boltzmann a sdm:Constant .
+
+sdm:CustomFunction a owl:Class ;
+    rdf1:subClassOf sdm:Function .
+
+sdm:Expression_0eca918ab1 a sdm:Expression ;
+    sdm:hasStrExpression "SolarFlux * pi * EarthRadius^2" .
+
+sdm:Expression_25f3c93f65 a sdm:Expression ;
+    sdm:hasStrExpression "if years <= 2021 then  [Historical Land-Use Change Emissions]else  [Land-Use Change Emissions]end if" ;
+    sdm:hasSymbol sdm:historicalLandUseChangeEmissions,
+        sdm:ifElse,
+        sdm:landuseChangeEmissions .
+
+sdm:Expression_2f960d6077 a sdm:Expression ;
+    sdm:hasStrExpression "[Earth Energy] * scaledWatts" ;
+    sdm:hasSymbol sdm:earthEnergy,
+        sdm:scaledWatts .
+
+sdm:Expression_34787cc78d a sdm:Expression ;
+    sdm:hasStrExpression "3.94" ;
+    sdm:hasSymbol sdm:3.94 .
+
+sdm:Expression_38aab53ef3 a sdm:Expression ;
+    sdm:hasStrExpression "12.64" ;
+    sdm:hasSymbol sdm:12.64 .
+
+sdm:Expression_486c9f56a1 a sdm:Expression ;
+    sdm:hasStrExpression "[Solar Radiation] * [Earth Albedo]" ;
+    sdm:hasSymbol sdm:earthAlbedo,
+        sdm:solarRadiation .
+
+sdm:Expression_49e8526f4f a sdm:Expression ;
+    sdm:hasStrExpression "10.55" ;
+    sdm:hasSymbol sdm:10.55 .
+
+sdm:Expression_571c978837 a sdm:Expression ;
+    sdm:hasStrExpression "36.7" ;
+    sdm:hasSymbol sdm:36.7 .
+
+sdm:Expression_5c28924f2b a sdm:Expression ;
+    sdm:hasStrExpression "KelvinToCelsius([Absolute Temperature])" ;
+    sdm:hasSymbol sdm:KelvinToCelsius,
+        sdm:abs,
+        sdm:absoluteTemperature .
+
+sdm:Expression_6a970436a7 a sdm:Expression ;
+    sdm:hasStrExpression "if years <= 2021 then  [Historical Land Sink]else  [Land Sink Rate]end if" ;
+    sdm:hasSymbol sdm:historicalLandSink,
+        sdm:ifElse,
+        sdm:landSinkRate,
+        sdm:sin .
+
+sdm:Expression_6ea1a31147 a sdm:Expression ;
+    sdm:hasStrExpression "(SolarFlux * pi * EarthRadius^2) * (1 - [Earth Albedo]) / ((1+[Emissivity])/2)  * {1 Seconds}" ;
+    sdm:hasSymbol sdm:EarthRadius,
+        sdm:SolarFlux,
+        sdm:earthAlbedo,
+        sdm:emissivity,
+        sdm:seconds .
+
+sdm:Expression_7bb4801e67 a sdm:Expression ;
+    sdm:hasStrExpression "[Atmospheric Energy] * [Emissivity] * scaledWatts" ;
+    sdm:hasSymbol sdm:atmosphericEnergy,
+        sdm:emissivity,
+        sdm:scaledWatts .
+
+sdm:Expression_7ecf0ea099 a sdm:Expression ;
+    sdm:hasStrExpression "([Radiation] / (Boltzmann * (EarthRadius^2 * pi * 4)))^ (1/4)" ;
+    sdm:hasSymbol sdm:Boltzmann,
+        sdm:EarthRadius,
+        sdm:radiation .
+
+sdm:Expression_903070a905 a sdm:Expression ;
+    sdm:hasStrExpression "[Atmospheric Carbon Dioxide] / CO2MassToPPM" ;
+    sdm:hasSymbol sdm:CO2MassToPPM,
+        sdm:atmosphericCarbonDioxide .
+
+sdm:Expression_921906c9d1 a sdm:Expression ;
+    sdm:hasStrExpression "[Atmospheric Energy] * (1 - [Emissivity]) * scaledWatts" ;
+    sdm:hasSymbol sdm:atmosphericEnergy,
+        sdm:emissivity,
+        sdm:scaledWatts .
+
+sdm:Expression_b466971568 a sdm:Expression ;
+    sdm:hasStrExpression "[Historical CO2 PPM] * CO2MassToPPM" ;
+    sdm:hasSymbol sdm:CO2MassToPPM,
+        sdm:historicalCO2PPM .
+
+sdm:Expression_b79c895347 a sdm:Expression ;
+    sdm:hasStrExpression ".3" ;
+    sdm:hasSymbol <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/.3> .
+
+sdm:Expression_d1ebb4716e a sdm:Expression ;
+    sdm:hasStrExpression "if years <= 2021 then  [Historical Fossil Emissions]else  [Pollution Emissions]end if" ;
+    sdm:hasSymbol sdm:historicalFossilEmissions,
+        sdm:ifElse,
+        sdm:pollutionEmissions .
+
+sdm:Expression_daf304fe90 a sdm:Expression ;
+    sdm:hasStrExpression "if years <= 2021 then  [Historical Ocean Sink]else  [Ocean Sink Rate]end if" ;
+    sdm:hasSymbol sdm:historicalOceanSink,
+        sdm:ifElse,
+        sdm:oceanSinkRate,
+        sdm:sin .
+
+sdm:KelvinToCelsius a sdm:CustomFunction .
+
+sdm:SolarFlux a sdm:Constant .
+
+sdm:abs a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:degreesKelvin a sdm:Unit .
+
+sdm:globalTemperature a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_5c28924f2b ;
+    sdm:hasID "80"^^xsd:int ;
+    sdm:hasUnit sdm:degreesCelsius ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:greshamacuksitesdefaultfiles20181113ChrisBuddMathsOfClimateChangeTpdf a sdm:DataSource ;
+    sdm:hasSourceURL "https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf" .
+
+sdm:hasInflow a owl:ObjectProperty ;
+    rdf1:domain sdm:Stock ;
+    rdf1:range sdm:Flow .
+
+sdm:hasStart a owl:ObjectProperty ;
+    rdf1:domain sdm:Flow ;
+    rdf1:range sdm:Stock .
+
+sdm:historicalGlobalTemperatureAnomaly a sdm:Converter ;
+    sdm:hasData "[{x:1880,y:-0.48},{x:1881,y:-0.38},{x:1882,y:-0.46},{x:1883,y:-0.64},{x:1884,y:-0.67},{x:1885,y:-0.55},{x:1886,y:-0.49},{x:1887,y:-0.47},{x:1888,y:-0.41},{x:1889,y:-0.29},{x:1890,y:-0.5},{x:1891,y:-0.53},{x:1892,y:-0.52},{x:1893,y:-0.56},{x:1894,y:-0.43},{x:1895,y:-0.42},{x:1896,y:-0.36},{x:1897,y:-0.28},{x:1898,y:-0.41},{x:1899,y:-0.24},{x:1900,y:-0.17},{x:1901,y:-0.14},{x:1902,y:-0.29},{x:1903,y:-0.38},{x:1904,y:-0.44},{x:1905,y:-0.33},{x:1906,y:-0.16},{x:1907,y:-0.61},{x:1908,y:-0.43},{x:1909,y:-0.41},{x:1910,y:-0.34},{x:1911,y:-0.47},{x:1912,y:-0.47},{x:1913,y:-0.3},{x:1914,y:-0.04},{x:1915,y:-0.06},{x:1916,y:-0.45},{x:1917,y:-0.62},{x:1918,y:-0.5},{x:1919,y:-0.33},{x:1920,y:-0.36},{x:1921,y:-0.15},{x:1922,y:-0.27},{x:1923,y:-0.3},{x:1924,y:-0.25},{x:1925,y:-0.15},{x:1926,y:-0.02},{x:1927,y:-0.22},{x:1928,y:-0.14},{x:1929,y:-0.49},{x:1930,y:-0.11},{x:1931,y:-0.01},{x:1932,y:-0.03},{x:1933,y:-0.35},{x:1934,y:-0.06},{x:1935,y:-0.17},{x:1936,y:-0.13},{x:1937,y:-0.02},{x:1938,y:0.17},{x:1939,y:0.09},{x:1940,y:0.07},{x:1941,y:0.1},{x:1942,y:0.06},{x:1943,y:0.07},{x:1944,y:0.19},{x:1945,y:-0.07},{x:1946,y:-0.01},{x:1947,y:0.04},{x:1948,y:0.05},{x:1949,y:-0.07},{x:1950,y:-0.33},{x:1951,y:-0.07},{x:1952,y:-0.06},{x:1953,y:0.19},{x:1954,y:-0.13},{x:1955,y:-0.12},{x:1956,y:-0.41},{x:1957,y:-0.04},{x:1958,y:0.14},{x:1959,y:0.07},{x:1960,y:-0.02},{x:1961,y:0.11},{x:1962,y:0.15},{x:1963,y:0.21},{x:1964,y:-0.22},{x:1965,y:-0.13},{x:1966,y:-0.06},{x:1967,y:0.01},{x:1968,y:-0.12},{x:1969,y:-0.09},{x:1970,y:0.04},{x:1971,y:-0.02},{x:1972,y:-0.16},{x:1973,y:0.34},{x:1974,y:-0.18},{x:1975,y:0.14},{x:1976,y:-0.23},{x:1977,y:0.25},{x:1978,y:0.11},{x:1979,y:0.18},{x:1980,y:0.32},{x:1981,y:0.53},{x:1982,y:0.12},{x:1983,y:0.5},{x:1984,y:0.07},{x:1985,y:0.1},{x:1986,y:0.31},{x:1987,y:0.45},{x:1988,y:0.59},{x:1989,y:0.37},{x:1990,y:0.66},{x:1991,y:0.54},{x:1992,y:0.25},{x:1993,y:0.36},{x:1994,y:0.49},{x:1995,y:0.78},{x:1996,y:0.35},{x:1997,y:0.64},{x:1998,y:0.98},{x:1999,y:0.79},{x:2000,y:0.63},{x:2001,y:0.85},{x:2002,y:0.96},{x:2003,y:0.95},{x:2004,y:0.82},{x:2005,y:1.09},{x:2006,y:0.98},{x:2007,y:1.12},{x:2008,y:0.89},{x:2009,y:0.9},{x:2010,y:1.14},{x:2011,y:0.92},{x:2012,y:0.96},{x:2013,y:1.03},{x:2014,y:1.02},{x:2015,y:1.41},{x:2016,y:1.53},{x:2017,y:1.4},{x:2018,y:1.2},{x:2019,y:1.42},{x:2020,y:1.58},{x:2021,y:1.42}]" ;
+    sdm:hasDataSource sdm:statistacomstatistics1048518averagelandseatemperatureanomalysince1850 ;
+    sdm:hasID "110"^^xsd:int ;
+    sdm:hasInputSource sdm:currentTime ;
+    sdm:hasUnit sdm:degreesCelsius ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:landSink a sdm:Flow ;
+    sdm:hasFlowrate sdm:Expression_6a970436a7 ;
+    sdm:hasID "71"^^xsd:int ;
+    sdm:hasStart sdm:atmosphericCarbonDioxide ;
+    sdm:hasUnit sdm:tonsCO2PerYear ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:climateChangeModel ;
+    rdf1:comment "Source: <a href=\"https://www.wri.org/insights/forests-absorb-twice-much-carbon-they-emit-each-year\">https://www.wri.org/insights/forests-absorb-twice-much-carbon-they-emit-each-year</a>" .
+
+sdm:landuseChange a sdm:Flow ;
+    sdm:hasEnd sdm:atmosphericCarbonDioxide ;
+    sdm:hasFlowrate sdm:Expression_25f3c93f65 ;
+    sdm:hasID "131"^^xsd:int ;
+    sdm:hasUnit sdm:tonsCO2PerYear ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:oceanSink a sdm:Flow ;
+    sdm:hasFlowrate sdm:Expression_daf304fe90 ;
+    sdm:hasID "130"^^xsd:int ;
+    sdm:hasStart sdm:atmosphericCarbonDioxide ;
+    sdm:hasUnit sdm:tonsCO2PerYear ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:passThrough a sdm:Flow ;
+    sdm:hasFlowrate sdm:Expression_7bb4801e67 ;
+    sdm:hasID "61"^^xsd:int ;
+    sdm:hasStart sdm:atmosphericEnergy ;
+    sdm:hasUnit sdm:watts ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:pollution a sdm:Flow ;
+    sdm:hasEnd sdm:atmosphericCarbonDioxide ;
+    sdm:hasFlowrate sdm:Expression_d1ebb4716e ;
+    sdm:hasID "67"^^xsd:int ;
+    sdm:hasUnit sdm:tonsCO2PerYear ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:primitiveOf a owl:ObjectProperty ;
+    rdf1:domain sdm:Primitive ;
+    rdf1:range sdm:Model .
+
+sdm:radiationDown a sdm:Flow ;
+    sdm:hasEnd sdm:earthEnergy ;
+    sdm:hasFlowrate sdm:Expression_95b16ca4b4 ;
+    sdm:hasID "60"^^xsd:int ;
+    sdm:hasStart sdm:atmosphericEnergy ;
+    sdm:hasUnit sdm:watts ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:radiationUp a sdm:Flow ;
+    sdm:hasFlowrate sdm:Expression_95b16ca4b4 ;
+    sdm:hasID "93"^^xsd:int ;
+    sdm:hasStart sdm:atmosphericEnergy ;
+    sdm:hasUnit sdm:watts ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:reflection a sdm:Flow ;
+    sdm:hasFlowrate sdm:Expression_486c9f56a1 ;
+    sdm:hasID "59"^^xsd:int ;
+    sdm:hasStart sdm:earthEnergy ;
+    sdm:hasUnit sdm:watts ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:climateChangeModel ;
+    rdf1:comment "Solar radiation reflect by the earth (or atmosphere). The atmosphere does not interact with it." .
+
+sdm:scaledJoules a sdm:Constant .
+
+sdm:seconds a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:statistacomstatistics1048518averagelandseatemperatureanomalysince1850 a sdm:DataSource ;
+    sdm:hasSourceURL "https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/" .
+
+sdm:statistacomstatistics1091926atmosphericconcentrationofco2historic a sdm:DataSource ;
+    sdm:hasSourceURL "https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/" .
+
+sdm:tonsCO2 a sdm:Unit .
+
+sdm:years a sdm:Time,
+        sdm:Unit,
+        owl:NamedIndividual .
+
+sdm:CO2MassToPPM a sdm:Constant .
+
+sdm:EarthRadius a sdm:Constant .
+
+sdm:Expression_95b16ca4b4 a sdm:Expression ;
+    sdm:hasStrExpression "[Atmosphere Radiation] / 2" ;
+    sdm:hasSymbol sdm:atmosphereRadiation .
+
+sdm:Expression_c252ae1f3e a sdm:Expression ;
+    sdm:hasStrExpression "[e0] * scaledJoules" ;
+    sdm:hasSymbol sdm:e0,
+        sdm:scaledJoules .
+
+sdm:Function a owl:Class ;
+    rdf1:subClassOf sdm:Symbol .
+
+sdm:absoluteTemperature a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_7ecf0ea099 ;
+    sdm:hasID "91"^^xsd:int ;
+    sdm:hasUnit sdm:degreesKelvin ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:atmosphereRadiation a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_921906c9d1 ;
+    sdm:hasID "101"^^xsd:int ;
+    sdm:hasUnit sdm:watts ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:co2PPM a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_903070a905 ;
+    sdm:hasID "96"^^xsd:int ;
+    sdm:hasUnit sdm:ppmCO2 ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:degreesCelsius a sdm:Unit .
+
+sdm:e0 a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_6ea1a31147 ;
+    sdm:hasID "144"^^xsd:int ;
+    sdm:hasUnit sdm:joules ;
+    sdm:primitiveOf sdm:climateChangeModel ;
+    rdf1:comment "Steady state initial energy used to initialize the Earth and Atmospheric Energy Stocks. This could be omitted but numerical stability issues might be encountered for time steps significantly larger than one second." .
+
+sdm:historicalCO2PPM a sdm:Converter ;
+    sdm:hasData "[{x:1959,y:315.98},{x:1960,y:316.91},{x:1961,y:317.64},{x:1962,y:318.45},{x:1963,y:318.99},{x:1964,y:319.62},{x:1965,y:320.04},{x:1966,y:321.37},{x:1967,y:322.18},{x:1968,y:323.05},{x:1969,y:324.62},{x:1970,y:325.68},{x:1971,y:326.32},{x:1972,y:327.46},{x:1973,y:329.68},{x:1974,y:330.19},{x:1975,y:331.12},{x:1976,y:332.03},{x:1977,y:333.84},{x:1978,y:335.41},{x:1979,y:336.84},{x:1980,y:338.76},{x:1981,y:340.12},{x:1982,y:341.48},{x:1983,y:343.15},{x:1984,y:344.85},{x:1985,y:346.35},{x:1986,y:347.61},{x:1987,y:349.31},{x:1988,y:351.69},{x:1989,y:353.2},{x:1990,y:354.45},{x:1991,y:355.7},{x:1992,y:356.54},{x:1993,y:357.21},{x:1994,y:358.96},{x:1995,y:360.97},{x:1996,y:362.74},{x:1997,y:363.88},{x:1998,y:366.84},{x:1999,y:368.54},{x:2000,y:369.71},{x:2001,y:371.32},{x:2002,y:373.45},{x:2003,y:375.98},{x:2004,y:377.7},{x:2005,y:379.98},{x:2006,y:382.09},{x:2007,y:384.02},{x:2008,y:385.83},{x:2009,y:387.64},{x:2010,y:390.1},{x:2011,y:391.85},{x:2012,y:394.06},{x:2013,y:396.74},{x:2014,y:398.87},{x:2015,y:401.01},{x:2016,y:404.41},{x:2017,y:406.76},{x:2018,y:408.72},{x:2019,y:411.66},{x:2020,y:414.24},{x:2021,y:416.45}]" ;
+    sdm:hasDataSource sdm:statistacomstatistics1091926atmosphericconcentrationofco2historic ;
+    sdm:hasID "120"^^xsd:int ;
+    sdm:hasInputSource sdm:currentTime ;
+    sdm:hasUnit sdm:ppmCO2 ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:historicalFossilEmissions a sdm:Converter ;
+    sdm:hasData "[{x:1959,y:8.86},{x:1960,y:9.39},{x:1961,y:9.42},{x:1962,y:9.75},{x:1963,y:10.27},{x:1964,y:10.83},{x:1965,y:11.32},{x:1966,y:11.87},{x:1967,y:12.24},{x:1968,y:12.91},{x:1969,y:13.77},{x:1970,y:14.9},{x:1971,y:15.51},{x:1972,y:16.23},{x:1973,y:17.09},{x:1974,y:17.02},{x:1975,y:17.05},{x:1976,y:17.99},{x:1977,y:18.5},{x:1978,y:19.08},{x:1979,y:19.62},{x:1980,y:19.5},{x:1981,y:19.04},{x:1982,y:18.88},{x:1983,y:19.01},{x:1984,y:19.66},{x:1985,y:20.33},{x:1986,y:20.63},{x:1987,y:21.27},{x:1988,y:22.11},{x:1989,y:22.41},{x:1990,y:22.76},{x:1991,y:23.24},{x:1992,y:22.58},{x:1993,y:22.81},{x:1994,y:22.97},{x:1995,y:23.46},{x:1996,y:24.16},{x:1997,y:24.3},{x:1998,y:24.21},{x:1999,y:24.73},{x:2000,y:25.45},{x:2001,y:25.67},{x:2002,y:26.28},{x:2003,y:27.65},{x:2004,y:28.64},{x:2005,y:29.61},{x:2006,y:30.59},{x:2007,y:31.51},{x:2008,y:32.09},{x:2009,y:31.56},{x:2010,y:33.36},{x:2011,y:34.49},{x:2012,y:35.01},{x:2013,y:35.32},{x:2014,y:35.58},{x:2015,y:35.56},{x:2016,y:35.52},{x:2017,y:36.1},{x:2018,y:36.83},{x:2019,y:37.08},{x:2020,y:35.26},{x:2021,y:37.12}]" ;
+    sdm:hasDataSource sdm:icoscpeuscienceandimpactglobalcarbonbudget2022 ;
+    sdm:hasID "106"^^xsd:int ;
+    sdm:hasInputSource sdm:currentTime ;
+    sdm:hasUnit sdm:gigatonsCO2PerYear ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:historicalLandSink a sdm:Converter ;
+    sdm:hasData "[{x:1959,y:1.47},{x:1960,y:4.52},{x:1961,y:3.08},{x:1962,y:4.84},{x:1963,y:3.19},{x:1964,y:6.18},{x:1965,y:1.25},{x:1966,y:5.11},{x:1967,y:6.14},{x:1968,y:8.81},{x:1969,y:2.61},{x:1970,y:2.61},{x:1971,y:8.98},{x:1972,y:4.59},{x:1973,y:6.93},{x:1974,y:15.34},{x:1975,y:9.69},{x:1976,y:10.95},{x:1977,y:5.53},{x:1978,y:10.19},{x:1979,y:5.2},{x:1980,y:1.51},{x:1981,y:8.13},{x:1982,y:6.12},{x:1983,y:1.03},{x:1984,y:10.58},{x:1985,y:10.13},{x:1986,y:8.45},{x:1987,y:1.29},{x:1988,y:7.55},{x:1989,y:13.08},{x:1990,y:8.55},{x:1991,y:8.26},{x:1992,y:8.26},{x:1993,y:10.48},{x:1994,y:5.37},{x:1995,y:6.49},{x:1996,y:12.45},{x:1997,y:11.67},{x:1998,y:5.52},{x:1999,y:13.17},{x:2000,y:13.73},{x:2001,y:8.74},{x:2002,y:3.61},{x:2003,y:8.47},{x:2004,y:12.7},{x:2005,y:6.88},{x:2006,y:11.41},{x:2007,y:9.93},{x:2008,y:13.3},{x:2009,y:10.94},{x:2010,y:12.17},{x:2011,y:15.06},{x:2012,y:8.48},{x:2013,y:13.04},{x:2014,y:13.42},{x:2015,y:7.36},{x:2016,y:9.87},{x:2017,y:13.03},{x:2018,y:13.36},{x:2019,y:11.15},{x:2020,y:11.38},{x:2021,y:12.64}]" ;
+    sdm:hasDataSource sdm:icoscpeuscienceandimpactglobalcarbonbudget2022 ;
+    sdm:hasID "135"^^xsd:int ;
+    sdm:hasInputSource sdm:currentTime ;
+    sdm:hasUnit sdm:gigatonsCO2PerYear ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:historicalLandUseChangeEmissions a sdm:Converter ;
+    sdm:hasData "[{x:1959,y:7.1},{x:1960,y:6.57},{x:1961,y:6.11},{x:1962,y:5.89},{x:1963,y:5.65},{x:1964,y:5.48},{x:1965,y:5.07},{x:1966,y:4.85},{x:1967,y:4.92},{x:1968,y:4.98},{x:1969,y:4.67},{x:1970,y:4.6},{x:1971,y:4.59},{x:1972,y:4.59},{x:1973,y:4.45},{x:1974,y:4.32},{x:1975,y:4.37},{x:1976,y:4.3},{x:1977,y:4.41},{x:1978,y:4.22},{x:1979,y:4.06},{x:1980,y:4.08},{x:1981,y:4.39},{x:1982,y:4.41},{x:1983,y:4.8},{x:1984,y:5.31},{x:1985,y:5.08},{x:1986,y:5.12},{x:1987,y:5.11},{x:1988,y:5.06},{x:1989,y:4.87},{x:1990,y:4.88},{x:1991,y:4.76},{x:1992,y:4.89},{x:1993,y:4.88},{x:1994,y:5.3},{x:1995,y:5.29},{x:1996,y:5.29},{x:1997,y:7.1},{x:1998,y:5.49},{x:1999,y:5.49},{x:2000,y:5.12},{x:2001,y:4.74},{x:2002,y:5.18},{x:2003,y:5.65},{x:2004,y:5.36},{x:2005,y:4.72},{x:2006,y:5.07},{x:2007,y:4.44},{x:2008,y:4.64},{x:2009,y:5.03},{x:2010,y:4.84},{x:2011,y:4.96},{x:2012,y:4.83},{x:2013,y:4.63},{x:2014,y:4.92},{x:2015,y:5.39},{x:2016,y:4.53},{x:2017,y:4.33},{x:2018,y:4.18},{x:2019,y:4.56},{x:2020,y:4.06},{x:2021,y:3.94}]" ;
+    sdm:hasDataSource sdm:icoscpeuscienceandimpactglobalcarbonbudget2022 ;
+    sdm:hasID "133"^^xsd:int ;
+    sdm:hasInputSource sdm:currentTime ;
+    sdm:hasUnit sdm:gigatonsCO2PerYear ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:historicalOceanSink a sdm:Converter ;
+    sdm:hasData "[{x:1959,y:3.57},{x:1960,y:3.51},{x:1961,y:2.95},{x:1962,y:3.28},{x:1963,y:3.88},{x:1964,y:4.45},{x:1965,y:4.84},{x:1966,y:4.68},{x:1967,y:4.13},{x:1968,y:4.33},{x:1969,y:4.67},{x:1970,y:4.12},{x:1971,y:4.45},{x:1972,y:5.43},{x:1973,y:4.95},{x:1974,y:4.8},{x:1975,y:4.61},{x:1976,y:5.22},{x:1977,y:5.51},{x:1978,y:5.64},{x:1979,y:5.45},{x:1980,y:6.36},{x:1981,y:6.31},{x:1982,y:6.92},{x:1983,y:7.36},{x:1984,y:6.85},{x:1985,y:6.5},{x:1986,y:6.69},{x:1987,y:7.02},{x:1988,y:6.57},{x:1989,y:6.66},{x:1990,y:7.38},{x:1991,y:7.78},{x:1992,y:8.31},{x:1993,y:8.14},{x:1994,y:7.37},{x:1995,y:7.32},{x:1996,y:7.35},{x:1997,y:7.9},{x:1998,y:8.06},{x:1999,y:7.2},{x:2000,y:7},{x:2001,y:6.66},{x:2002,y:7.96},{x:2003,y:8.48},{x:2004,y:8.33},{x:2005,y:8.53},{x:2006,y:8.89},{x:2007,y:8.66},{x:2008,y:8.73},{x:2009,y:9.29},{x:2010,y:9.2},{x:2011,y:9.36},{x:2012,y:9.61},{x:2013,y:9.7},{x:2014,y:10.2},{x:2015,y:10.43},{x:2016,y:10.92},{x:2017,y:10.46},{x:2018,y:10.8},{x:2019,y:10.97},{x:2020,y:10.99},{x:2021,y:10.55}]" ;
+    sdm:hasDataSource sdm:icoscpeuscienceandimpactglobalcarbonbudget2022 ;
+    sdm:hasID "134"^^xsd:int ;
+    sdm:hasInputSource sdm:currentTime ;
+    sdm:hasUnit sdm:gigatonsCO2PerYear ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:landSinkRate a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_38aab53ef3 ;
+    sdm:hasID "124"^^xsd:int ;
+    sdm:hasUnit sdm:gigatonsCO2PerYear ;
+    sdm:primitiveOf sdm:climateChangeModel ;
+    rdf1:comment "<span style=\"letter-spacing: 0.39996px\">Rate of land sequestration starting in 2022.</span>" .
+
+sdm:landuseChangeEmissions a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_34787cc78d ;
+    sdm:hasID "141"^^xsd:int ;
+    sdm:hasUnit sdm:gigatonsCO2PerYear ;
+    sdm:primitiveOf sdm:climateChangeModel ;
+    rdf1:comment "<span style=\"letter-spacing: 0.39996px\">Rate of land- use change </span>emissions<span style=\"letter-spacing: 0.39996px\">&nbsp;(e.g. deforestation) starting in 2022.</span>" .
+
+sdm:oceanSinkRate a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_49e8526f4f ;
+    sdm:hasID "140"^^xsd:int ;
+    sdm:hasUnit sdm:gigatonsCO2PerYear ;
+    sdm:primitiveOf sdm:climateChangeModel ;
+    rdf1:comment "<span style=\"letter-spacing: 0.39996px;\">Rate of ocean sequestration starting in 2022.</span><br>" .
+
+sdm:pollutionEmissions a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_571c978837 ;
+    sdm:hasID "118"^^xsd:int ;
+    sdm:hasUnit sdm:gigatonsCO2PerYear ;
+    sdm:primitiveOf sdm:climateChangeModel ;
+    rdf1:comment "Rate of fossil fuel pollution starting in 2022." .
+
+sdm:ppmCO2 a sdm:Unit .
+
+sdm:radiation a sdm:Flow ;
+    sdm:hasEnd sdm:atmosphericEnergy ;
+    sdm:hasFlowrate sdm:Expression_2f960d6077 ;
+    sdm:hasID "89"^^xsd:int ;
+    sdm:hasStart sdm:earthEnergy ;
+    sdm:hasUnit sdm:watts ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:sin a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:solarRadiation a sdm:Flow ;
+    sdm:hasEnd sdm:earthEnergy ;
+    sdm:hasFlowrate sdm:Expression_0eca918ab1 ;
+    sdm:hasID "56"^^xsd:int ;
+    sdm:hasUnit sdm:watts ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:climateChangeModel ;
+    rdf1:comment "Solar radiation, does not interact with the atmosphere." .
+
+sdm:UserInput a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:earthAlbedo a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_b79c895347 ;
+    sdm:hasID "111"^^xsd:int ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:joules a sdm:Unit .
+
+sdm:scaledWatts a sdm:Constant .
+
+sdm:emissivity a sdm:Converter ;
+    sdm:hasData "[{x:200,y:0.194},{x:400,y:0.14},{x:600,y:0.108},{x:800,y:0.085},{x:1600,y:0.0301}]" ;
+    sdm:hasDataSource sdm:greshamacuksitesdefaultfiles20181113ChrisBuddMathsOfClimateChangeTpdf ;
+    sdm:hasID "95"^^xsd:int ;
+    sdm:hasInputSource sdm:co2PPM ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:icoscpeuscienceandimpactglobalcarbonbudget2022 a sdm:DataSource ;
+    sdm:hasSourceURL "https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022" .
+
+sdm:ifElse a sdm:General,
+        sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:tonsCO2PerYear a sdm:Unit .
+
+sdm:DataSource a owl:Class .
+
+sdm:General a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:atmosphericCarbonDioxide a sdm:Stock ;
+    sdm:hasID "66"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_b466971568 ;
+    sdm:hasUnit sdm:tonsCO2 ;
+    sdm:isNonNegative false ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:currentTime a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:earthEnergy a sdm:Stock ;
+    sdm:hasID "55"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_c252ae1f3e ;
+    sdm:hasUnit sdm:joules ;
+    sdm:isNonNegative false ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:Symbol a owl:Class .
+
+sdm:atmosphericEnergy a sdm:Stock ;
+    sdm:hasID "58"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_c252ae1f3e ;
+    sdm:hasUnit sdm:joules ;
+    sdm:isNonNegative false ;
+    sdm:primitiveOf sdm:climateChangeModel .
+
+sdm:watts a sdm:Unit .
+
+sdm:Model a owl:Class .
+
+sdm:gigatonsCO2PerYear a sdm:Unit .
+
+sdm:Primitive a owl:Class .
+
+sdm:Programming a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:Stock a owl:Class ;
+    rdf1:subClassOf sdm:Primitive,
+        sdm:Symbol .
+
+sdm:BuiltInFunction a owl:Class ;
+    rdf1:subClassOf sdm:Function .
+
+sdm:Converter a owl:Class ;
+    rdf1:subClassOf sdm:Primitive,
+        sdm:Symbol .
+
+sdm:String a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:Unit a owl:Class .
+
+sdm:Variable a owl:Class ;
+    rdf1:subClassOf sdm:Primitive,
+        sdm:Symbol .
+
+sdm:Constant a owl:Class ;
+    rdf1:subClassOf sdm:Symbol .
+
+sdm:RandomNumber a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:Time a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:Historical a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:Flow a owl:Class ;
+    rdf1:subClassOf sdm:Primitive,
+        sdm:Symbol .
+
+sdm:StatisticalDistribution a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:Vector a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:Expression a owl:Class .
+
+sdm:Mathematical a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:climateChangeModel a sdm:Model ;
+    sdm:hasPrimitive sdm:absoluteTemperature,
+        sdm:atmosphereRadiation,
+        sdm:atmosphericCarbonDioxide,
+        sdm:atmosphericEnergy,
+        sdm:co2PPM,
+        sdm:e0,
+        sdm:earthAlbedo,
+        sdm:earthEnergy,
+        sdm:emissivity,
+        sdm:globalTemperature,
+        sdm:historicalCO2PPM,
+        sdm:historicalFossilEmissions,
+        sdm:historicalGlobalTemperatureAnomaly,
+        sdm:historicalLandSink,
+        sdm:historicalLandUseChangeEmissions,
+        sdm:historicalOceanSink,
+        sdm:landSink,
+        sdm:landSinkRate,
+        sdm:landuseChange,
+        sdm:landuseChangeEmissions,
+        sdm:oceanSink,
+        sdm:oceanSinkRate,
+        sdm:passThrough,
+        sdm:pollution,
+        sdm:pollutionEmissions,
+        sdm:radiation,
+        sdm:radiationDown,
+        sdm:radiationUp,
+        sdm:reflection,
+        sdm:solarRadiation ;
+    sdm:hasTimeLength 140.0 ;
+    sdm:hasTimeStart 1960.0 ;
+    sdm:hasTimeStep 1.0 ;
+    sdm:hasTimeUnit sdm:years ;
+    sdm:usesAlgorithm "Euler" .
+

@@ -1,0 +1,960 @@
+@prefix : <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sdm: <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm#> .
+
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm> rdf:type owl:Ontology ;
+                                                          rdfs:comment "SDMOnto is an ontology describing the underlying structure of System Dynamics models available on the Insight Maker platform. Its goal is to improve the modularity and accessibility of these models."@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasDataSource
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasDataSource> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Converter> ;
+                                                                       rdfs:range <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/DataSource> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasEnd
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasEnd> rdf:type owl:ObjectProperty ;
+                                                                owl:inverseOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasInflow> ;
+                                                                rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Flow> ;
+                                                                rdfs:range <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Stock> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasExpression
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasExpression> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Variable> ;
+                                                                       rdfs:range <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Expression> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasFlowrate
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasFlowrate> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Flow> ;
+                                                                     rdfs:range <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Expression> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasInflow
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasInflow> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Stock> ;
+                                                                   rdfs:range <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Flow> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasInitialValue
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasInitialValue> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Stock> ;
+                                                                         rdfs:range <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Expression> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasInputSource
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasInputSource> rdf:type owl:ObjectProperty ;
+                                                                        rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Converter> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasOutflow
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasOutflow> rdf:type owl:ObjectProperty ;
+                                                                    owl:inverseOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasStart> ;
+                                                                    rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Stock> ;
+                                                                    rdfs:range <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Flow> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasPrimitive
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasPrimitive> rdf:type owl:ObjectProperty ;
+                                                                      owl:inverseOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/primitiveOf> ;
+                                                                      rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Model> ;
+                                                                      rdfs:range <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Primitive> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasStart
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasStart> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Flow> ;
+                                                                  rdfs:range <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Stock> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasSymbol
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasSymbol> rdf:type owl:ObjectProperty ,
+                                                                            owl:TransitiveProperty ;
+                                                                   rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Expression> ;
+                                                                   rdfs:range <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Symbol> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasTimeUnit
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasTimeUnit> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Model> ;
+                                                                     rdfs:range <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Unit> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasUnit
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasUnit> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Primitive> ;
+                                                                 rdfs:range <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Unit> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/primitiveOf
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/primitiveOf> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Primitive> ;
+                                                                     rdfs:range <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Model> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasData
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasData> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Converter> ;
+                                                                 rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasID
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasID> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Primitive> ;
+                                                               rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasName
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasName> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Primitive> ;
+                                                                 rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasSourceURL
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasSourceURL> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/DataSource> ;
+                                                                      rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasStrExpression
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasStrExpression> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Expression> ;
+                                                                          rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasTimeLength
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasTimeLength> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Model> ;
+                                                                       rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasTimeStart
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasTimeStart> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Model> ;
+                                                                      rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasTimeStep
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hasTimeStep> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Model> ;
+                                                                     rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/isNonNegative
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/isNonNegative> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Stock> ;
+                                                                       rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/isOnlyPositive
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/isOnlyPositive> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Flow> ;
+                                                                        rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/usesAlgorithm
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/usesAlgorithm> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:domain <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Model> ;
+                                                                       rdfs:range rdfs:Literal .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/BuiltInFunction
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/BuiltInFunction> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Function> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Constant
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Constant> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Symbol> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Converter
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Converter> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Primitive> ,
+                                                                                   <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Symbol> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/CustomFunction
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/CustomFunction> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Function> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/DataSource
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/DataSource> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Expression
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Expression> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Flow
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Flow> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Primitive> ,
+                                                                              <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Symbol> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Function
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Function> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Symbol> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/General
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/General> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/BuiltInFunction> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Historical
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Historical> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/BuiltInFunction> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/BuiltInFunction> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Model
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Model> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Primitive
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Primitive> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Programming
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Programming> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/BuiltInFunction> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/RandomNumber
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/RandomNumber> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/BuiltInFunction> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/BuiltInFunction> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Stock
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Stock> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Primitive> ,
+                                                                               <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Symbol> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/String
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/String> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/BuiltInFunction> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Symbol
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Symbol> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Time
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Time> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/BuiltInFunction> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Unit
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Unit> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/UserInput
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/UserInput> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/BuiltInFunction> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Variable
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Variable> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Primitive> ,
+                                                                                  <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Symbol> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/BuiltInFunction> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/CDFChiSquared
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/CDFChiSquared> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/CDFExponential
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/CDFExponential> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/CDFF
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/CDFF> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/CDFLognormal
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/CDFLognormal> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/CDFNormal
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/CDFNormal> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/CDFPoisson
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/CDFPoisson> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/CDFt
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/CDFt> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/PDFChiSquared
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/PDFChiSquared> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/PDFExponential
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/PDFExponential> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/PDFF
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/PDFF> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/PDFLognormal
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/PDFLognormal> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/PDFNormal
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/PDFNormal> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/PDFt
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/PDFt> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/PMFPoisson
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/PMFPoisson> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/abs
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/abs> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/alert
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/alert> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/UserInput> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/anonymousFunction
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/anonymousFunction> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Programming> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/anonymousFunctionSingleLine
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/anonymousFunctionSingleLine> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Programming> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/arcCos
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/arcCos> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/arcSin
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/arcSin> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/arcTan
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/arcTan> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/beta
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/beta> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/RandomNumber> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/binary
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/binary> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/RandomNumber> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/binomial
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/binomial> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/RandomNumber> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/confirm
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/confirm> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/UserInput> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/contains
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/contains> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/String> ,
+                                                                           <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/correlation
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/correlation> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Historical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/cos
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/cos> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/currentTime
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/currentTime> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Time> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/custom
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/custom> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/RandomNumber> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/days
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/days> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Time> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/delay
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/delay> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Historical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/delay1
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/delay1> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Historical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/delay3
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/delay3> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Historical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/delayN
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/delayN> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Historical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/difference
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/difference> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/e
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/e> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Constant> ,
+                                                                    <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/errorHandling
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/errorHandling> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Programming> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/exp
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/exp> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/expit
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/expit> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/exponential
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/exponential> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/RandomNumber> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/filter
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/filter> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/fix
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/fix> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Historical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/flatten
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/flatten> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/forIn
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/forIn> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Programming> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/function
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/function> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Programming> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/gamma
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/gamma> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/RandomNumber> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hours
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/hours> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Time> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/ifElse
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/ifElse> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/General> ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Programming> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/indexOf
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/indexOf> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/String> ,
+                                                                          <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/intersection
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/intersection> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/invChiSquared
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/invChiSquared> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/invExponential
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/invExponential> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/invF
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/invF> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/invLognormal
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/invLognormal> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/invNormal
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/invNormal> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/invt
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/invt> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/StatisticalDistribution> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/join
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/join> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/String> ,
+                                                                       <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/keys
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/keys> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/length
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/length> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/String> ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/ln
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/ln> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/log
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/log> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/logit
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/logit> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/lognormal
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/lognormal> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/RandomNumber> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/lookup
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/lookup> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/lowercase
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/lowercase> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/String> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/map
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/map> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/max
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/max> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/mean
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/mean> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/median
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/median> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/min
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/min> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/minutes
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/minutes> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Time> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/mod
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/mod> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/months
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/months> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Time> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/negativeBinomial
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/negativeBinomial> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/RandomNumber> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/normal
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/normal> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/RandomNumber> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/parse
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/parse> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/String> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/pastMax
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/pastMax> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Historical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/pastMean
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/pastMean> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Historical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/pastMedian
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/pastMedian> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Historical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/pastMin
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/pastMin> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Historical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/pastStd
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/pastStd> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Historical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/pastValues
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/pastValues> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Historical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/pause
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/pause> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/General> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/pi
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/pi> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Constant> ,
+                                                                     <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/poisson
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/poisson> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/RandomNumber> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/product
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/product> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/prompt
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/prompt> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/UserInput> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/pulse
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/pulse> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/General> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/ramp
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/ramp> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/General> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/range
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/range> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/String> ,
+                                                                        <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/repeat
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/repeat> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/reverse
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/reverse> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/round
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/round> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/roundDown
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/roundDown> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/roundUp
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/roundUp> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/sample
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/sample> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/seasonal
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/seasonal> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Time> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/seconds
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/seconds> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Time> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/select
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/select> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/setRandSeed
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/setRandSeed> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/RandomNumber> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/sign
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/sign> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/sin
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/sin> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/smooth
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/smooth> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Historical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/smoothN
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/smoothN> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Historical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/sort
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/sort> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/split
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/split> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/String> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/sqrt
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/sqrt> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/std
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/std> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/step
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/step> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/General> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/stop
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/stop> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/General> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/sum
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/sum> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/tan
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/tan> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Mathematical> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/throwError
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/throwError> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Programming> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/timeEnd
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/timeEnd> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Time> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/timeLength
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/timeLength> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Time> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/timeStart
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/timeStart> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Time> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/timeStep
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/timeStep> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Time> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/triangular
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/triangular> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/RandomNumber> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/trim
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/trim> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/String> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/uniform
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/uniform> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/RandomNumber> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/union
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/union> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/unique
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/unique> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/uppercase
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/uppercase> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/String> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/values
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/values> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Vector> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/variable
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/variable> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Programming> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/weeks
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/weeks> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Time> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/while
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/while> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Programming> .
+
+
+###  http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/years
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/years> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/Time> .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+owl:Thing rdfs:comment "IM maakt gebruik van Comments. -> Zou dit dan als rdfs:comment (annotation) worden verbonden aan een instance van de class Equation?"@en .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

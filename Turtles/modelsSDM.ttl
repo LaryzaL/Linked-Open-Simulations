@@ -1,0 +1,2044 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdm1: <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm> .
+@prefix sdm11: <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sdm1: a owl:Ontology ;
+    rdfs:comment "SDMOnto is an ontology describing the underlying structure of System Dynamics models available on the Insight Maker platform. Its goal is to improve the modularity and accessibility of these models."@en .
+
+sdm11:CDFChiSquared a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:CDFExponential a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:CDFF a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:CDFLognormal a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:CDFNormal a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:CDFPoisson a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:CDFt a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:PDFChiSquared a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:PDFExponential a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:PDFF a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:PDFLognormal a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:PDFNormal a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:PDFt a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:PMFPoisson a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:acutecompletionrateperresource a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_6464f6d76f ;
+    sdm11:hasID "593"^^xsd:int ;
+    rdfs:comment "depends on complexity of patients and quality of resources" .
+
+sdm11:alert a sdm11:UserInput,
+        owl:NamedIndividual .
+
+sdm11:ambulancefraction a sdm11:Converter ;
+    sdm11:hasData "[{x:0,y:0.341},{x:1,y:0.37},{x:2,y:0.376},{x:3,y:0.376},{x:4,y:0.37},{x:5,y:0.356},{x:6,y:0.301},{x:7,y:0.204},{x:8,y:0.186},{x:9,y:0.189},{x:10,y:0.205},{x:11,y:0.221},{x:12,y:0.238},{x:13,y:0.237},{x:14,y:0.234},{x:15,y:0.235},{x:16,y:0.226},{x:17,y:0.218},{x:18,y:0.225},{x:19,y:0.21},{x:20,y:0.234},{x:21,y:0.252},{x:22,y:0.283},{x:23,y:0.312},{x:24,y:0.341}]" ;
+    sdm11:hasID "625"^^xsd:int ;
+    sdm11:hasInputSource sdm11:hourofday .
+
+sdm11:anonymousFunction a sdm11:Programming,
+        owl:NamedIndividual .
+
+sdm11:anonymousFunctionSingleLine a sdm11:Programming,
+        owl:NamedIndividual .
+
+sdm11:arcCos a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:arcSin a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:arcTan a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:beta a sdm11:RandomNumber,
+        owl:NamedIndividual .
+
+sdm11:binary a sdm11:RandomNumber,
+        owl:NamedIndividual .
+
+sdm11:binomial a sdm11:RandomNumber,
+        owl:NamedIndividual .
+
+sdm11:confirm a sdm11:UserInput,
+        owl:NamedIndividual .
+
+sdm11:contains a sdm11:String,
+        sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:correlation a sdm11:Historical,
+        owl:NamedIndividual .
+
+sdm11:cos a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:cumNEATPerformance a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_9eea76a211 ;
+    sdm11:hasID "669"^^xsd:int .
+
+sdm11:cumOccRatio a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_6e7549a4dc ;
+    sdm11:hasID "724"^^xsd:int .
+
+sdm11:custom a sdm11:RandomNumber,
+        owl:NamedIndividual .
+
+sdm11:dailyResources a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_b485d77fdc ;
+    sdm11:hasID "592"^^xsd:int ;
+    rdfs:comment "Average number of arrivals per hour",
+        "ambulance matrix load balancing P1 7 per hour (NSW 2012 data Mohsin)",
+        "clinical team resources for assessment, investigation, stabilising treatment and reviews; need depends on complexity and age" .
+
+sdm11:days a sdm11:Time,
+        owl:NamedIndividual .
+
+sdm11:delay a sdm11:Historical,
+        owl:NamedIndividual .
+
+sdm11:delay1 a sdm11:Historical,
+        owl:NamedIndividual .
+
+sdm11:delay3 a sdm11:Historical,
+        owl:NamedIndividual .
+
+sdm11:delayN a sdm11:Historical,
+        owl:NamedIndividual .
+
+sdm11:difference a sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:e a sdm11:Constant,
+        sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:errorHandling a sdm11:Programming,
+        owl:NamedIndividual .
+
+sdm11:exp a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:expit a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:exponential a sdm11:RandomNumber,
+        owl:NamedIndividual .
+
+sdm11:filter a sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:fix a sdm11:Historical,
+        owl:NamedIndividual .
+
+sdm11:flatten a sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:function a sdm11:Programming,
+        owl:NamedIndividual .
+
+sdm11:gamma a sdm11:RandomNumber,
+        owl:NamedIndividual .
+
+sdm11:globalTemperature a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_5c28924f2b ;
+    sdm11:hasID "80"^^xsd:int ;
+    sdm11:hasUnit sdm11:degreesCelsius .
+
+sdm11:hasData a owl:DatatypeProperty ;
+    rdfs:domain sdm11:Converter .
+
+sdm11:hasDataSource a owl:ObjectProperty ;
+    rdfs:domain sdm11:Converter ;
+    rdfs:range sdm11:DataSource .
+
+sdm11:hasEnd a owl:ObjectProperty ;
+    rdfs:domain sdm11:Flow ;
+    rdfs:range sdm11:Stock ;
+    owl:inverseOf sdm11:hasInflow .
+
+sdm11:hasExpression a owl:ObjectProperty ;
+    rdfs:domain sdm11:Variable ;
+    rdfs:range sdm11:Expression .
+
+sdm11:hasFlowrate a owl:ObjectProperty ;
+    rdfs:domain sdm11:Flow ;
+    rdfs:range sdm11:Expression .
+
+sdm11:hasID a owl:DatatypeProperty ;
+    rdfs:range xsd:int .
+
+sdm11:hasInitialValue a owl:ObjectProperty ;
+    rdfs:domain sdm11:Stock ;
+    rdfs:range sdm11:Expression .
+
+sdm11:hasInputSource a owl:ObjectProperty ;
+    rdfs:domain sdm11:Converter .
+
+sdm11:hasName a owl:DatatypeProperty ;
+    rdfs:range rdfs:Literal .
+
+sdm11:hasOutflow a owl:ObjectProperty ;
+    rdfs:domain sdm11:Stock ;
+    rdfs:range sdm11:Flow ;
+    owl:inverseOf sdm11:hasStart .
+
+sdm11:hasPrimitive a owl:ObjectProperty ;
+    rdfs:domain sdm11:Model ;
+    rdfs:range sdm11:Primitive ;
+    owl:inverseOf sdm11:primitiveOf .
+
+sdm11:hasSourceURL a owl:DatatypeProperty ;
+    rdfs:domain sdm11:DataSource ;
+    rdfs:range rdfs:Literal .
+
+sdm11:hasStrExpression a owl:DatatypeProperty ;
+    rdfs:domain sdm11:Expression ;
+    rdfs:range rdfs:Literal .
+
+sdm11:hasSymbol a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:domain sdm11:Expression ;
+    rdfs:range sdm11:Symbol .
+
+sdm11:hasTimeLength a owl:DatatypeProperty ;
+    rdfs:domain sdm11:Model .
+
+sdm11:hasTimeStart a owl:DatatypeProperty ;
+    rdfs:domain sdm11:Model .
+
+sdm11:hasTimeStep a owl:DatatypeProperty ;
+    rdfs:domain sdm11:Model .
+
+sdm11:hasTimeUnit a owl:ObjectProperty ;
+    rdfs:domain sdm11:Model ;
+    rdfs:range sdm11:Unit .
+
+sdm11:hasUnit a owl:ObjectProperty ;
+    rdfs:domain sdm11:Symbol ;
+    rdfs:range sdm11:Unit .
+
+sdm11:historicalGlobalTemperatureAnomaly a sdm11:Converter ;
+    sdm11:hasData "[{x:1880,y:-0.48},{x:1881,y:-0.38},{x:1882,y:-0.46},{x:1883,y:-0.64},{x:1884,y:-0.67},{x:1885,y:-0.55},{x:1886,y:-0.49},{x:1887,y:-0.47},{x:1888,y:-0.41},{x:1889,y:-0.29},{x:1890,y:-0.5},{x:1891,y:-0.53},{x:1892,y:-0.52},{x:1893,y:-0.56},{x:1894,y:-0.43},{x:1895,y:-0.42},{x:1896,y:-0.36},{x:1897,y:-0.28},{x:1898,y:-0.41},{x:1899,y:-0.24},{x:1900,y:-0.17},{x:1901,y:-0.14},{x:1902,y:-0.29},{x:1903,y:-0.38},{x:1904,y:-0.44},{x:1905,y:-0.33},{x:1906,y:-0.16},{x:1907,y:-0.61},{x:1908,y:-0.43},{x:1909,y:-0.41},{x:1910,y:-0.34},{x:1911,y:-0.47},{x:1912,y:-0.47},{x:1913,y:-0.3},{x:1914,y:-0.04},{x:1915,y:-0.06},{x:1916,y:-0.45},{x:1917,y:-0.62},{x:1918,y:-0.5},{x:1919,y:-0.33},{x:1920,y:-0.36},{x:1921,y:-0.15},{x:1922,y:-0.27},{x:1923,y:-0.3},{x:1924,y:-0.25},{x:1925,y:-0.15},{x:1926,y:-0.02},{x:1927,y:-0.22},{x:1928,y:-0.14},{x:1929,y:-0.49},{x:1930,y:-0.11},{x:1931,y:-0.01},{x:1932,y:-0.03},{x:1933,y:-0.35},{x:1934,y:-0.06},{x:1935,y:-0.17},{x:1936,y:-0.13},{x:1937,y:-0.02},{x:1938,y:0.17},{x:1939,y:0.09},{x:1940,y:0.07},{x:1941,y:0.1},{x:1942,y:0.06},{x:1943,y:0.07},{x:1944,y:0.19},{x:1945,y:-0.07},{x:1946,y:-0.01},{x:1947,y:0.04},{x:1948,y:0.05},{x:1949,y:-0.07},{x:1950,y:-0.33},{x:1951,y:-0.07},{x:1952,y:-0.06},{x:1953,y:0.19},{x:1954,y:-0.13},{x:1955,y:-0.12},{x:1956,y:-0.41},{x:1957,y:-0.04},{x:1958,y:0.14},{x:1959,y:0.07},{x:1960,y:-0.02},{x:1961,y:0.11},{x:1962,y:0.15},{x:1963,y:0.21},{x:1964,y:-0.22},{x:1965,y:-0.13},{x:1966,y:-0.06},{x:1967,y:0.01},{x:1968,y:-0.12},{x:1969,y:-0.09},{x:1970,y:0.04},{x:1971,y:-0.02},{x:1972,y:-0.16},{x:1973,y:0.34},{x:1974,y:-0.18},{x:1975,y:0.14},{x:1976,y:-0.23},{x:1977,y:0.25},{x:1978,y:0.11},{x:1979,y:0.18},{x:1980,y:0.32},{x:1981,y:0.53},{x:1982,y:0.12},{x:1983,y:0.5},{x:1984,y:0.07},{x:1985,y:0.1},{x:1986,y:0.31},{x:1987,y:0.45},{x:1988,y:0.59},{x:1989,y:0.37},{x:1990,y:0.66},{x:1991,y:0.54},{x:1992,y:0.25},{x:1993,y:0.36},{x:1994,y:0.49},{x:1995,y:0.78},{x:1996,y:0.35},{x:1997,y:0.64},{x:1998,y:0.98},{x:1999,y:0.79},{x:2000,y:0.63},{x:2001,y:0.85},{x:2002,y:0.96},{x:2003,y:0.95},{x:2004,y:0.82},{x:2005,y:1.09},{x:2006,y:0.98},{x:2007,y:1.12},{x:2008,y:0.89},{x:2009,y:0.9},{x:2010,y:1.14},{x:2011,y:0.92},{x:2012,y:0.96},{x:2013,y:1.03},{x:2014,y:1.02},{x:2015,y:1.41},{x:2016,y:1.53},{x:2017,y:1.4},{x:2018,y:1.2},{x:2019,y:1.42},{x:2020,y:1.58},{x:2021,y:1.42}]" ;
+    sdm11:hasDataSource sdm11:statistacomstatistics1048518averagelandseatemperatureanomalysince1850 ;
+    sdm11:hasID "110"^^xsd:int ;
+    sdm11:hasInputSource sdm11:currentTime ;
+    sdm11:hasUnit sdm11:degreesCelsius .
+
+sdm11:indexOf a sdm11:String,
+        sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:intersection a sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:invChiSquared a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:invExponential a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:invF a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:invLognormal a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:invNormal a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:invt a sdm11:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm11:isNonNegative a owl:DatatypeProperty ;
+    rdfs:domain sdm11:Stock ;
+    rdfs:range xsd:boolean .
+
+sdm11:isOnlyPositive a owl:DatatypeProperty ;
+    rdfs:domain sdm11:Flow ;
+    rdfs:range xsd:boolean .
+
+sdm11:join a sdm11:String,
+        sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:keys a sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:length a sdm11:String,
+        sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:ln a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:log a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:logit a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:lognormal a sdm11:RandomNumber,
+        owl:NamedIndividual .
+
+sdm11:lookup a sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:lowercase a sdm11:String,
+        owl:NamedIndividual .
+
+sdm11:map a sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:max a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:mean a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:median a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:minutes a sdm11:Time,
+        owl:NamedIndividual .
+
+sdm11:months a sdm11:Time,
+        owl:NamedIndividual .
+
+sdm11:neatLScaleHi a sdm11:Stock ;
+    sdm11:hasID "743"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_dc56de8f45 ;
+    sdm11:isNonNegative false .
+
+sdm11:neatLScaleLo a sdm11:Stock ;
+    sdm11:hasID "744"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_614a85c607 ;
+    sdm11:isNonNegative false .
+
+sdm11:neatPerfbyhour a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_3567b8ad01 ;
+    sdm11:hasID "642"^^xsd:int .
+
+sdm11:negativeBinomial a sdm11:RandomNumber,
+        owl:NamedIndividual .
+
+sdm11:normal a sdm11:RandomNumber,
+        owl:NamedIndividual .
+
+sdm11:occupancyRatio a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_5ce41b8ac4 ;
+    sdm11:hasID "714"^^xsd:int .
+
+sdm11:occupancylevel a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_ca39c5318f ;
+    sdm11:hasID "657"^^xsd:int .
+
+sdm11:parse a sdm11:String,
+        owl:NamedIndividual .
+
+sdm11:pastMax a sdm11:Historical,
+        owl:NamedIndividual .
+
+sdm11:pastMean a sdm11:Historical,
+        owl:NamedIndividual .
+
+sdm11:pastMedian a sdm11:Historical,
+        owl:NamedIndividual .
+
+sdm11:pastMin a sdm11:Historical,
+        owl:NamedIndividual .
+
+sdm11:pastStd a sdm11:Historical,
+        owl:NamedIndividual .
+
+sdm11:pastValues a sdm11:Historical,
+        owl:NamedIndividual .
+
+sdm11:pause a sdm11:General,
+        owl:NamedIndividual .
+
+sdm11:pi a sdm11:Constant,
+        sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:poisson a sdm11:RandomNumber,
+        owl:NamedIndividual .
+
+sdm11:product a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:prompt a sdm11:UserInput,
+        owl:NamedIndividual .
+
+sdm11:pulse a sdm11:General,
+        owl:NamedIndividual .
+
+sdm11:ramp a sdm11:General,
+        owl:NamedIndividual .
+
+sdm11:range a sdm11:String,
+        sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:repeat a sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:reverse a sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:round a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:roundDown a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:roundUp a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:sample a sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:seasonal a sdm11:Time,
+        owl:NamedIndividual .
+
+sdm11:select a sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:servicefraction a sdm11:Converter ;
+    sdm11:hasData "[{x:0,y:0.031},{x:1,y:0.029},{x:2,y:0.026},{x:3,y:0.023},{x:4,y:0.02},{x:5,y:0.018},{x:6,y:0.018},{x:7,y:0.026},{x:8,y:0.037},{x:9,y:0.051},{x:10,y:0.059},{x:11,y:0.062},{x:12,y:0.061},{x:13,y:0.059},{x:14,y:0.057},{x:15,y:0.056},{x:16,y:0.054},{x:17,y:0.05},{x:18,y:0.051},{x:19,y:0.045},{x:20,y:0.047},{x:21,y:0.043},{x:22,y:0.041},{x:23,y:0.036},{x:24,y:0.031}]" ;
+    sdm11:hasID "462"^^xsd:int ;
+    sdm11:hasInputSource sdm11:currentTime .
+
+sdm11:setRandSeed a sdm11:RandomNumber,
+        owl:NamedIndividual .
+
+sdm11:sign a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:smooth a sdm11:Historical,
+        owl:NamedIndividual .
+
+sdm11:smoothN a sdm11:Historical,
+        owl:NamedIndividual .
+
+sdm11:sort a sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:split a sdm11:String,
+        owl:NamedIndividual .
+
+sdm11:sqrt a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:std a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:step a sdm11:General,
+        owl:NamedIndividual .
+
+sdm11:stop a sdm11:General,
+        owl:NamedIndividual .
+
+sdm11:sum a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:tan a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:throwError a sdm11:Programming,
+        owl:NamedIndividual .
+
+sdm11:timeEnd a sdm11:Time,
+        owl:NamedIndividual .
+
+sdm11:timeLength a sdm11:Time,
+        owl:NamedIndividual .
+
+sdm11:timeStart a sdm11:Time,
+        owl:NamedIndividual .
+
+sdm11:timeStep a sdm11:Time,
+        owl:NamedIndividual .
+
+sdm11:timeinEDCare a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_a34001c5d3 ;
+    sdm11:hasID "632"^^xsd:int ;
+    rdfs:comment "used actual overnight times to calculate base completion rate" .
+
+sdm11:triangular a sdm11:RandomNumber,
+        owl:NamedIndividual .
+
+sdm11:trim a sdm11:String,
+        owl:NamedIndividual .
+
+sdm11:uniform a sdm11:RandomNumber,
+        owl:NamedIndividual .
+
+sdm11:union a sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:unique a sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:uppercase a sdm11:String,
+        owl:NamedIndividual .
+
+sdm11:usesAlgorithm a owl:DatatypeProperty ;
+    rdfs:range rdfs:Literal .
+
+sdm11:values a sdm11:Vector,
+        owl:NamedIndividual .
+
+sdm11:variable a sdm11:Programming,
+        owl:NamedIndividual .
+
+sdm11:weeks a sdm11:Time,
+        owl:NamedIndividual .
+
+sdm11:while a sdm11:Programming,
+        owl:NamedIndividual .
+
+sdm11:years a sdm11:Time,
+        owl:NamedIndividual .
+
+owl:Thing rdfs:comment "IM maakt gebruik van Comments. -> Zou dit dan als rdfs:comment (annotation) worden verbonden aan een instance van de class Equation?"@en .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/emergencyDepartmentModel> a sdm11:Model ;
+    sdm11:hasPrimitive <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/24hrs>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/48hrs>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/4hr>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/acutecompletionrateperresource>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/add>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/adminEMU>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/admit>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/admitfraction>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/admitfractionforlate>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/admittedinED>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/admittedinEDspaces>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/alate>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/ambulancefraction>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/arrivalfraction>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/arrive>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/baseSpecialistsperhour>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/basecompletionrate>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/bedCapacity>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/caretodisp>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/cltodl>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/cumBedCapacity>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/cumDispOK>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/cumEDDisp>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/cumNEATPerformance>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/cumOccRatio>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/cumOccupancy>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/dailyResources>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/dailyarrivals>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/delayforAreaorEDMO>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/discharge>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/dlate>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/edAdmit>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/edCare>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/edCare4>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/edDispLate>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/edDisposition>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/edSpaces>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/edcompletionrate>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/edtoIPW>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/edwaittime>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/emu>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/emu1>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/emuCapacity>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/emudischarge>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/emudischargelate>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/emutowards>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/emutowardslate>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/failtotriage>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/failuretosee>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/flow>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/hourofday>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/hoursbeyondtarget>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/incintarget>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/inctot>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/inpatientward>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/neatLScaleHi>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/neatLScaleLo>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/neatPerfbyhour>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/occupancyRatio>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/occupancylevel>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/plannedreview>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/preTriage>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/recentEDDischarge>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/remove>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/represent>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/representtimewindow>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/seeinED>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/servicefraction>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/specialisteffectoncare>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/specialistsperSatWEDayShift>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/specialistsperhour>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/targettimeinED>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/timeinED>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/timeinEDCare>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/timeinpreCare>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/timeinpretriage>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/timeleftforcare>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/toEMU>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/totalEDDisp>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/triageandregister>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/unoccupiedEDspaces>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/unoccupiedEMUbeds>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/unplannedrepresent>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/wardnetdischarge>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/workload> ;
+    sdm11:hasTimeLength 40.0 ;
+    sdm11:hasTimeStart 8.0 ;
+    sdm11:hasTimeStep 0.25 ;
+    sdm11:hasTimeUnit <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/hours> ;
+    sdm11:usesAlgorithm "Euler" .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/predatorPreyModel> a sdm11:Model ;
+    sdm11:hasPrimitive <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/effectsonFoxesDeaths>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/effectsonRabbitsBirths>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/foxes>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/foxesBirthRate>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/foxesBirths>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/foxesDeathRate>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/foxesDeaths>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/rabbits>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/rabbitsBirthRate>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/rabbitsBirths>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/rabbitsDeathRate>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/rabbitsDeaths>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/rabbitsDensity>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/rabbitsDensity25>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/rabbitsDensity50> ;
+    sdm11:hasTimeLength 120.0 ;
+    sdm11:hasTimeStart 0.0 ;
+    sdm11:hasTimeStep 1.0 ;
+    sdm11:hasTimeUnit <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/months> ;
+    sdm11:usesAlgorithm "RK4" .
+
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/.3> a sdm11:Constant .
+
+sdm11:0 a sdm11:Constant .
+
+sdm11:0.0125 a sdm11:Constant .
+
+sdm11:0.025 a sdm11:Constant .
+
+sdm11:0.1 a sdm11:Constant .
+
+sdm11:0.16 a sdm11:Constant .
+
+sdm11:0.45 a sdm11:Constant .
+
+sdm11:0.5 a sdm11:Constant .
+
+sdm11:0.64 a sdm11:Constant .
+
+sdm11:0.8 a sdm11:Constant .
+
+sdm11:1 a sdm11:Constant .
+
+sdm11:1.2 a sdm11:Constant .
+
+sdm11:1.5 a sdm11:Constant .
+
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/1/24> a sdm11:Constant .
+
+sdm11:10 a sdm11:Constant .
+
+sdm11:10.55 a sdm11:Constant .
+
+sdm11:100 a sdm11:Constant .
+
+sdm11:12 a sdm11:Constant .
+
+sdm11:12.64 a sdm11:Constant .
+
+sdm11:12000 a sdm11:Constant .
+
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/14/40> a sdm11:Constant .
+
+sdm11:15 a sdm11:Constant .
+
+sdm11:175 a sdm11:Constant .
+
+sdm11:180 a sdm11:Constant .
+
+sdm11:2 a sdm11:Constant .
+
+sdm11:2.5 a sdm11:Constant .
+
+sdm11:200 a sdm11:Constant .
+
+sdm11:22 a sdm11:Constant .
+
+sdm11:3 a sdm11:Constant .
+
+sdm11:3.9 a sdm11:Constant .
+
+sdm11:3.94 a sdm11:Constant .
+
+sdm11:36.7 a sdm11:Constant .
+
+sdm11:4 a sdm11:Constant .
+
+sdm11:48 a sdm11:Constant .
+
+sdm11:5 a sdm11:Constant .
+
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/5/60> a sdm11:Constant .
+
+sdm11:60 a sdm11:Constant .
+
+sdm11:Boltzmann a sdm11:Constant .
+
+sdm11:CustomFunction a owl:Class ;
+    rdfs:subClassOf sdm11:Function .
+
+sdm11:Expression_0a7fddc22e a sdm11:Expression ;
+    sdm11:hasStrExpression "3" ;
+    sdm11:hasSymbol sdm11:3 .
+
+sdm11:Expression_0bca4d107b a sdm11:Expression ;
+    sdm11:hasStrExpression "3.9" ;
+    sdm11:hasSymbol sdm11:3.9 .
+
+sdm11:Expression_0d58df37c7 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Bed Capacity]+[EMU Capacity]" ;
+    sdm11:hasSymbol sdm11:bedCapacity,
+        sdm11:emuCapacity .
+
+sdm11:Expression_0eca918ab1 a sdm11:Expression ;
+    sdm11:hasStrExpression "SolarFlux * pi * EarthRadius^2" .
+
+sdm11:Expression_1623a9ede1 a sdm11:Expression ;
+    sdm11:hasStrExpression "0.16" ;
+    sdm11:hasSymbol sdm11:0.16 .
+
+sdm11:Expression_169970bf41 a sdm11:Expression ;
+    sdm11:hasStrExpression "1.5" ;
+    sdm11:hasSymbol sdm11:1.5 .
+
+sdm11:Expression_251adc4171 a sdm11:Expression ;
+    sdm11:hasStrExpression "[planned review]+[unplanned represent]" ;
+    sdm11:hasSymbol sdm11:plannedreview,
+        sdm11:unplannedrepresent .
+
+sdm11:Expression_25f3c93f65 a sdm11:Expression ;
+    sdm11:hasStrExpression "if years <= 2021 then  [Historical Land-Use Change Emissions]else  [Land-Use Change Emissions]end if" ;
+    sdm11:hasSymbol sdm11:historicalLandUseChangeEmissions,
+        sdm11:ifElse,
+        sdm11:landuseChangeEmissions .
+
+sdm11:Expression_2780519d1c a sdm11:Expression ;
+    sdm11:hasStrExpression "IfThenElse([Admitted in ED spaces]=1,IfThenElse([Occupancy Level]<0, [ED Admit], 0),0)" ;
+    sdm11:hasSymbol sdm11:admittedinEDspaces,
+        sdm11:edAdmit,
+        sdm11:ifElse,
+        sdm11:occupancyLevel .
+
+sdm11:Expression_2daa476ad5 a sdm11:Expression ;
+    sdm11:hasStrExpression "1/24" ;
+    sdm11:hasSymbol <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/1/24> .
+
+sdm11:Expression_2f960d6077 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Earth Energy] * scaledWatts" ;
+    sdm11:hasSymbol sdm11:earthEnergy,
+        sdm11:scaledWatts .
+
+sdm11:Expression_312474924f a sdm11:Expression ;
+    sdm11:hasStrExpression "[ED Spaces]-[ED Care]-[ED Care 4+]-[Admitted in ED]" ;
+    sdm11:hasSymbol sdm11:admittedinED,
+        sdm11:edCare,
+        sdm11:edCare4,
+        sdm11:edSpaces .
+
+sdm11:Expression_34787cc78d a sdm11:Expression ;
+    sdm11:hasStrExpression "3.94" ;
+    sdm11:hasSymbol sdm11:3.94 .
+
+sdm11:Expression_3567b8ad01 a sdm11:Expression ;
+    sdm11:hasStrExpression "100*[care to disp]/[Total ED Disp]" ;
+    sdm11:hasSymbol sdm11:caretodisp,
+        sdm11:totalEDDisp .
+
+sdm11:Expression_35a7da8d72 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Effects on Rabbits Births]" ;
+    sdm11:hasSymbol sdm11:effectsonRabbitsBirths .
+
+sdm11:Expression_36c06fd291 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Total ED Disp]" ;
+    sdm11:hasSymbol sdm11:totalEDDisp .
+
+sdm11:Expression_3812cb2db9 a sdm11:Expression ;
+    sdm11:hasStrExpression "0.64" ;
+    sdm11:hasSymbol sdm11:0.64 .
+
+sdm11:Expression_38aab53ef3 a sdm11:Expression ;
+    sdm11:hasStrExpression "12.64" ;
+    sdm11:hasSymbol sdm11:12.64 .
+
+sdm11:Expression_3ace84934c a sdm11:Expression ;
+    sdm11:hasStrExpression "0.001*[Foxes]" ;
+    sdm11:hasSymbol sdm11:foxes .
+
+sdm11:Expression_3af2ac9dd3 a sdm11:Expression ;
+    sdm11:hasStrExpression "0.8" ;
+    sdm11:hasSymbol sdm11:0.8 .
+
+sdm11:Expression_3c863126e6 a sdm11:Expression ;
+    sdm11:hasStrExpression "1.2" ;
+    sdm11:hasSymbol sdm11:1.2 .
+
+sdm11:Expression_486c9f56a1 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Solar Radiation] * [Earth Albedo]" ;
+    sdm11:hasSymbol sdm11:earthAlbedo,
+        sdm11:solarRadiation .
+
+sdm11:Expression_49e8526f4f a sdm11:Expression ;
+    sdm11:hasStrExpression "10.55" ;
+    sdm11:hasSymbol sdm11:10.55 .
+
+sdm11:Expression_4cf71af45f a sdm11:Expression ;
+    sdm11:hasStrExpression "Hours() mod 24" ;
+    sdm11:hasSymbol sdm11:hours,
+        sdm11:mod .
+
+sdm11:Expression_4e9e3870a3 a sdm11:Expression ;
+    sdm11:hasStrExpression "2" ;
+    sdm11:hasSymbol sdm11:2 .
+
+sdm11:Expression_4ede9adcb4 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Target time in ED]-[time in preCare]" ;
+    sdm11:hasSymbol sdm11:targettimeinED,
+        sdm11:timeinpreCare .
+
+sdm11:Expression_506ae89c21 a sdm11:Expression ;
+    sdm11:hasStrExpression "IfThenElse(Time()>{7.9 hours} and Time()<{15.9 hours}, [Specialists per SatWE Day Shift],[base Specialists per hour])" ;
+    sdm11:hasSymbol sdm11:baseSpecialistsperhour,
+        sdm11:currentTime,
+        sdm11:ifElse,
+        sdm11:specialistsperSatWEDayShift .
+
+sdm11:Expression_523a9f0875 a sdm11:Expression ;
+    sdm11:hasStrExpression "Min([ED Care],[ED completion rate])" ;
+    sdm11:hasSymbol sdm11:edCare,
+        sdm11:edcompletionrate,
+        sdm11:min .
+
+sdm11:Expression_571c978837 a sdm11:Expression ;
+    sdm11:hasStrExpression "36.7" ;
+    sdm11:hasSymbol sdm11:36.7 .
+
+sdm11:Expression_58428aa0c9 a sdm11:Expression ;
+    sdm11:hasStrExpression "[EMU Capacity]-[Adm in EMU]" ;
+    sdm11:hasSymbol sdm11:adminEMU,
+        sdm11:emuCapacity .
+
+sdm11:Expression_5c28924f2b a sdm11:Expression ;
+    sdm11:hasStrExpression "KelvinToCelsius([Absolute Temperature])" ;
+    sdm11:hasSymbol sdm11:KelvinToCelsius,
+        sdm11:abs,
+        sdm11:absoluteTemperature .
+
+sdm11:Expression_5ce41b8ac4 a sdm11:Expression ;
+    sdm11:hasStrExpression "100*[Inpatient ward]/[Bed Capacity]" ;
+    sdm11:hasSymbol sdm11:bedCapacity,
+        sdm11:inpatientward .
+
+sdm11:Expression_614a85c607 a sdm11:Expression ;
+    sdm11:hasStrExpression "60" ;
+    sdm11:hasSymbol sdm11:60 .
+
+sdm11:Expression_6464f6d76f a sdm11:Expression ;
+    sdm11:hasStrExpression "0.5" ;
+    sdm11:hasSymbol sdm11:0.5 .
+
+sdm11:Expression_68c16b2a03 a sdm11:Expression ;
+    sdm11:hasStrExpression "[ED Care]/[time left for care]" ;
+    sdm11:hasSymbol sdm11:edCare,
+        sdm11:forIn,
+        sdm11:timeleftforcare .
+
+sdm11:Expression_69a0ff2c61 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Rabbits]*[Rabbits Death Rate]" ;
+    sdm11:hasSymbol sdm11:rabbits,
+        sdm11:rabbitsDeathRate .
+
+sdm11:Expression_6a970436a7 a sdm11:Expression ;
+    sdm11:hasStrExpression "if years <= 2021 then  [Historical Land Sink]else  [Land Sink Rate]end if" ;
+    sdm11:hasSymbol sdm11:historicalLandSink,
+        sdm11:ifElse,
+        sdm11:landSinkRate,
+        sdm11:sin .
+
+sdm11:Expression_6d123d98b0 a sdm11:Expression ;
+    sdm11:hasStrExpression "[ED Care 4+]/[hours beyond target]" ;
+    sdm11:hasSymbol sdm11:edCare4,
+        sdm11:hoursbeyondtarget .
+
+sdm11:Expression_6e3e25d423 a sdm11:Expression ;
+    sdm11:hasStrExpression "[care to disp]" ;
+    sdm11:hasSymbol sdm11:caretodisp .
+
+sdm11:Expression_6e7549a4dc a sdm11:Expression ;
+    sdm11:hasStrExpression "IfThenElse([Cum Bed Capacity]>0, 100*[Cum Occupancy]/[Cum Bed Capacity],50)" ;
+    sdm11:hasSymbol sdm11:cumBedCapacity,
+        sdm11:cumOccupancy,
+        sdm11:ifElse .
+
+sdm11:Expression_6e7add30e7 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Rabbits Birth Rate]*[Rabbits]" ;
+    sdm11:hasSymbol sdm11:rabbits,
+        sdm11:rabbitsBirthRate .
+
+sdm11:Expression_6ea1a31147 a sdm11:Expression ;
+    sdm11:hasStrExpression "(SolarFlux * pi * EarthRadius^2) * (1 - [Earth Albedo]) / ((1+[Emissivity])/2)  * {1 Seconds}" ;
+    sdm11:hasSymbol sdm11:EarthRadius,
+        sdm11:SolarFlux,
+        sdm11:earthAlbedo,
+        sdm11:emissivity,
+        sdm11:seconds .
+
+sdm11:Expression_6fd710ce31 a sdm11:Expression ;
+    sdm11:hasStrExpression "[EMU]+[EMU 1+]" ;
+    sdm11:hasSymbol sdm11:emu,
+        sdm11:emu1 .
+
+sdm11:Expression_70bc938a1d a sdm11:Expression ;
+    sdm11:hasStrExpression "175" ;
+    sdm11:hasSymbol sdm11:175 .
+
+sdm11:Expression_7bb4801e67 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Atmospheric Energy] * [Emissivity] * scaledWatts" ;
+    sdm11:hasSymbol sdm11:atmosphericEnergy,
+        sdm11:emissivity,
+        sdm11:scaledWatts .
+
+sdm11:Expression_7ecf0ea099 a sdm11:Expression ;
+    sdm11:hasStrExpression "([Radiation] / (Boltzmann * (EarthRadius^2 * pi * 4)))^ (1/4)" ;
+    sdm11:hasSymbol sdm11:Boltzmann,
+        sdm11:EarthRadius,
+        sdm11:radiation .
+
+sdm11:Expression_8111de1e14 a sdm11:Expression ;
+    sdm11:hasStrExpression "12000" ;
+    sdm11:hasSymbol sdm11:12000 .
+
+sdm11:Expression_89fe99d7f2 a sdm11:Expression ;
+    sdm11:hasStrExpression "[ED Admit]*[Admitted in ED spaces]" ;
+    sdm11:hasSymbol sdm11:admittedinEDspaces,
+        sdm11:edAdmit .
+
+sdm11:Expression_8a1fb4929d a sdm11:Expression ;
+    sdm11:hasStrExpression "[base completion rate]+[specialists per hour]*[specialist effect on care]" ;
+    sdm11:hasSymbol sdm11:basecompletionrate,
+        sdm11:specialisteffectoncare,
+        sdm11:specialistsperhour .
+
+sdm11:Expression_8a31529d23 a sdm11:Expression ;
+    sdm11:hasStrExpression "[ED Disp Late]*(1-[admit fraction for late])" ;
+    sdm11:hasSymbol sdm11:admitfractionforlate,
+        sdm11:edDispLate,
+        sdm11:forIn .
+
+sdm11:Expression_8ac505aa61 a sdm11:Expression ;
+    sdm11:hasStrExpression "15" ;
+    sdm11:hasSymbol sdm11:15 .
+
+sdm11:Expression_8c1f986e64 a sdm11:Expression ;
+    sdm11:hasStrExpression "[ED Disposition]*[admit fraction]" ;
+    sdm11:hasSymbol sdm11:admitfraction,
+        sdm11:edDisposition .
+
+sdm11:Expression_8dbe6fa0ca a sdm11:Expression ;
+    sdm11:hasStrExpression "48" ;
+    sdm11:hasSymbol sdm11:48 .
+
+sdm11:Expression_903070a905 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Atmospheric Carbon Dioxide] / CO2MassToPPM" ;
+    sdm11:hasSymbol sdm11:CO2MassToPPM,
+        sdm11:atmosphericCarbonDioxide .
+
+sdm11:Expression_92105922d8 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Rabbits Density]/50" ;
+    sdm11:hasSymbol sdm11:rabbitsDensity .
+
+sdm11:Expression_921906c9d1 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Atmospheric Energy] * (1 - [Emissivity]) * scaledWatts" ;
+    sdm11:hasSymbol sdm11:atmosphericEnergy,
+        sdm11:emissivity,
+        sdm11:scaledWatts .
+
+sdm11:Expression_95ed1782e9 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Daily arrivals]*[Arrival fraction]" ;
+    sdm11:hasSymbol sdm11:arrivalfraction,
+        sdm11:dailyarrivals .
+
+sdm11:Expression_97421710f5 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Foxes Death Rate]*[Foxes]" ;
+    sdm11:hasSymbol sdm11:foxes,
+        sdm11:foxesDeathRate .
+
+sdm11:Expression_9bb83860a6 a sdm11:Expression ;
+    sdm11:hasStrExpression "IfThenElse([Admitted in ED spaces]=1,IfThenElse([Unoccupied EMU beds]>0,  0.5, 0),0)" ;
+    sdm11:hasSymbol sdm11:admittedinEDspaces,
+        sdm11:ifElse,
+        sdm11:unoccupiedEMUbeds .
+
+sdm11:Expression_9dd7f234b7 a sdm11:Expression ;
+    sdm11:hasStrExpression "[ED wait time]+[time in pretriage]" ;
+    sdm11:hasSymbol sdm11:edwaittime,
+        sdm11:timeinpretriage .
+
+sdm11:Expression_9eea76a211 a sdm11:Expression ;
+    sdm11:hasStrExpression "IfThenElse([Cum ED Disp]>0, 100*[Cum DispOK]/[Cum ED Disp],100)" ;
+    sdm11:hasSymbol sdm11:cumDispOK,
+        sdm11:cumEDDisp,
+        sdm11:ifElse .
+
+sdm11:Expression_9ef9fc6821 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Rabbits Density]/25" ;
+    sdm11:hasSymbol sdm11:rabbitsDensity .
+
+sdm11:Expression_a34001c5d3 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Time in ED]-[time in preCare]" ;
+    sdm11:hasSymbol sdm11:timeinED,
+        sdm11:timeinpreCare .
+
+sdm11:Expression_a92e842e46 a sdm11:Expression ;
+    sdm11:hasStrExpression "180" ;
+    sdm11:hasSymbol sdm11:180 .
+
+sdm11:Expression_b466971568 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Historical CO2 PPM] * CO2MassToPPM" ;
+    sdm11:hasSymbol sdm11:CO2MassToPPM,
+        sdm11:historicalCO2PPM .
+
+sdm11:Expression_b79c895347 a sdm11:Expression ;
+    sdm11:hasStrExpression ".3" ;
+    sdm11:hasSymbol <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/.3> .
+
+sdm11:Expression_bd47a2d2c1 a sdm11:Expression ;
+    sdm11:hasStrExpression "2.5" ;
+    sdm11:hasSymbol sdm11:2.5 .
+
+sdm11:Expression_be8eb23c35 a sdm11:Expression ;
+    sdm11:hasStrExpression "10" ;
+    sdm11:hasSymbol sdm11:10 .
+
+sdm11:Expression_c58ef475d7 a sdm11:Expression ;
+    sdm11:hasStrExpression "200" ;
+    sdm11:hasSymbol sdm11:200 .
+
+sdm11:Expression_c8860acb43 a sdm11:Expression ;
+    sdm11:hasStrExpression "[care to disp]+[cl to dl]" ;
+    sdm11:hasSymbol sdm11:caretodisp,
+        sdm11:cltodl .
+
+sdm11:Expression_ca39c5318f a sdm11:Expression ;
+    sdm11:hasStrExpression "[Inpatient ward]-[Bed Capacity]" ;
+    sdm11:hasSymbol sdm11:bedCapacity,
+        sdm11:inpatientward .
+
+sdm11:Expression_ca61760e49 a sdm11:Expression ;
+    sdm11:hasStrExpression "12" ;
+    sdm11:hasSymbol sdm11:12 .
+
+sdm11:Expression_d1ebb4716e a sdm11:Expression ;
+    sdm11:hasStrExpression "if years <= 2021 then  [Historical Fossil Emissions]else  [Pollution Emissions]end if" ;
+    sdm11:hasSymbol sdm11:historicalFossilEmissions,
+        sdm11:ifElse,
+        sdm11:pollutionEmissions .
+
+sdm11:Expression_d3d7d5129d a sdm11:Expression ;
+    sdm11:hasStrExpression "0.1" ;
+    sdm11:hasSymbol sdm11:0.1 .
+
+sdm11:Expression_d6408ff4ce a sdm11:Expression ;
+    sdm11:hasStrExpression "[Effects on Foxes Deaths]" ;
+    sdm11:hasSymbol sdm11:effectsonFoxesDeaths .
+
+sdm11:Expression_daf304fe90 a sdm11:Expression ;
+    sdm11:hasStrExpression "if years <= 2021 then  [Historical Ocean Sink]else  [Ocean Sink Rate]end if" ;
+    sdm11:hasSymbol sdm11:historicalOceanSink,
+        sdm11:ifElse,
+        sdm11:oceanSinkRate,
+        sdm11:sin .
+
+sdm11:Expression_dcce37c2b7 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Foxes Birth Rate]*[Foxes]" ;
+    sdm11:hasSymbol sdm11:foxes,
+        sdm11:foxesBirthRate .
+
+sdm11:Expression_e30db0c80f a sdm11:Expression ;
+    sdm11:hasStrExpression "22" ;
+    sdm11:hasSymbol sdm11:22 .
+
+sdm11:Expression_e7005ce9e9 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Rabbits]/500" ;
+    sdm11:hasSymbol sdm11:rabbits .
+
+sdm11:Expression_eb9c98d2fb a sdm11:Expression ;
+    sdm11:hasStrExpression "5/60" ;
+    sdm11:hasSymbol <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/5/60> .
+
+sdm11:Expression_ec845a5f24 a sdm11:Expression ;
+    sdm11:hasStrExpression "IfThenElse([Unoccupied ED spaces]>0,  [Delay for Area  or EDMO]/[ED wait time], 0)" ;
+    sdm11:hasSymbol sdm11:delayforAreaorEDMO,
+        sdm11:edwaittime,
+        sdm11:forIn,
+        sdm11:ifElse,
+        sdm11:unoccupiedEDspaces .
+
+sdm11:Expression_ef2d8972b0 a sdm11:Expression ;
+    sdm11:hasStrExpression "0.45" ;
+    sdm11:hasSymbol sdm11:0.45 .
+
+sdm11:Expression_f6100fc1d3 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Inpatient ward]+[Adm in EMU]" ;
+    sdm11:hasSymbol sdm11:adminEMU,
+        sdm11:inpatientward .
+
+sdm11:Expression_f7000f635c a sdm11:Expression ;
+    sdm11:hasStrExpression "[ED Disposition]*(1-[admit fraction])" ;
+    sdm11:hasSymbol sdm11:admitfraction,
+        sdm11:edDisposition .
+
+sdm11:Expression_f7116d183f a sdm11:Expression ;
+    sdm11:hasStrExpression "[Recent ED Discharge]/[re-present time window]" ;
+    sdm11:hasSymbol sdm11:recentEDDischarge,
+        sdm11:representtimewindow .
+
+sdm11:Expression_f7275a1ebc a sdm11:Expression ;
+    sdm11:hasStrExpression "4" ;
+    sdm11:hasSymbol sdm11:4 .
+
+sdm11:Expression_fd82d75a0f a sdm11:Expression ;
+    sdm11:hasStrExpression "[ED Disp Late]*[admit fraction for late]" ;
+    sdm11:hasSymbol sdm11:admitfractionforlate,
+        sdm11:edDispLate,
+        sdm11:forIn .
+
+sdm11:KelvinToCelsius a sdm11:CustomFunction .
+
+sdm11:SolarFlux a sdm11:Constant .
+
+sdm11:abs a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:absoluteTemperature a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_7ecf0ea099 ;
+    sdm11:hasID "91"^^xsd:int ;
+    sdm11:hasUnit sdm11:degreesKelvin .
+
+sdm11:admittedinED a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_89fe99d7f2 ;
+    sdm11:hasID "682"^^xsd:int .
+
+sdm11:arrivalfraction a sdm11:Converter ;
+    sdm11:hasData "[{x:0,y:0.031},{x:1,y:0.029},{x:2,y:0.026},{x:3,y:0.023},{x:4,y:0.02},{x:5,y:0.018},{x:6,y:0.018},{x:7,y:0.026},{x:8,y:0.037},{x:9,y:0.051},{x:10,y:0.059},{x:11,y:0.062},{x:12,y:0.061},{x:13,y:0.059},{x:14,y:0.057},{x:15,y:0.056},{x:16,y:0.054},{x:17,y:0.05},{x:18,y:0.051},{x:19,y:0.045},{x:20,y:0.047},{x:21,y:0.043},{x:22,y:0.041},{x:23,y:0.036},{x:24,y:0.031}]" ;
+    sdm11:hasID "447"^^xsd:int ;
+    sdm11:hasInputSource sdm11:hourofday .
+
+sdm11:atmosphereRadiation a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_921906c9d1 ;
+    sdm11:hasID "101"^^xsd:int ;
+    sdm11:hasUnit sdm11:watts .
+
+sdm11:baseSpecialistsperhour a sdm11:Converter ;
+    sdm11:hasData "[{x:0,y:0},{x:7,y:0},{x:7.5,y:1},{x:8,y:2},{x:15.5,y:2},{x:16,y:2},{x:23,y:2},{x:23.5,y:1},{x:24,y:0}]" ;
+    sdm11:hasID "598"^^xsd:int ;
+    sdm11:hasInputSource sdm11:hourofday .
+
+sdm11:basecompletionrate a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_0a7fddc22e ;
+    sdm11:hasID "615"^^xsd:int ;
+    rdfs:comment "based on overnight shift performance of one non specialist team around 3 per hour completions" .
+
+sdm11:co2PPM a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_903070a905 ;
+    sdm11:hasID "96"^^xsd:int ;
+    sdm11:hasUnit sdm11:ppmCO2 .
+
+sdm11:dailyarrivals a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_70bc938a1d ;
+    sdm11:hasID "451"^^xsd:int ;
+    rdfs:comment "Total per day" .
+
+sdm11:degreesKelvin a sdm11:Unit .
+
+sdm11:e0 a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_6ea1a31147 ;
+    sdm11:hasID "144"^^xsd:int ;
+    sdm11:hasUnit sdm11:joules ;
+    rdfs:comment "Steady state initial energy used to initialize the Earth and Atmospheric Energy Stocks. This could be omitted but numerical stability issues might be encountered for time steps significantly larger than one second." .
+
+sdm11:edSpaces a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_e30db0c80f ;
+    sdm11:hasID "453"^^xsd:int ;
+    rdfs:comment "the maximum is flexible when overcrowded and includes resusc for now" .
+
+sdm11:edcompletionrate a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_8a1fb4929d ;
+    sdm11:hasID "108"^^xsd:int .
+
+sdm11:effectsonFoxesDeaths a sdm11:Converter ;
+    sdm11:hasData "[{x:0,y:0.5},{x:1,y:0.2},{x:2,y:0.1},{x:3,y:0.05},{x:4,y:0.03},{x:5,y:0.01},{x:6,y:0},{x:7,y:0},{x:8,y:0}]" ;
+    sdm11:hasID "41"^^xsd:int ;
+    sdm11:hasInputSource sdm11:rabbitsDensity25 .
+
+sdm11:effectsonRabbitsBirths a sdm11:Converter ;
+    sdm11:hasData "[{x:0,y:0.2},{x:1,y:0.1},{x:2,y:0},{x:3,y:0},{x:5,y:0},{x:6,y:0},{x:6,y:0},{x:7,y:0},{x:8,y:0},{x:9,y:0},{x:10,y:0},{x:11,y:0},{x:13,y:0}]" ;
+    sdm11:hasID "50"^^xsd:int ;
+    sdm11:hasInputSource sdm11:rabbitsDensity50 .
+
+sdm11:foxesBirthRate a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_d3d7d5129d ;
+    sdm11:hasID "30"^^xsd:int .
+
+sdm11:foxesDeathRate a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_d6408ff4ce ;
+    sdm11:hasID "29"^^xsd:int .
+
+sdm11:greshamacuksitesdefaultfiles20181113ChrisBuddMathsOfClimateChangeTpdf a sdm11:DataSource ;
+    sdm11:hasSourceURL "https://www.gresham.ac.uk/sites/default/files/2018-11-13_ChrisBudd_MathsOfClimateChange-T.pdf" .
+
+sdm11:hasInflow a owl:ObjectProperty ;
+    rdfs:domain sdm11:Stock ;
+    rdfs:range sdm11:Flow .
+
+sdm11:hasStart a owl:ObjectProperty ;
+    rdfs:domain sdm11:Flow ;
+    rdfs:range sdm11:Stock .
+
+sdm11:historicalCO2PPM a sdm11:Converter ;
+    sdm11:hasData "[{x:1959,y:315.98},{x:1960,y:316.91},{x:1961,y:317.64},{x:1962,y:318.45},{x:1963,y:318.99},{x:1964,y:319.62},{x:1965,y:320.04},{x:1966,y:321.37},{x:1967,y:322.18},{x:1968,y:323.05},{x:1969,y:324.62},{x:1970,y:325.68},{x:1971,y:326.32},{x:1972,y:327.46},{x:1973,y:329.68},{x:1974,y:330.19},{x:1975,y:331.12},{x:1976,y:332.03},{x:1977,y:333.84},{x:1978,y:335.41},{x:1979,y:336.84},{x:1980,y:338.76},{x:1981,y:340.12},{x:1982,y:341.48},{x:1983,y:343.15},{x:1984,y:344.85},{x:1985,y:346.35},{x:1986,y:347.61},{x:1987,y:349.31},{x:1988,y:351.69},{x:1989,y:353.2},{x:1990,y:354.45},{x:1991,y:355.7},{x:1992,y:356.54},{x:1993,y:357.21},{x:1994,y:358.96},{x:1995,y:360.97},{x:1996,y:362.74},{x:1997,y:363.88},{x:1998,y:366.84},{x:1999,y:368.54},{x:2000,y:369.71},{x:2001,y:371.32},{x:2002,y:373.45},{x:2003,y:375.98},{x:2004,y:377.7},{x:2005,y:379.98},{x:2006,y:382.09},{x:2007,y:384.02},{x:2008,y:385.83},{x:2009,y:387.64},{x:2010,y:390.1},{x:2011,y:391.85},{x:2012,y:394.06},{x:2013,y:396.74},{x:2014,y:398.87},{x:2015,y:401.01},{x:2016,y:404.41},{x:2017,y:406.76},{x:2018,y:408.72},{x:2019,y:411.66},{x:2020,y:414.24},{x:2021,y:416.45}]" ;
+    sdm11:hasDataSource sdm11:statistacomstatistics1091926atmosphericconcentrationofco2historic ;
+    sdm11:hasID "120"^^xsd:int ;
+    sdm11:hasInputSource sdm11:currentTime ;
+    sdm11:hasUnit sdm11:ppmCO2 .
+
+sdm11:historicalFossilEmissions a sdm11:Converter ;
+    sdm11:hasData "[{x:1959,y:8.86},{x:1960,y:9.39},{x:1961,y:9.42},{x:1962,y:9.75},{x:1963,y:10.27},{x:1964,y:10.83},{x:1965,y:11.32},{x:1966,y:11.87},{x:1967,y:12.24},{x:1968,y:12.91},{x:1969,y:13.77},{x:1970,y:14.9},{x:1971,y:15.51},{x:1972,y:16.23},{x:1973,y:17.09},{x:1974,y:17.02},{x:1975,y:17.05},{x:1976,y:17.99},{x:1977,y:18.5},{x:1978,y:19.08},{x:1979,y:19.62},{x:1980,y:19.5},{x:1981,y:19.04},{x:1982,y:18.88},{x:1983,y:19.01},{x:1984,y:19.66},{x:1985,y:20.33},{x:1986,y:20.63},{x:1987,y:21.27},{x:1988,y:22.11},{x:1989,y:22.41},{x:1990,y:22.76},{x:1991,y:23.24},{x:1992,y:22.58},{x:1993,y:22.81},{x:1994,y:22.97},{x:1995,y:23.46},{x:1996,y:24.16},{x:1997,y:24.3},{x:1998,y:24.21},{x:1999,y:24.73},{x:2000,y:25.45},{x:2001,y:25.67},{x:2002,y:26.28},{x:2003,y:27.65},{x:2004,y:28.64},{x:2005,y:29.61},{x:2006,y:30.59},{x:2007,y:31.51},{x:2008,y:32.09},{x:2009,y:31.56},{x:2010,y:33.36},{x:2011,y:34.49},{x:2012,y:35.01},{x:2013,y:35.32},{x:2014,y:35.58},{x:2015,y:35.56},{x:2016,y:35.52},{x:2017,y:36.1},{x:2018,y:36.83},{x:2019,y:37.08},{x:2020,y:35.26},{x:2021,y:37.12}]" ;
+    sdm11:hasDataSource sdm11:icoscpeuscienceandimpactglobalcarbonbudget2022 ;
+    sdm11:hasID "106"^^xsd:int ;
+    sdm11:hasInputSource sdm11:currentTime ;
+    sdm11:hasUnit sdm11:gigatonsCO2PerYear .
+
+sdm11:historicalLandSink a sdm11:Converter ;
+    sdm11:hasData "[{x:1959,y:1.47},{x:1960,y:4.52},{x:1961,y:3.08},{x:1962,y:4.84},{x:1963,y:3.19},{x:1964,y:6.18},{x:1965,y:1.25},{x:1966,y:5.11},{x:1967,y:6.14},{x:1968,y:8.81},{x:1969,y:2.61},{x:1970,y:2.61},{x:1971,y:8.98},{x:1972,y:4.59},{x:1973,y:6.93},{x:1974,y:15.34},{x:1975,y:9.69},{x:1976,y:10.95},{x:1977,y:5.53},{x:1978,y:10.19},{x:1979,y:5.2},{x:1980,y:1.51},{x:1981,y:8.13},{x:1982,y:6.12},{x:1983,y:1.03},{x:1984,y:10.58},{x:1985,y:10.13},{x:1986,y:8.45},{x:1987,y:1.29},{x:1988,y:7.55},{x:1989,y:13.08},{x:1990,y:8.55},{x:1991,y:8.26},{x:1992,y:8.26},{x:1993,y:10.48},{x:1994,y:5.37},{x:1995,y:6.49},{x:1996,y:12.45},{x:1997,y:11.67},{x:1998,y:5.52},{x:1999,y:13.17},{x:2000,y:13.73},{x:2001,y:8.74},{x:2002,y:3.61},{x:2003,y:8.47},{x:2004,y:12.7},{x:2005,y:6.88},{x:2006,y:11.41},{x:2007,y:9.93},{x:2008,y:13.3},{x:2009,y:10.94},{x:2010,y:12.17},{x:2011,y:15.06},{x:2012,y:8.48},{x:2013,y:13.04},{x:2014,y:13.42},{x:2015,y:7.36},{x:2016,y:9.87},{x:2017,y:13.03},{x:2018,y:13.36},{x:2019,y:11.15},{x:2020,y:11.38},{x:2021,y:12.64}]" ;
+    sdm11:hasDataSource sdm11:icoscpeuscienceandimpactglobalcarbonbudget2022 ;
+    sdm11:hasID "135"^^xsd:int ;
+    sdm11:hasInputSource sdm11:currentTime ;
+    sdm11:hasUnit sdm11:gigatonsCO2PerYear .
+
+sdm11:historicalLandUseChangeEmissions a sdm11:Converter ;
+    sdm11:hasData "[{x:1959,y:7.1},{x:1960,y:6.57},{x:1961,y:6.11},{x:1962,y:5.89},{x:1963,y:5.65},{x:1964,y:5.48},{x:1965,y:5.07},{x:1966,y:4.85},{x:1967,y:4.92},{x:1968,y:4.98},{x:1969,y:4.67},{x:1970,y:4.6},{x:1971,y:4.59},{x:1972,y:4.59},{x:1973,y:4.45},{x:1974,y:4.32},{x:1975,y:4.37},{x:1976,y:4.3},{x:1977,y:4.41},{x:1978,y:4.22},{x:1979,y:4.06},{x:1980,y:4.08},{x:1981,y:4.39},{x:1982,y:4.41},{x:1983,y:4.8},{x:1984,y:5.31},{x:1985,y:5.08},{x:1986,y:5.12},{x:1987,y:5.11},{x:1988,y:5.06},{x:1989,y:4.87},{x:1990,y:4.88},{x:1991,y:4.76},{x:1992,y:4.89},{x:1993,y:4.88},{x:1994,y:5.3},{x:1995,y:5.29},{x:1996,y:5.29},{x:1997,y:7.1},{x:1998,y:5.49},{x:1999,y:5.49},{x:2000,y:5.12},{x:2001,y:4.74},{x:2002,y:5.18},{x:2003,y:5.65},{x:2004,y:5.36},{x:2005,y:4.72},{x:2006,y:5.07},{x:2007,y:4.44},{x:2008,y:4.64},{x:2009,y:5.03},{x:2010,y:4.84},{x:2011,y:4.96},{x:2012,y:4.83},{x:2013,y:4.63},{x:2014,y:4.92},{x:2015,y:5.39},{x:2016,y:4.53},{x:2017,y:4.33},{x:2018,y:4.18},{x:2019,y:4.56},{x:2020,y:4.06},{x:2021,y:3.94}]" ;
+    sdm11:hasDataSource sdm11:icoscpeuscienceandimpactglobalcarbonbudget2022 ;
+    sdm11:hasID "133"^^xsd:int ;
+    sdm11:hasInputSource sdm11:currentTime ;
+    sdm11:hasUnit sdm11:gigatonsCO2PerYear .
+
+sdm11:historicalOceanSink a sdm11:Converter ;
+    sdm11:hasData "[{x:1959,y:3.57},{x:1960,y:3.51},{x:1961,y:2.95},{x:1962,y:3.28},{x:1963,y:3.88},{x:1964,y:4.45},{x:1965,y:4.84},{x:1966,y:4.68},{x:1967,y:4.13},{x:1968,y:4.33},{x:1969,y:4.67},{x:1970,y:4.12},{x:1971,y:4.45},{x:1972,y:5.43},{x:1973,y:4.95},{x:1974,y:4.8},{x:1975,y:4.61},{x:1976,y:5.22},{x:1977,y:5.51},{x:1978,y:5.64},{x:1979,y:5.45},{x:1980,y:6.36},{x:1981,y:6.31},{x:1982,y:6.92},{x:1983,y:7.36},{x:1984,y:6.85},{x:1985,y:6.5},{x:1986,y:6.69},{x:1987,y:7.02},{x:1988,y:6.57},{x:1989,y:6.66},{x:1990,y:7.38},{x:1991,y:7.78},{x:1992,y:8.31},{x:1993,y:8.14},{x:1994,y:7.37},{x:1995,y:7.32},{x:1996,y:7.35},{x:1997,y:7.9},{x:1998,y:8.06},{x:1999,y:7.2},{x:2000,y:7},{x:2001,y:6.66},{x:2002,y:7.96},{x:2003,y:8.48},{x:2004,y:8.33},{x:2005,y:8.53},{x:2006,y:8.89},{x:2007,y:8.66},{x:2008,y:8.73},{x:2009,y:9.29},{x:2010,y:9.2},{x:2011,y:9.36},{x:2012,y:9.61},{x:2013,y:9.7},{x:2014,y:10.2},{x:2015,y:10.43},{x:2016,y:10.92},{x:2017,y:10.46},{x:2018,y:10.8},{x:2019,y:10.97},{x:2020,y:10.99},{x:2021,y:10.55}]" ;
+    sdm11:hasDataSource sdm11:icoscpeuscienceandimpactglobalcarbonbudget2022 ;
+    sdm11:hasID "134"^^xsd:int ;
+    sdm11:hasInputSource sdm11:currentTime ;
+    sdm11:hasUnit sdm11:gigatonsCO2PerYear .
+
+sdm11:hours a sdm11:Time,
+        owl:NamedIndividual .
+
+sdm11:hoursbeyondtarget a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_3c863126e6 ;
+    sdm11:hasID "638"^^xsd:int ;
+    rdfs:comment "try 1" .
+
+sdm11:landSinkRate a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_38aab53ef3 ;
+    sdm11:hasID "124"^^xsd:int ;
+    sdm11:hasUnit sdm11:gigatonsCO2PerYear ;
+    rdfs:comment "<span style=\"letter-spacing: 0.39996px\">Rate of land sequestration starting in 2022.</span>" .
+
+sdm11:landuseChangeEmissions a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_34787cc78d ;
+    sdm11:hasID "141"^^xsd:int ;
+    sdm11:hasUnit sdm11:gigatonsCO2PerYear ;
+    rdfs:comment "<span style=\"letter-spacing: 0.39996px\">Rate of land- use change </span>emissions<span style=\"letter-spacing: 0.39996px\">&nbsp;(e.g. deforestation) starting in 2022.</span>" .
+
+sdm11:min a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:mod a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:oceanSinkRate a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_49e8526f4f ;
+    sdm11:hasID "140"^^xsd:int ;
+    sdm11:hasUnit sdm11:gigatonsCO2PerYear ;
+    rdfs:comment "<span style=\"letter-spacing: 0.39996px;\">Rate of ocean sequestration starting in 2022.</span><br>" .
+
+sdm11:plannedreview a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_628e79cf79 ;
+    sdm11:hasID "754"^^xsd:int ;
+    rdfs:comment "around 6 percent of arrivals; need to subtract from arrive" .
+
+sdm11:pollutionEmissions a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_571c978837 ;
+    sdm11:hasID "118"^^xsd:int ;
+    sdm11:hasUnit sdm11:gigatonsCO2PerYear ;
+    rdfs:comment "Rate of fossil fuel pollution starting in 2022." .
+
+sdm11:primitiveOf a owl:ObjectProperty ;
+    rdfs:domain sdm11:Primitive ;
+    rdfs:range sdm11:Model .
+
+sdm11:rabbitsBirthRate a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_35a7da8d72 ;
+    sdm11:hasID "32"^^xsd:int .
+
+sdm11:rabbitsDeathRate a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_3ace84934c ;
+    sdm11:hasID "31"^^xsd:int .
+
+sdm11:rabbitsDensity25 a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_9ef9fc6821 ;
+    sdm11:hasID "46"^^xsd:int .
+
+sdm11:rabbitsDensity50 a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_92105922d8 ;
+    sdm11:hasID "53"^^xsd:int .
+
+sdm11:representtimewindow a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_8dbe6fa0ca ;
+    sdm11:hasID "748"^^xsd:int .
+
+sdm11:scaledJoules a sdm11:Constant .
+
+sdm11:seconds a sdm11:Time,
+        owl:NamedIndividual .
+
+sdm11:specialisteffectoncare a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_bd47a2d2c1 ;
+    sdm11:hasID "594"^^xsd:int ;
+    rdfs:comment "one non spec plus 1 or 2 spec teams each of which adds 2.5 completions per hour" .
+
+sdm11:specialistsperSatWEDayShift a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_ebaf5ccd6f ;
+    sdm11:hasID "601"^^xsd:int .
+
+sdm11:specialistsperhour a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_506ae89c21 ;
+    sdm11:hasID "612"^^xsd:int ;
+    rdfs:comment "flexibility in allocating time and resources between Acute and Fast Track so look at overall ED effect rather than ED area effect by resources" .
+
+sdm11:statistacomstatistics1048518averagelandseatemperatureanomalysince1850 a sdm11:DataSource ;
+    sdm11:hasSourceURL "https://www.statista.com/statistics/1048518/average-land-sea-temperature-anomaly-since-1850/" .
+
+sdm11:statistacomstatistics1091926atmosphericconcentrationofco2historic a sdm11:DataSource ;
+    sdm11:hasSourceURL "https://www.statista.com/statistics/1091926/atmospheric-concentration-of-co2-historic/" .
+
+sdm11:targettimeinED a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_f7275a1ebc ;
+    sdm11:hasID "617"^^xsd:int .
+
+sdm11:timeinED a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_0bca4d107b ;
+    sdm11:hasID "630"^^xsd:int .
+
+sdm11:timeinpretriage a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_eb9c98d2fb ;
+    sdm11:hasID "618"^^xsd:int .
+
+sdm11:timeleftforcare a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_4ede9adcb4 ;
+    sdm11:hasID "619"^^xsd:int .
+
+sdm11:tonsCO2 a sdm11:Unit .
+
+sdm11:unoccupiedEDspaces a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_312474924f ;
+    sdm11:hasID "454"^^xsd:int .
+
+sdm11:unoccupiedEMUbeds a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_58428aa0c9 ;
+    sdm11:hasID "732"^^xsd:int .
+
+sdm11:unplannedrepresent a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_2daa476ad5 ;
+    sdm11:hasID "752"^^xsd:int ;
+    rdfs:comment "around 0.5 percent" .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/24hrs> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:emu1 ;
+    sdm11:hasFlowrate sdm11:Expression_259674cade ;
+    sdm11:hasID "37"^^xsd:int ;
+    sdm11:hasStart sdm11:emu .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/48hrs> a sdm11:Flow ;
+    sdm11:hasFlowrate sdm11:Expression_f7116d183f ;
+    sdm11:hasID "747"^^xsd:int ;
+    sdm11:hasStart sdm11:recentEDDischarge .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/4hr> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:edCare4 ;
+    sdm11:hasFlowrate sdm11:Expression_68c16b2a03 ;
+    sdm11:hasID "103"^^xsd:int ;
+    sdm11:hasStart sdm11:edCare ;
+    rdfs:comment "add 2 and 3 hour as well esp during midshift eg 8-1400 and 1600 to 2000" .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/absoluteTemperature> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/add> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:workload ;
+    sdm11:hasFlowrate sdm11:Expression_628e79cf79 ;
+    sdm11:hasID "590"^^xsd:int .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/admit> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:edAdmit ;
+    sdm11:hasFlowrate sdm11:Expression_8c1f986e64 ;
+    sdm11:hasID "65"^^xsd:int ;
+    sdm11:hasStart sdm11:edDisposition .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/alate> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:edAdmit ;
+    sdm11:hasFlowrate sdm11:Expression_fd82d75a0f ;
+    sdm11:hasID "98"^^xsd:int ;
+    sdm11:hasStart sdm11:edDispLate .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/arrive> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:preTriage ;
+    sdm11:hasFlowrate sdm11:Expression_95ed1782e9 ;
+    sdm11:hasID "27"^^xsd:int .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/atmosphereRadiation> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/atmosphericCarbonDioxide> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/atmosphericEnergy> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/caretodisp> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:edDisposition ;
+    sdm11:hasFlowrate sdm11:Expression_523a9f0875 ;
+    sdm11:hasID "64"^^xsd:int ;
+    sdm11:hasStart sdm11:edCare .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/cltodl> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:edDispLate ;
+    sdm11:hasFlowrate sdm11:Expression_6d123d98b0 ;
+    sdm11:hasID "104"^^xsd:int ;
+    sdm11:hasStart sdm11:edCare4 .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/co2PPM> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/discharge> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:recentEDDischarge ;
+    sdm11:hasFlowrate sdm11:Expression_f7000f635c ;
+    sdm11:hasID "69"^^xsd:int ;
+    sdm11:hasStart sdm11:edDisposition .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/dlate> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:recentEDDischarge ;
+    sdm11:hasFlowrate sdm11:Expression_8a31529d23 ;
+    sdm11:hasID "97"^^xsd:int ;
+    sdm11:hasStart sdm11:edDispLate .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/e0> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/earthAlbedo> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/earthEnergy> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/edtoIPW> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:inpatientward ;
+    sdm11:hasFlowrate sdm11:Expression_2780519d1c ;
+    sdm11:hasID "71"^^xsd:int ;
+    sdm11:hasStart sdm11:edAdmit ;
+    rdfs:comment "added ward occupancy from 7981" .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/emissivity> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/emudischarge> a sdm11:Flow ;
+    sdm11:hasFlowrate sdm11:Expression_ef2d8972b0 ;
+    sdm11:hasID "41"^^xsd:int ;
+    sdm11:hasStart sdm11:emu ;
+    rdfs:comment "90%" .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/emudischargelate> a sdm11:Flow ;
+    sdm11:hasFlowrate sdm11:Expression_c78807d0f1 ;
+    sdm11:hasID "42"^^xsd:int ;
+    sdm11:hasStart sdm11:emu1 .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/emutowards> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:inpatientward ;
+    sdm11:hasFlowrate sdm11:Expression_259674cade ;
+    sdm11:hasID "43"^^xsd:int ;
+    sdm11:hasStart sdm11:emu .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/emutowardslate> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:inpatientward ;
+    sdm11:hasFlowrate sdm11:Expression_c78807d0f1 ;
+    sdm11:hasID "39"^^xsd:int ;
+    sdm11:hasStart sdm11:emu1 .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/failtotriage> a sdm11:Flow ;
+    sdm11:hasFlowrate sdm11:Expression_fe5fa703a5 ;
+    sdm11:hasID "676"^^xsd:int ;
+    sdm11:hasStart sdm11:preTriage .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/failuretosee> a sdm11:Flow ;
+    sdm11:hasFlowrate sdm11:Expression_fe5fa703a5 ;
+    sdm11:hasID "70"^^xsd:int ;
+    sdm11:hasStart sdm11:delayforAreaorEDMO ;
+    rdfs:comment "includes DidNotWait, Transfers and Treatment INcomplete (Left Against Medical Advice usually while waiting for IP Review)" .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/flow> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:cumBedCapacity,
+        sdm11:cumOccupancy ;
+    sdm11:hasFlowrate sdm11:Expression_0d58df37c7,
+        sdm11:Expression_f6100fc1d3 ;
+    sdm11:hasID "719"^^xsd:int,
+        "722"^^xsd:int .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/foxesBirths> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:foxes ;
+    sdm11:hasFlowrate sdm11:Expression_dcce37c2b7 ;
+    sdm11:hasID "28"^^xsd:int .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/foxesDeaths> a sdm11:Flow ;
+    sdm11:hasFlowrate sdm11:Expression_97421710f5 ;
+    sdm11:hasID "27"^^xsd:int ;
+    sdm11:hasStart sdm11:foxes .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/globalTemperature> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/historicalCO2PPM> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/historicalFossilEmissions> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/historicalGlobalTemperatureAnomaly> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/historicalLandSink> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/historicalLandUseChangeEmissions> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/historicalOceanSink> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/hours> a sdm11:Unit .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/incintarget> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:cumDispOK ;
+    sdm11:hasFlowrate sdm11:Expression_6e3e25d423 ;
+    sdm11:hasID "667"^^xsd:int .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/inctot> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:cumEDDisp ;
+    sdm11:hasFlowrate sdm11:Expression_36c06fd291 ;
+    sdm11:hasID "663"^^xsd:int .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/landSink> a sdm11:Flow ;
+    sdm11:hasFlowrate sdm11:Expression_6a970436a7 ;
+    sdm11:hasID "71"^^xsd:int ;
+    sdm11:hasStart sdm11:atmosphericCarbonDioxide ;
+    sdm11:hasUnit sdm11:tonsCO2PerYear ;
+    sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> ;
+    rdfs:comment "Source: <a href=\"https://www.wri.org/insights/forests-absorb-twice-much-carbon-they-emit-each-year\">https://www.wri.org/insights/forests-absorb-twice-much-carbon-they-emit-each-year</a>" .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/landSinkRate> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/landuseChange> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:atmosphericCarbonDioxide ;
+    sdm11:hasFlowrate sdm11:Expression_25f3c93f65 ;
+    sdm11:hasID "131"^^xsd:int ;
+    sdm11:hasUnit sdm11:tonsCO2PerYear ;
+    sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/landuseChangeEmissions> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/months> a sdm11:Unit .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/oceanSink> a sdm11:Flow ;
+    sdm11:hasFlowrate sdm11:Expression_daf304fe90 ;
+    sdm11:hasID "130"^^xsd:int ;
+    sdm11:hasStart sdm11:atmosphericCarbonDioxide ;
+    sdm11:hasUnit sdm11:tonsCO2PerYear ;
+    sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/oceanSinkRate> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/passThrough> a sdm11:Flow ;
+    sdm11:hasFlowrate sdm11:Expression_7bb4801e67 ;
+    sdm11:hasID "61"^^xsd:int ;
+    sdm11:hasStart sdm11:atmosphericEnergy ;
+    sdm11:hasUnit sdm11:watts ;
+    sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/pollution> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:atmosphericCarbonDioxide ;
+    sdm11:hasFlowrate sdm11:Expression_d1ebb4716e ;
+    sdm11:hasID "67"^^xsd:int ;
+    sdm11:hasUnit sdm11:tonsCO2PerYear ;
+    sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/pollutionEmissions> sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/rabbitsBirths> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:rabbits ;
+    sdm11:hasFlowrate sdm11:Expression_6e7add30e7 ;
+    sdm11:hasID "25"^^xsd:int .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/rabbitsDeaths> a sdm11:Flow ;
+    sdm11:hasFlowrate sdm11:Expression_69a0ff2c61 ;
+    sdm11:hasID "24"^^xsd:int ;
+    sdm11:hasStart sdm11:rabbits .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/radiation> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:atmosphericEnergy ;
+    sdm11:hasFlowrate sdm11:Expression_2f960d6077 ;
+    sdm11:hasID "89"^^xsd:int ;
+    sdm11:hasStart sdm11:earthEnergy ;
+    sdm11:hasUnit sdm11:watts ;
+    sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/radiationDown> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:earthEnergy ;
+    sdm11:hasFlowrate sdm11:Expression_95b16ca4b4 ;
+    sdm11:hasID "60"^^xsd:int ;
+    sdm11:hasStart sdm11:atmosphericEnergy ;
+    sdm11:hasUnit sdm11:watts ;
+    sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/radiationUp> a sdm11:Flow ;
+    sdm11:hasFlowrate sdm11:Expression_95b16ca4b4 ;
+    sdm11:hasID "93"^^xsd:int ;
+    sdm11:hasStart sdm11:atmosphericEnergy ;
+    sdm11:hasUnit sdm11:watts ;
+    sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/reflection> a sdm11:Flow ;
+    sdm11:hasFlowrate sdm11:Expression_486c9f56a1 ;
+    sdm11:hasID "59"^^xsd:int ;
+    sdm11:hasStart sdm11:earthEnergy ;
+    sdm11:hasUnit sdm11:watts ;
+    sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> ;
+    rdfs:comment "Solar radiation reflect by the earth (or atmosphere). The atmosphere does not interact with it." .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/remove> a sdm11:Flow ;
+    sdm11:hasFlowrate sdm11:Expression_628e79cf79 ;
+    sdm11:hasID "591"^^xsd:int ;
+    sdm11:hasStart sdm11:workload .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/represent> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:preTriage ;
+    sdm11:hasFlowrate sdm11:Expression_251adc4171 ;
+    sdm11:hasID "751"^^xsd:int ;
+    sdm11:hasStart sdm11:recentEDDischarge .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/seeinED> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:edCare ;
+    sdm11:hasFlowrate sdm11:Expression_ec845a5f24 ;
+    sdm11:hasID "30"^^xsd:int ;
+    sdm11:hasStart sdm11:delayforAreaorEDMO .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/solarRadiation> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:earthEnergy ;
+    sdm11:hasFlowrate sdm11:Expression_0eca918ab1 ;
+    sdm11:hasID "56"^^xsd:int ;
+    sdm11:hasUnit sdm11:watts ;
+    sdm11:primitiveOf <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> ;
+    rdfs:comment "Solar radiation, does not interact with the atmosphere." .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/toEMU> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:emu ;
+    sdm11:hasFlowrate sdm11:Expression_9bb83860a6 ;
+    sdm11:hasID "40"^^xsd:int ;
+    sdm11:hasStart sdm11:edAdmit .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/triageandregister> a sdm11:Flow ;
+    sdm11:hasEnd sdm11:delayforAreaorEDMO ;
+    sdm11:hasFlowrate sdm11:Expression_ca61760e49 ;
+    sdm11:hasID "28"^^xsd:int ;
+    sdm11:hasStart sdm11:preTriage ;
+    rdfs:comment "quick less than 5 minutes" .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/wardnetdischarge> a sdm11:Flow ;
+    sdm11:hasFlowrate sdm11:Expression_169970bf41 ;
+    sdm11:hasID "86"^^xsd:int ;
+    sdm11:hasStart sdm11:inpatientward ;
+    rdfs:comment "need by day and time including % before 1200 and discharges vs admits to captur readmits within 28 days" .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/years> a sdm11:Unit .
+
+sdm11:CO2MassToPPM a sdm11:Constant .
+
+sdm11:EarthRadius a sdm11:Constant .
+
+sdm11:Expression_259674cade a sdm11:Expression ;
+    sdm11:hasStrExpression "0.025" ;
+    sdm11:hasSymbol sdm11:0.025 .
+
+sdm11:Expression_95b16ca4b4 a sdm11:Expression ;
+    sdm11:hasStrExpression "[Atmosphere Radiation] / 2" ;
+    sdm11:hasSymbol sdm11:atmosphereRadiation .
+
+sdm11:Expression_b485d77fdc a sdm11:Expression ;
+    sdm11:hasStrExpression "5" ;
+    sdm11:hasSymbol sdm11:5 .
+
+sdm11:Expression_c252ae1f3e a sdm11:Expression ;
+    sdm11:hasStrExpression "[e0] * scaledJoules" ;
+    sdm11:hasSymbol sdm11:e0,
+        sdm11:scaledJoules .
+
+sdm11:Expression_c78807d0f1 a sdm11:Expression ;
+    sdm11:hasStrExpression "0.0125" ;
+    sdm11:hasSymbol sdm11:0.0125 .
+
+sdm11:Expression_dc56de8f45 a sdm11:Expression ;
+    sdm11:hasStrExpression "100" ;
+    sdm11:hasSymbol sdm11:100 .
+
+sdm11:Expression_fe5fa703a5 a sdm11:Expression ;
+    sdm11:hasStrExpression "14/40" ;
+    sdm11:hasSymbol <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/14/40> .
+
+sdm11:Function a owl:Class ;
+    rdfs:subClassOf sdm11:Symbol .
+
+sdm11:adminEMU a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_6fd710ce31 ;
+    sdm11:hasID "727"^^xsd:int .
+
+sdm11:admitfraction a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_1623a9ede1 ;
+    sdm11:hasID "654"^^xsd:int .
+
+sdm11:admitfractionforlate a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_3812cb2db9 ;
+    sdm11:hasID "651"^^xsd:int .
+
+sdm11:cumBedCapacity a sdm11:Stock ;
+    sdm11:hasID "721"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_628e79cf79 ;
+    sdm11:isNonNegative true .
+
+sdm11:cumDispOK a sdm11:Stock ;
+    sdm11:hasID "665"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_628e79cf79 ;
+    sdm11:isNonNegative false .
+
+sdm11:cumEDDisp a sdm11:Stock ;
+    sdm11:hasID "662"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_628e79cf79 ;
+    sdm11:isNonNegative true .
+
+sdm11:cumOccupancy a sdm11:Stock ;
+    sdm11:hasID "718"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_628e79cf79 ;
+    sdm11:isNonNegative false .
+
+sdm11:degreesCelsius a sdm11:Unit .
+
+sdm11:earthAlbedo a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_b79c895347 ;
+    sdm11:hasID "111"^^xsd:int .
+
+sdm11:edwaittime a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_3af2ac9dd3 ;
+    sdm11:hasID "460"^^xsd:int .
+
+sdm11:emuCapacity a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_be8eb23c35 ;
+    sdm11:hasID "731"^^xsd:int .
+
+sdm11:ppmCO2 a sdm11:Unit .
+
+sdm11:rabbitsDensity a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_e7005ce9e9 ;
+    sdm11:hasID "38"^^xsd:int .
+
+sdm11:sin a sdm11:Mathematical,
+        owl:NamedIndividual .
+
+sdm11:timeinpreCare a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_9dd7f234b7 ;
+    sdm11:hasID "628"^^xsd:int .
+
+sdm11:totalEDDisp a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_c8860acb43 ;
+    sdm11:hasID "645"^^xsd:int .
+
+sdm11:workload a sdm11:Stock ;
+    sdm11:hasID "589"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_628e79cf79 ;
+    sdm11:isNonNegative false ;
+    sdm11:isOnlyPositive true .
+
+sdm11:UserInput a owl:Class ;
+    rdfs:subClassOf sdm11:BuiltInFunction .
+
+sdm11:admittedinEDspaces a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_628e79cf79 ;
+    sdm11:hasID "677"^^xsd:int ;
+    rdfs:comment "0=No 1=Yes" .
+
+sdm11:bedCapacity a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_c58ef475d7 ;
+    sdm11:hasID "659"^^xsd:int ;
+    rdfs:comment "total IP Ward Beds vs available for ED excludes EMU" .
+
+sdm11:emissivity a sdm11:Converter ;
+    sdm11:hasData "[{x:200,y:0.194},{x:400,y:0.14},{x:600,y:0.108},{x:800,y:0.085},{x:1600,y:0.0301}]" ;
+    sdm11:hasDataSource sdm11:greshamacuksitesdefaultfiles20181113ChrisBuddMathsOfClimateChangeTpdf ;
+    sdm11:hasID "95"^^xsd:int ;
+    sdm11:hasInputSource sdm11:co2PPM .
+
+sdm11:hourofday a sdm11:Variable ;
+    sdm11:hasExpression sdm11:Expression_4cf71af45f ;
+    sdm11:hasID "448"^^xsd:int .
+
+sdm11:joules a sdm11:Unit .
+
+sdm11:scaledWatts a sdm11:Constant .
+
+sdm11:delayforAreaorEDMO a sdm11:Stock ;
+    sdm11:hasID "29"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_ebaf5ccd6f ;
+    sdm11:isNonNegative true ;
+    rdfs:comment "lying or sitting in an ambulance bay, waiting room, or in a ED area waiting to be seen by an EDMO" .
+
+sdm11:edCare4 a sdm11:Stock ;
+    sdm11:hasID "102"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_4e9e3870a3 ;
+    sdm11:isNonNegative true ;
+    rdfs:comment "can be split into special areas like paeds subacute psych and procedure rooms" .
+
+sdm11:emu1 a sdm11:Stock ;
+    sdm11:hasID "38"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_ebaf5ccd6f ;
+    sdm11:isNonNegative true .
+
+sdm11:forIn a sdm11:Programming,
+        owl:NamedIndividual .
+
+sdm11:icoscpeuscienceandimpactglobalcarbonbudget2022 a sdm11:DataSource ;
+    sdm11:hasSourceURL "https://www.icos-cp.eu/science-and-impact/global-carbon-budget/2022" .
+
+sdm11:preTriage a sdm11:Stock ;
+    sdm11:hasID "26"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_ebaf5ccd6f ;
+    sdm11:isNonNegative true .
+
+sdm11:tonsCO2PerYear a sdm11:Unit .
+
+sdm11:Expression_ebaf5ccd6f a sdm11:Expression ;
+    sdm11:hasStrExpression "1" ;
+    sdm11:hasSymbol sdm11:1 .
+
+sdm11:atmosphericCarbonDioxide a sdm11:Stock ;
+    sdm11:hasID "66"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_b466971568 ;
+    sdm11:hasUnit sdm11:tonsCO2 ;
+    sdm11:isNonNegative false ;
+    sdm11:isOnlyPositive true .
+
+sdm11:earthEnergy a sdm11:Stock ;
+    sdm11:hasID "55"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_c252ae1f3e ;
+    sdm11:hasUnit sdm11:joules ;
+    sdm11:isNonNegative false .
+
+sdm11:edDispLate a sdm11:Stock ;
+    sdm11:hasID "96"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_628e79cf79 ;
+    sdm11:isNonNegative true .
+
+sdm11:edDisposition a sdm11:Stock ;
+    sdm11:hasID "68"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_ebaf5ccd6f ;
+    sdm11:isNonNegative true .
+
+sdm11:emu a sdm11:Stock ;
+    sdm11:hasID "36"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_b485d77fdc ;
+    sdm11:isNonNegative true .
+
+sdm11:foxes a sdm11:Stock ;
+    sdm11:hasID "26"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_dc56de8f45 ;
+    sdm11:isNonNegative true ;
+    sdm11:isOnlyPositive true .
+
+sdm11:rabbits a sdm11:Stock ;
+    sdm11:hasID "23"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_8111de1e14 ;
+    sdm11:isNonNegative true .
+
+sdm11:recentEDDischarge a sdm11:Stock ;
+    sdm11:hasID "62"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_628e79cf79 ;
+    sdm11:isNonNegative false .
+
+sdm11:DataSource a owl:Class .
+
+sdm11:General a owl:Class ;
+    rdfs:subClassOf sdm11:BuiltInFunction .
+
+sdm11:Primitive a owl:Class .
+
+sdm11:atmosphericEnergy a sdm11:Stock ;
+    sdm11:hasID "58"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_c252ae1f3e ;
+    sdm11:hasUnit sdm11:joules ;
+    sdm11:isNonNegative false .
+
+sdm11:edAdmit a sdm11:Stock ;
+    sdm11:hasID "63"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_628e79cf79 ;
+    sdm11:isNonNegative false .
+
+sdm11:edCare a sdm11:Stock ;
+    sdm11:hasID "33"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_8ac505aa61 ;
+    sdm11:isNonNegative true ;
+    rdfs:comment "can be split into special areas like paeds subacute psych and procedure rooms" .
+
+sdm11:inpatientward a sdm11:Stock ;
+    sdm11:hasID "54"^^xsd:int ;
+    sdm11:hasInitialValue sdm11:Expression_a92e842e46 ;
+    sdm11:isNonNegative true .
+
+sdm11:watts a sdm11:Unit .
+
+sdm11:Symbol a owl:Class .
+
+sdm11:currentTime a sdm11:Time,
+        owl:NamedIndividual .
+
+sdm11:gigatonsCO2PerYear a sdm11:Unit .
+
+sdm11:Model a owl:Class .
+
+sdm11:Programming a owl:Class ;
+    rdfs:subClassOf sdm11:BuiltInFunction .
+
+sdm11:BuiltInFunction a owl:Class ;
+    rdfs:subClassOf sdm11:Function .
+
+sdm11:String a owl:Class ;
+    rdfs:subClassOf sdm11:BuiltInFunction .
+
+sdm11:ifElse a sdm11:General,
+        sdm11:Programming,
+        owl:NamedIndividual .
+
+sdm11:Expression_628e79cf79 a sdm11:Expression ;
+    sdm11:hasStrExpression "0" ;
+    sdm11:hasSymbol sdm11:0 .
+
+sdm11:RandomNumber a owl:Class ;
+    rdfs:subClassOf sdm11:BuiltInFunction .
+
+sdm11:Time a owl:Class ;
+    rdfs:subClassOf sdm11:BuiltInFunction .
+
+sdm11:Unit a owl:Class .
+
+sdm11:Historical a owl:Class ;
+    rdfs:subClassOf sdm11:BuiltInFunction .
+
+sdm11:Converter a owl:Class ;
+    rdfs:subClassOf sdm11:Primitive,
+        sdm11:Symbol .
+
+sdm11:StatisticalDistribution a owl:Class ;
+    rdfs:subClassOf sdm11:BuiltInFunction .
+
+sdm11:Vector a owl:Class ;
+    rdfs:subClassOf sdm11:BuiltInFunction .
+
+sdm11:Mathematical a owl:Class ;
+    rdfs:subClassOf sdm11:BuiltInFunction .
+
+sdm11:Stock a owl:Class ;
+    rdfs:subClassOf sdm11:Primitive,
+        sdm11:Symbol .
+
+<http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/climateChangeModel> a sdm11:Model ;
+    sdm11:hasPrimitive <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/absoluteTemperature>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/atmosphereRadiation>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/atmosphericCarbonDioxide>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/atmosphericEnergy>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/co2PPM>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/e0>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/earthAlbedo>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/earthEnergy>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/emissivity>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/globalTemperature>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/historicalCO2PPM>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/historicalFossilEmissions>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/historicalGlobalTemperatureAnomaly>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/historicalLandSink>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/historicalLandUseChangeEmissions>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/historicalOceanSink>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/landSink>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/landSinkRate>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/landuseChange>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/landuseChangeEmissions>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/oceanSink>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/oceanSinkRate>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/passThrough>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/pollution>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/pollutionEmissions>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/radiation>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/radiationDown>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/radiationUp>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/reflection>,
+        <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/solarRadiation> ;
+    sdm11:hasTimeLength 140.0 ;
+    sdm11:hasTimeStart 1960.0 ;
+    sdm11:hasTimeStep 1.0 ;
+    sdm11:hasTimeUnit <http:/w.semanticweb.org/loafo/ontologies/2024/3/sdm/years> ;
+    sdm11:usesAlgorithm "Euler" .
+
+sdm11:Constant a owl:Class ;
+    rdfs:subClassOf sdm11:Symbol .
+
+sdm11:Flow a owl:Class ;
+    rdfs:subClassOf sdm11:Primitive,
+        sdm11:Symbol .
+
+sdm11:Variable a owl:Class ;
+    rdfs:subClassOf sdm11:Primitive,
+        sdm11:Symbol .
+
+sdm11:Expression a owl:Class .
+

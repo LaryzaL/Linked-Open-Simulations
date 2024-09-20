@@ -1,0 +1,1575 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf1: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdm: <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/> .
+@prefix sdm1: <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sdm1: a owl:Ontology ;
+    rdf1:comment "SDMOnto is an ontology describing the underlying structure of System Dynamics models available on the Insight Maker platform. Its goal is to improve the modularity and accessibility of these models."@en .
+
+sdm:CDFChiSquared a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CDFExponential a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CDFF a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CDFLognormal a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CDFNormal a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CDFPoisson a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CDFt a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CustomFunction a owl:Class ;
+    rdf1:subClassOf sdm:Function .
+
+sdm:PDFChiSquared a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:PDFExponential a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:PDFF a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:PDFLognormal a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:PDFNormal a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:PDFt a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:PMFPoisson a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:abs a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:alert a sdm:UserInput,
+        owl:NamedIndividual .
+
+sdm:anonymousFunction a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:anonymousFunctionSingleLine a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:arcCos a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:arcSin a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:arcTan a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:beta a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:binary a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:binomial a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:confirm a sdm:UserInput,
+        owl:NamedIndividual .
+
+sdm:contains a sdm:String,
+        sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:correlation a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:cos a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:custom a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:days a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:delay a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:delay1 a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:delay3 a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:delayN a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:difference a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:e a sdm:Constant,
+        sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:errorHandling a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:exp a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:expit a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:exponential a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:filter a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:fix a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:flatten a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:function a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:gamma a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:hasData a owl:DatatypeProperty ;
+    rdf1:domain sdm:Converter ;
+    rdf1:range rdf1:Literal .
+
+sdm:hasDataSource a owl:ObjectProperty ;
+    rdf1:domain sdm:Converter ;
+    rdf1:range sdm:DataSource .
+
+sdm:hasEnd a owl:ObjectProperty ;
+    rdf1:domain sdm:Flow ;
+    rdf1:range sdm:Stock ;
+    owl:inverseOf sdm:hasInflow .
+
+sdm:hasExpression a owl:ObjectProperty ;
+    rdf1:domain sdm:Variable ;
+    rdf1:range sdm:Expression .
+
+sdm:hasFlowrate a owl:ObjectProperty ;
+    rdf1:domain sdm:Flow ;
+    rdf1:range sdm:Expression .
+
+sdm:hasID a owl:DatatypeProperty ;
+    rdf1:domain sdm:Primitive ;
+    rdf1:range xsd:int .
+
+sdm:hasInitialValue a owl:ObjectProperty ;
+    rdf1:domain sdm:Stock ;
+    rdf1:range sdm:Expression .
+
+sdm:hasInputSource a owl:ObjectProperty ;
+    rdf1:domain sdm:Converter .
+
+sdm:hasName a owl:DatatypeProperty ;
+    rdf1:domain sdm:Primitive ;
+    rdf1:range rdf1:Literal .
+
+sdm:hasOutflow a owl:ObjectProperty ;
+    rdf1:domain sdm:Stock ;
+    rdf1:range sdm:Flow ;
+    owl:inverseOf sdm:hasStart .
+
+sdm:hasPrimitive a owl:ObjectProperty ;
+    rdf1:domain sdm:Model ;
+    rdf1:range sdm:Primitive ;
+    owl:inverseOf sdm:primitiveOf .
+
+sdm:hasSourceURL a owl:DatatypeProperty ;
+    rdf1:domain sdm:DataSource ;
+    rdf1:range rdf1:Literal .
+
+sdm:hasStrExpression a owl:DatatypeProperty ;
+    rdf1:domain sdm:Expression ;
+    rdf1:range rdf1:Literal .
+
+sdm:hasSymbol a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdf1:domain sdm:Expression ;
+    rdf1:range sdm:Symbol .
+
+sdm:hasTimeLength a owl:DatatypeProperty ;
+    rdf1:domain sdm:Model ;
+    rdf1:range xsd:decimal .
+
+sdm:hasTimeStart a owl:DatatypeProperty ;
+    rdf1:domain sdm:Model ;
+    rdf1:range xsd:decimal .
+
+sdm:hasTimeStep a owl:DatatypeProperty ;
+    rdf1:domain sdm:Model ;
+    rdf1:range xsd:decimal .
+
+sdm:hasTimeUnit a owl:ObjectProperty ;
+    rdf1:domain sdm:Model ;
+    rdf1:range sdm:Unit .
+
+sdm:hasUnit a owl:ObjectProperty ;
+    rdf1:domain sdm:Primitive ;
+    rdf1:range sdm:Unit .
+
+sdm:indexOf a sdm:String,
+        sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:intersection a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:invChiSquared a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:invExponential a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:invF a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:invLognormal a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:invNormal a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:invt a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:isNonNegative a owl:DatatypeProperty ;
+    rdf1:domain sdm:Stock ;
+    rdf1:range xsd:boolean .
+
+sdm:isOnlyPositive a owl:DatatypeProperty ;
+    rdf1:domain sdm:Flow ;
+    rdf1:range xsd:boolean .
+
+sdm:join a sdm:String,
+        sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:keys a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:length a sdm:String,
+        sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:ln a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:log a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:logit a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:lognormal a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:lookup a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:lowercase a sdm:String,
+        owl:NamedIndividual .
+
+sdm:map a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:max a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:mean a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:median a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:minutes a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:months a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:negativeBinomial a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:normal a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:parse a sdm:String,
+        owl:NamedIndividual .
+
+sdm:pastMax a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:pastMean a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:pastMedian a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:pastMin a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:pastStd a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:pastValues a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:pause a sdm:General,
+        owl:NamedIndividual .
+
+sdm:pi a sdm:Constant,
+        sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:poisson a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:product a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:prompt a sdm:UserInput,
+        owl:NamedIndividual .
+
+sdm:pulse a sdm:General,
+        owl:NamedIndividual .
+
+sdm:ramp a sdm:General,
+        owl:NamedIndividual .
+
+sdm:range a sdm:String,
+        sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:repeat a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:reverse a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:round a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:roundDown a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:roundUp a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:sample a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:seasonal a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:seconds a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:select a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:setRandSeed a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:sign a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:sin a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:smooth a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:smoothN a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:sort a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:split a sdm:String,
+        owl:NamedIndividual .
+
+sdm:sqrt a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:std a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:step a sdm:General,
+        owl:NamedIndividual .
+
+sdm:stop a sdm:General,
+        owl:NamedIndividual .
+
+sdm:sum a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:tan a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:throwError a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:timeEnd a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:timeLength a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:timeStart a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:timeStep a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:triangular a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:trim a sdm:String,
+        owl:NamedIndividual .
+
+sdm:uniform a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:union a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:unique a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:uppercase a sdm:String,
+        owl:NamedIndividual .
+
+sdm:usesAlgorithm a owl:DatatypeProperty ;
+    rdf1:domain sdm:Model ;
+    rdf1:range rdf1:Literal .
+
+sdm:values a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:variable a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:weeks a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:while a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:years a sdm:Time,
+        owl:NamedIndividual .
+
+owl:Thing rdf1:comment "IM maakt gebruik van Comments. -> Zou dit dan als rdfs:comment (annotation) worden verbonden aan een instance van de class Equation?"@en .
+
+sdm:0 a sdm:Constant .
+
+sdm:0.0125 a sdm:Constant .
+
+sdm:0.025 a sdm:Constant .
+
+sdm:0.16 a sdm:Constant .
+
+sdm:0.45 a sdm:Constant .
+
+sdm:0.5 a sdm:Constant .
+
+sdm:0.64 a sdm:Constant .
+
+sdm:0.8 a sdm:Constant .
+
+sdm:1 a sdm:Constant .
+
+sdm:1.2 a sdm:Constant .
+
+sdm:1.5 a sdm:Constant .
+
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/1/24> a sdm:Constant .
+
+sdm:10 a sdm:Constant .
+
+sdm:100 a sdm:Constant .
+
+sdm:12 a sdm:Constant .
+
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/14/40> a sdm:Constant .
+
+sdm:15 a sdm:Constant .
+
+sdm:175 a sdm:Constant .
+
+sdm:180 a sdm:Constant .
+
+sdm:2 a sdm:Constant .
+
+sdm:2.5 a sdm:Constant .
+
+sdm:200 a sdm:Constant .
+
+sdm:22 a sdm:Constant .
+
+sdm:24hrs a sdm:Flow ;
+    sdm:hasEnd sdm:emu1 ;
+    sdm:hasFlowrate sdm:Expression_259674cade ;
+    sdm:hasID "37"^^xsd:int ;
+    sdm:hasStart sdm:emu ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:3 a sdm:Constant .
+
+sdm:3.9 a sdm:Constant .
+
+sdm:4 a sdm:Constant .
+
+sdm:48 a sdm:Constant .
+
+sdm:48hrs a sdm:Flow ;
+    sdm:hasFlowrate sdm:Expression_f7116d183f ;
+    sdm:hasID "747"^^xsd:int ;
+    sdm:hasStart sdm:recentEDDischarge ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:4hr a sdm:Flow ;
+    sdm:hasEnd sdm:edCare4 ;
+    sdm:hasFlowrate sdm:Expression_68c16b2a03 ;
+    sdm:hasID "103"^^xsd:int ;
+    sdm:hasStart sdm:edCare ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "add 2 and 3 hour as well esp during midshift eg 8-1400 and 1600 to 2000" .
+
+sdm:5 a sdm:Constant .
+
+<http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/5/60> a sdm:Constant .
+
+sdm:60 a sdm:Constant .
+
+sdm:Expression_0a7fddc22e a sdm:Expression ;
+    sdm:hasStrExpression "3" ;
+    sdm:hasSymbol sdm:3 .
+
+sdm:Expression_0bca4d107b a sdm:Expression ;
+    sdm:hasStrExpression "3.9" ;
+    sdm:hasSymbol sdm:3.9 .
+
+sdm:Expression_0d58df37c7 a sdm:Expression ;
+    sdm:hasStrExpression "[Bed Capacity]+[EMU Capacity]" ;
+    sdm:hasSymbol sdm:bedCapacity,
+        sdm:emuCapacity .
+
+sdm:Expression_1623a9ede1 a sdm:Expression ;
+    sdm:hasStrExpression "0.16" ;
+    sdm:hasSymbol sdm:0.16 .
+
+sdm:Expression_169970bf41 a sdm:Expression ;
+    sdm:hasStrExpression "1.5" ;
+    sdm:hasSymbol sdm:1.5 .
+
+sdm:Expression_251adc4171 a sdm:Expression ;
+    sdm:hasStrExpression "[planned review]+[unplanned represent]" ;
+    sdm:hasSymbol sdm:plannedreview,
+        sdm:unplannedrepresent .
+
+sdm:Expression_2780519d1c a sdm:Expression ;
+    sdm:hasStrExpression "IfThenElse([Admitted in ED spaces]=1,IfThenElse([Occupancy Level]<0, [ED Admit], 0),0)" ;
+    sdm:hasSymbol sdm:admittedinEDspaces,
+        sdm:edAdmit,
+        sdm:ifElse,
+        sdm:occupancyLevel .
+
+sdm:Expression_2daa476ad5 a sdm:Expression ;
+    sdm:hasStrExpression "1/24" ;
+    sdm:hasSymbol <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/1/24> .
+
+sdm:Expression_312474924f a sdm:Expression ;
+    sdm:hasStrExpression "[ED Spaces]-[ED Care]-[ED Care 4+]-[Admitted in ED]" ;
+    sdm:hasSymbol sdm:admittedinED,
+        sdm:edCare,
+        sdm:edCare4,
+        sdm:edSpaces .
+
+sdm:Expression_3567b8ad01 a sdm:Expression ;
+    sdm:hasStrExpression "100*[care to disp]/[Total ED Disp]" ;
+    sdm:hasSymbol sdm:caretodisp,
+        sdm:totalEDDisp .
+
+sdm:Expression_36c06fd291 a sdm:Expression ;
+    sdm:hasStrExpression "[Total ED Disp]" ;
+    sdm:hasSymbol sdm:totalEDDisp .
+
+sdm:Expression_3812cb2db9 a sdm:Expression ;
+    sdm:hasStrExpression "0.64" ;
+    sdm:hasSymbol sdm:0.64 .
+
+sdm:Expression_3af2ac9dd3 a sdm:Expression ;
+    sdm:hasStrExpression "0.8" ;
+    sdm:hasSymbol sdm:0.8 .
+
+sdm:Expression_3c863126e6 a sdm:Expression ;
+    sdm:hasStrExpression "1.2" ;
+    sdm:hasSymbol sdm:1.2 .
+
+sdm:Expression_4cf71af45f a sdm:Expression ;
+    sdm:hasStrExpression "Hours() mod 24" ;
+    sdm:hasSymbol sdm:hours,
+        sdm:mod .
+
+sdm:Expression_4e9e3870a3 a sdm:Expression ;
+    sdm:hasStrExpression "2" ;
+    sdm:hasSymbol sdm:2 .
+
+sdm:Expression_4ede9adcb4 a sdm:Expression ;
+    sdm:hasStrExpression "[Target time in ED]-[time in preCare]" ;
+    sdm:hasSymbol sdm:targettimeinED,
+        sdm:timeinpreCare .
+
+sdm:Expression_506ae89c21 a sdm:Expression ;
+    sdm:hasStrExpression "IfThenElse(Time()>{7.9 hours} and Time()<{15.9 hours}, [Specialists per SatWE Day Shift],[base Specialists per hour])" ;
+    sdm:hasSymbol sdm:baseSpecialistsperhour,
+        sdm:currentTime,
+        sdm:ifElse,
+        sdm:specialistsperSatWEDayShift .
+
+sdm:Expression_523a9f0875 a sdm:Expression ;
+    sdm:hasStrExpression "Min([ED Care],[ED completion rate])" ;
+    sdm:hasSymbol sdm:edCare,
+        sdm:edcompletionrate,
+        sdm:min .
+
+sdm:Expression_58428aa0c9 a sdm:Expression ;
+    sdm:hasStrExpression "[EMU Capacity]-[Adm in EMU]" ;
+    sdm:hasSymbol sdm:adminEMU,
+        sdm:emuCapacity .
+
+sdm:Expression_5ce41b8ac4 a sdm:Expression ;
+    sdm:hasStrExpression "100*[Inpatient ward]/[Bed Capacity]" ;
+    sdm:hasSymbol sdm:bedCapacity,
+        sdm:inpatientward .
+
+sdm:Expression_614a85c607 a sdm:Expression ;
+    sdm:hasStrExpression "60" ;
+    sdm:hasSymbol sdm:60 .
+
+sdm:Expression_6464f6d76f a sdm:Expression ;
+    sdm:hasStrExpression "0.5" ;
+    sdm:hasSymbol sdm:0.5 .
+
+sdm:Expression_68c16b2a03 a sdm:Expression ;
+    sdm:hasStrExpression "[ED Care]/[time left for care]" ;
+    sdm:hasSymbol sdm:edCare,
+        sdm:forIn,
+        sdm:timeleftforcare .
+
+sdm:Expression_6d123d98b0 a sdm:Expression ;
+    sdm:hasStrExpression "[ED Care 4+]/[hours beyond target]" ;
+    sdm:hasSymbol sdm:edCare4,
+        sdm:hoursbeyondtarget .
+
+sdm:Expression_6e3e25d423 a sdm:Expression ;
+    sdm:hasStrExpression "[care to disp]" ;
+    sdm:hasSymbol sdm:caretodisp .
+
+sdm:Expression_6e7549a4dc a sdm:Expression ;
+    sdm:hasStrExpression "IfThenElse([Cum Bed Capacity]>0, 100*[Cum Occupancy]/[Cum Bed Capacity],50)" ;
+    sdm:hasSymbol sdm:cumBedCapacity,
+        sdm:cumOccupancy,
+        sdm:ifElse .
+
+sdm:Expression_6fd710ce31 a sdm:Expression ;
+    sdm:hasStrExpression "[EMU]+[EMU 1+]" ;
+    sdm:hasSymbol sdm:emu,
+        sdm:emu1 .
+
+sdm:Expression_70bc938a1d a sdm:Expression ;
+    sdm:hasStrExpression "175" ;
+    sdm:hasSymbol sdm:175 .
+
+sdm:Expression_89fe99d7f2 a sdm:Expression ;
+    sdm:hasStrExpression "[ED Admit]*[Admitted in ED spaces]" ;
+    sdm:hasSymbol sdm:admittedinEDspaces,
+        sdm:edAdmit .
+
+sdm:Expression_8a1fb4929d a sdm:Expression ;
+    sdm:hasStrExpression "[base completion rate]+[specialists per hour]*[specialist effect on care]" ;
+    sdm:hasSymbol sdm:basecompletionrate,
+        sdm:specialisteffectoncare,
+        sdm:specialistsperhour .
+
+sdm:Expression_8a31529d23 a sdm:Expression ;
+    sdm:hasStrExpression "[ED Disp Late]*(1-[admit fraction for late])" ;
+    sdm:hasSymbol sdm:admitfractionforlate,
+        sdm:edDispLate,
+        sdm:forIn .
+
+sdm:Expression_8ac505aa61 a sdm:Expression ;
+    sdm:hasStrExpression "15" ;
+    sdm:hasSymbol sdm:15 .
+
+sdm:Expression_8c1f986e64 a sdm:Expression ;
+    sdm:hasStrExpression "[ED Disposition]*[admit fraction]" ;
+    sdm:hasSymbol sdm:admitfraction,
+        sdm:edDisposition .
+
+sdm:Expression_8dbe6fa0ca a sdm:Expression ;
+    sdm:hasStrExpression "48" ;
+    sdm:hasSymbol sdm:48 .
+
+sdm:Expression_95ed1782e9 a sdm:Expression ;
+    sdm:hasStrExpression "[Daily arrivals]*[Arrival fraction]" ;
+    sdm:hasSymbol sdm:arrivalfraction,
+        sdm:dailyarrivals .
+
+sdm:Expression_9bb83860a6 a sdm:Expression ;
+    sdm:hasStrExpression "IfThenElse([Admitted in ED spaces]=1,IfThenElse([Unoccupied EMU beds]>0,  0.5, 0),0)" ;
+    sdm:hasSymbol sdm:admittedinEDspaces,
+        sdm:ifElse,
+        sdm:unoccupiedEMUbeds .
+
+sdm:Expression_9dd7f234b7 a sdm:Expression ;
+    sdm:hasStrExpression "[ED wait time]+[time in pretriage]" ;
+    sdm:hasSymbol sdm:edwaittime,
+        sdm:timeinpretriage .
+
+sdm:Expression_9eea76a211 a sdm:Expression ;
+    sdm:hasStrExpression "IfThenElse([Cum ED Disp]>0, 100*[Cum DispOK]/[Cum ED Disp],100)" ;
+    sdm:hasSymbol sdm:cumDispOK,
+        sdm:cumEDDisp,
+        sdm:ifElse .
+
+sdm:Expression_a34001c5d3 a sdm:Expression ;
+    sdm:hasStrExpression "[Time in ED]-[time in preCare]" ;
+    sdm:hasSymbol sdm:timeinED,
+        sdm:timeinpreCare .
+
+sdm:Expression_a92e842e46 a sdm:Expression ;
+    sdm:hasStrExpression "180" ;
+    sdm:hasSymbol sdm:180 .
+
+sdm:Expression_bd47a2d2c1 a sdm:Expression ;
+    sdm:hasStrExpression "2.5" ;
+    sdm:hasSymbol sdm:2.5 .
+
+sdm:Expression_be8eb23c35 a sdm:Expression ;
+    sdm:hasStrExpression "10" ;
+    sdm:hasSymbol sdm:10 .
+
+sdm:Expression_c58ef475d7 a sdm:Expression ;
+    sdm:hasStrExpression "200" ;
+    sdm:hasSymbol sdm:200 .
+
+sdm:Expression_c8860acb43 a sdm:Expression ;
+    sdm:hasStrExpression "[care to disp]+[cl to dl]" ;
+    sdm:hasSymbol sdm:caretodisp,
+        sdm:cltodl .
+
+sdm:Expression_ca39c5318f a sdm:Expression ;
+    sdm:hasStrExpression "[Inpatient ward]-[Bed Capacity]" ;
+    sdm:hasSymbol sdm:bedCapacity,
+        sdm:inpatientward .
+
+sdm:Expression_ca61760e49 a sdm:Expression ;
+    sdm:hasStrExpression "12" ;
+    sdm:hasSymbol sdm:12 .
+
+sdm:Expression_dc56de8f45 a sdm:Expression ;
+    sdm:hasStrExpression "100" ;
+    sdm:hasSymbol sdm:100 .
+
+sdm:Expression_e30db0c80f a sdm:Expression ;
+    sdm:hasStrExpression "22" ;
+    sdm:hasSymbol sdm:22 .
+
+sdm:Expression_eb9c98d2fb a sdm:Expression ;
+    sdm:hasStrExpression "5/60" ;
+    sdm:hasSymbol <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/5/60> .
+
+sdm:Expression_ec845a5f24 a sdm:Expression ;
+    sdm:hasStrExpression "IfThenElse([Unoccupied ED spaces]>0,  [Delay for Area  or EDMO]/[ED wait time], 0)" ;
+    sdm:hasSymbol sdm:delayforAreaorEDMO,
+        sdm:edwaittime,
+        sdm:forIn,
+        sdm:ifElse,
+        sdm:unoccupiedEDspaces .
+
+sdm:Expression_ef2d8972b0 a sdm:Expression ;
+    sdm:hasStrExpression "0.45" ;
+    sdm:hasSymbol sdm:0.45 .
+
+sdm:Expression_f6100fc1d3 a sdm:Expression ;
+    sdm:hasStrExpression "[Inpatient ward]+[Adm in EMU]" ;
+    sdm:hasSymbol sdm:adminEMU,
+        sdm:inpatientward .
+
+sdm:Expression_f7000f635c a sdm:Expression ;
+    sdm:hasStrExpression "[ED Disposition]*(1-[admit fraction])" ;
+    sdm:hasSymbol sdm:admitfraction,
+        sdm:edDisposition .
+
+sdm:Expression_f7116d183f a sdm:Expression ;
+    sdm:hasStrExpression "[Recent ED Discharge]/[re-present time window]" ;
+    sdm:hasSymbol sdm:recentEDDischarge,
+        sdm:representtimewindow .
+
+sdm:Expression_f7275a1ebc a sdm:Expression ;
+    sdm:hasStrExpression "4" ;
+    sdm:hasSymbol sdm:4 .
+
+sdm:Expression_fd82d75a0f a sdm:Expression ;
+    sdm:hasStrExpression "[ED Disp Late]*[admit fraction for late]" ;
+    sdm:hasSymbol sdm:admitfractionforlate,
+        sdm:edDispLate,
+        sdm:forIn .
+
+sdm:acutecompletionrateperresource a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_6464f6d76f ;
+    sdm:hasID "593"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "depends on complexity of patients and quality of resources" .
+
+sdm:add a sdm:Flow ;
+    sdm:hasEnd sdm:workload ;
+    sdm:hasFlowrate sdm:Expression_628e79cf79 ;
+    sdm:hasID "590"^^xsd:int ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:admit a sdm:Flow ;
+    sdm:hasEnd sdm:edAdmit ;
+    sdm:hasFlowrate sdm:Expression_8c1f986e64 ;
+    sdm:hasID "65"^^xsd:int ;
+    sdm:hasStart sdm:edDisposition ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:alate a sdm:Flow ;
+    sdm:hasEnd sdm:edAdmit ;
+    sdm:hasFlowrate sdm:Expression_fd82d75a0f ;
+    sdm:hasID "98"^^xsd:int ;
+    sdm:hasStart sdm:edDispLate ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:ambulancefraction a sdm:Converter ;
+    sdm:hasData "[{x:0,y:0.341},{x:1,y:0.37},{x:2,y:0.376},{x:3,y:0.376},{x:4,y:0.37},{x:5,y:0.356},{x:6,y:0.301},{x:7,y:0.204},{x:8,y:0.186},{x:9,y:0.189},{x:10,y:0.205},{x:11,y:0.221},{x:12,y:0.238},{x:13,y:0.237},{x:14,y:0.234},{x:15,y:0.235},{x:16,y:0.226},{x:17,y:0.218},{x:18,y:0.225},{x:19,y:0.21},{x:20,y:0.234},{x:21,y:0.252},{x:22,y:0.283},{x:23,y:0.312},{x:24,y:0.341}]" ;
+    sdm:hasID "625"^^xsd:int ;
+    sdm:hasInputSource sdm:hourofday ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:arrive a sdm:Flow ;
+    sdm:hasEnd sdm:preTriage ;
+    sdm:hasFlowrate sdm:Expression_95ed1782e9 ;
+    sdm:hasID "27"^^xsd:int ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:cumNEATPerformance a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_9eea76a211 ;
+    sdm:hasID "669"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:cumOccRatio a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_6e7549a4dc ;
+    sdm:hasID "724"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:dailyResources a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_b485d77fdc ;
+    sdm:hasID "592"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "Average number of arrivals per hour",
+        "ambulance matrix load balancing P1 7 per hour (NSW 2012 data Mohsin)",
+        "clinical team resources for assessment, investigation, stabilising treatment and reviews; need depends on complexity and age" .
+
+sdm:discharge a sdm:Flow ;
+    sdm:hasEnd sdm:recentEDDischarge ;
+    sdm:hasFlowrate sdm:Expression_f7000f635c ;
+    sdm:hasID "69"^^xsd:int ;
+    sdm:hasStart sdm:edDisposition ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:dlate a sdm:Flow ;
+    sdm:hasEnd sdm:recentEDDischarge ;
+    sdm:hasFlowrate sdm:Expression_8a31529d23 ;
+    sdm:hasID "97"^^xsd:int ;
+    sdm:hasStart sdm:edDispLate ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:edtoIPW a sdm:Flow ;
+    sdm:hasEnd sdm:inpatientward ;
+    sdm:hasFlowrate sdm:Expression_2780519d1c ;
+    sdm:hasID "71"^^xsd:int ;
+    sdm:hasStart sdm:edAdmit ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "added ward occupancy from 7981" .
+
+sdm:emudischarge a sdm:Flow ;
+    sdm:hasFlowrate sdm:Expression_ef2d8972b0 ;
+    sdm:hasID "41"^^xsd:int ;
+    sdm:hasStart sdm:emu ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "90%" .
+
+sdm:emudischargelate a sdm:Flow ;
+    sdm:hasFlowrate sdm:Expression_c78807d0f1 ;
+    sdm:hasID "42"^^xsd:int ;
+    sdm:hasStart sdm:emu1 ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:emutowards a sdm:Flow ;
+    sdm:hasEnd sdm:inpatientward ;
+    sdm:hasFlowrate sdm:Expression_259674cade ;
+    sdm:hasID "43"^^xsd:int ;
+    sdm:hasStart sdm:emu ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:emutowardslate a sdm:Flow ;
+    sdm:hasEnd sdm:inpatientward ;
+    sdm:hasFlowrate sdm:Expression_c78807d0f1 ;
+    sdm:hasID "39"^^xsd:int ;
+    sdm:hasStart sdm:emu1 ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:failtotriage a sdm:Flow ;
+    sdm:hasFlowrate sdm:Expression_fe5fa703a5 ;
+    sdm:hasID "676"^^xsd:int ;
+    sdm:hasStart sdm:preTriage ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:failuretosee a sdm:Flow ;
+    sdm:hasFlowrate sdm:Expression_fe5fa703a5 ;
+    sdm:hasID "70"^^xsd:int ;
+    sdm:hasStart sdm:delayforAreaorEDMO ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "includes DidNotWait, Transfers and Treatment INcomplete (Left Against Medical Advice usually while waiting for IP Review)" .
+
+sdm:flow a sdm:Flow ;
+    sdm:hasEnd sdm:cumBedCapacity,
+        sdm:cumOccupancy ;
+    sdm:hasFlowrate sdm:Expression_0d58df37c7,
+        sdm:Expression_f6100fc1d3 ;
+    sdm:hasID "719"^^xsd:int,
+        "722"^^xsd:int ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:hasInflow a owl:ObjectProperty ;
+    rdf1:domain sdm:Stock ;
+    rdf1:range sdm:Flow .
+
+sdm:hasStart a owl:ObjectProperty ;
+    rdf1:domain sdm:Flow ;
+    rdf1:range sdm:Stock .
+
+sdm:incintarget a sdm:Flow ;
+    sdm:hasEnd sdm:cumDispOK ;
+    sdm:hasFlowrate sdm:Expression_6e3e25d423 ;
+    sdm:hasID "667"^^xsd:int ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:inctot a sdm:Flow ;
+    sdm:hasEnd sdm:cumEDDisp ;
+    sdm:hasFlowrate sdm:Expression_36c06fd291 ;
+    sdm:hasID "663"^^xsd:int ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:min a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:mod a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:neatLScaleHi a sdm:Stock ;
+    sdm:hasID "743"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_dc56de8f45 ;
+    sdm:isNonNegative false ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:neatLScaleLo a sdm:Stock ;
+    sdm:hasID "744"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_614a85c607 ;
+    sdm:isNonNegative false ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:neatPerfbyhour a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_3567b8ad01 ;
+    sdm:hasID "642"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:occupancyRatio a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_5ce41b8ac4 ;
+    sdm:hasID "714"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:occupancylevel a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_ca39c5318f ;
+    sdm:hasID "657"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:primitiveOf a owl:ObjectProperty ;
+    rdf1:domain sdm:Primitive ;
+    rdf1:range sdm:Model .
+
+sdm:remove a sdm:Flow ;
+    sdm:hasFlowrate sdm:Expression_628e79cf79 ;
+    sdm:hasID "591"^^xsd:int ;
+    sdm:hasStart sdm:workload ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:represent a sdm:Flow ;
+    sdm:hasEnd sdm:preTriage ;
+    sdm:hasFlowrate sdm:Expression_251adc4171 ;
+    sdm:hasID "751"^^xsd:int ;
+    sdm:hasStart sdm:recentEDDischarge ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:seeinED a sdm:Flow ;
+    sdm:hasEnd sdm:edCare ;
+    sdm:hasFlowrate sdm:Expression_ec845a5f24 ;
+    sdm:hasID "30"^^xsd:int ;
+    sdm:hasStart sdm:delayforAreaorEDMO ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:servicefraction a sdm:Converter ;
+    sdm:hasData "[{x:0,y:0.031},{x:1,y:0.029},{x:2,y:0.026},{x:3,y:0.023},{x:4,y:0.02},{x:5,y:0.018},{x:6,y:0.018},{x:7,y:0.026},{x:8,y:0.037},{x:9,y:0.051},{x:10,y:0.059},{x:11,y:0.062},{x:12,y:0.061},{x:13,y:0.059},{x:14,y:0.057},{x:15,y:0.056},{x:16,y:0.054},{x:17,y:0.05},{x:18,y:0.051},{x:19,y:0.045},{x:20,y:0.047},{x:21,y:0.043},{x:22,y:0.041},{x:23,y:0.036},{x:24,y:0.031}]" ;
+    sdm:hasID "462"^^xsd:int ;
+    sdm:hasInputSource sdm:currentTime ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:timeinEDCare a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_a34001c5d3 ;
+    sdm:hasID "632"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "used actual overnight times to calculate base completion rate" .
+
+sdm:toEMU a sdm:Flow ;
+    sdm:hasEnd sdm:emu ;
+    sdm:hasFlowrate sdm:Expression_9bb83860a6 ;
+    sdm:hasID "40"^^xsd:int ;
+    sdm:hasStart sdm:edAdmit ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:triageandregister a sdm:Flow ;
+    sdm:hasEnd sdm:delayforAreaorEDMO ;
+    sdm:hasFlowrate sdm:Expression_ca61760e49 ;
+    sdm:hasID "28"^^xsd:int ;
+    sdm:hasStart sdm:preTriage ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "quick less than 5 minutes" .
+
+sdm:wardnetdischarge a sdm:Flow ;
+    sdm:hasFlowrate sdm:Expression_169970bf41 ;
+    sdm:hasID "86"^^xsd:int ;
+    sdm:hasStart sdm:inpatientward ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "need by day and time including % before 1200 and discharges vs admits to captur readmits within 28 days" .
+
+sdm:DataSource a owl:Class .
+
+sdm:Expression_259674cade a sdm:Expression ;
+    sdm:hasStrExpression "0.025" ;
+    sdm:hasSymbol sdm:0.025 .
+
+sdm:Expression_b485d77fdc a sdm:Expression ;
+    sdm:hasStrExpression "5" ;
+    sdm:hasSymbol sdm:5 .
+
+sdm:Expression_c78807d0f1 a sdm:Expression ;
+    sdm:hasStrExpression "0.0125" ;
+    sdm:hasSymbol sdm:0.0125 .
+
+sdm:Expression_fe5fa703a5 a sdm:Expression ;
+    sdm:hasStrExpression "14/40" ;
+    sdm:hasSymbol <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/14/40> .
+
+sdm:Function a owl:Class ;
+    rdf1:subClassOf sdm:Symbol .
+
+sdm:admittedinED a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_89fe99d7f2 ;
+    sdm:hasID "682"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:arrivalfraction a sdm:Converter ;
+    sdm:hasData "[{x:0,y:0.031},{x:1,y:0.029},{x:2,y:0.026},{x:3,y:0.023},{x:4,y:0.02},{x:5,y:0.018},{x:6,y:0.018},{x:7,y:0.026},{x:8,y:0.037},{x:9,y:0.051},{x:10,y:0.059},{x:11,y:0.062},{x:12,y:0.061},{x:13,y:0.059},{x:14,y:0.057},{x:15,y:0.056},{x:16,y:0.054},{x:17,y:0.05},{x:18,y:0.051},{x:19,y:0.045},{x:20,y:0.047},{x:21,y:0.043},{x:22,y:0.041},{x:23,y:0.036},{x:24,y:0.031}]" ;
+    sdm:hasID "447"^^xsd:int ;
+    sdm:hasInputSource sdm:hourofday ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:baseSpecialistsperhour a sdm:Converter ;
+    sdm:hasData "[{x:0,y:0},{x:7,y:0},{x:7.5,y:1},{x:8,y:2},{x:15.5,y:2},{x:16,y:2},{x:23,y:2},{x:23.5,y:1},{x:24,y:0}]" ;
+    sdm:hasID "598"^^xsd:int ;
+    sdm:hasInputSource sdm:hourofday ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:basecompletionrate a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_0a7fddc22e ;
+    sdm:hasID "615"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "based on overnight shift performance of one non specialist team around 3 per hour completions" .
+
+sdm:cltodl a sdm:Flow ;
+    sdm:hasEnd sdm:edDispLate ;
+    sdm:hasFlowrate sdm:Expression_6d123d98b0 ;
+    sdm:hasID "104"^^xsd:int ;
+    sdm:hasStart sdm:edCare4 ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:currentTime a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:dailyarrivals a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_70bc938a1d ;
+    sdm:hasID "451"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "Total per day" .
+
+sdm:edSpaces a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_e30db0c80f ;
+    sdm:hasID "453"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "the maximum is flexible when overcrowded and includes resusc for now" .
+
+sdm:edcompletionrate a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_8a1fb4929d ;
+    sdm:hasID "108"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:hours a sdm:Time,
+        sdm:Unit,
+        owl:NamedIndividual .
+
+sdm:hoursbeyondtarget a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_3c863126e6 ;
+    sdm:hasID "638"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "try 1" .
+
+sdm:plannedreview a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_628e79cf79 ;
+    sdm:hasID "754"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "around 6 percent of arrivals; need to subtract from arrive" .
+
+sdm:representtimewindow a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_8dbe6fa0ca ;
+    sdm:hasID "748"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:specialisteffectoncare a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_bd47a2d2c1 ;
+    sdm:hasID "594"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "one non spec plus 1 or 2 spec teams each of which adds 2.5 completions per hour" .
+
+sdm:specialistsperSatWEDayShift a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_ebaf5ccd6f ;
+    sdm:hasID "601"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:specialistsperhour a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_506ae89c21 ;
+    sdm:hasID "612"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "flexibility in allocating time and resources between Acute and Fast Track so look at overall ED effect rather than ED area effect by resources" .
+
+sdm:targettimeinED a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_f7275a1ebc ;
+    sdm:hasID "617"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:timeinED a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_0bca4d107b ;
+    sdm:hasID "630"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:timeinpretriage a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_eb9c98d2fb ;
+    sdm:hasID "618"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:timeleftforcare a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_4ede9adcb4 ;
+    sdm:hasID "619"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:unoccupiedEDspaces a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_312474924f ;
+    sdm:hasID "454"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:unoccupiedEMUbeds a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_58428aa0c9 ;
+    sdm:hasID "732"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:unplannedrepresent a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_2daa476ad5 ;
+    sdm:hasID "752"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "around 0.5 percent" .
+
+sdm:Unit a owl:Class .
+
+sdm:UserInput a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:adminEMU a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_6fd710ce31 ;
+    sdm:hasID "727"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:admitfraction a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_1623a9ede1 ;
+    sdm:hasID "654"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:admitfractionforlate a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_3812cb2db9 ;
+    sdm:hasID "651"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:cumBedCapacity a sdm:Stock ;
+    sdm:hasID "721"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_628e79cf79 ;
+    sdm:isNonNegative true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:cumDispOK a sdm:Stock ;
+    sdm:hasID "665"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_628e79cf79 ;
+    sdm:isNonNegative false ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:cumEDDisp a sdm:Stock ;
+    sdm:hasID "662"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_628e79cf79 ;
+    sdm:isNonNegative true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:cumOccupancy a sdm:Stock ;
+    sdm:hasID "718"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_628e79cf79 ;
+    sdm:isNonNegative false ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:edwaittime a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_3af2ac9dd3 ;
+    sdm:hasID "460"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:emuCapacity a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_be8eb23c35 ;
+    sdm:hasID "731"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:timeinpreCare a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_9dd7f234b7 ;
+    sdm:hasID "628"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:totalEDDisp a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_c8860acb43 ;
+    sdm:hasID "645"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:workload a sdm:Stock ;
+    sdm:hasID "589"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_628e79cf79 ;
+    sdm:isNonNegative false ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:admittedinEDspaces a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_628e79cf79 ;
+    sdm:hasID "677"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "0=No 1=Yes" .
+
+sdm:bedCapacity a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_c58ef475d7 ;
+    sdm:hasID "659"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "total IP Ward Beds vs available for ED excludes EMU" .
+
+sdm:caretodisp a sdm:Flow ;
+    sdm:hasEnd sdm:edDisposition ;
+    sdm:hasFlowrate sdm:Expression_523a9f0875 ;
+    sdm:hasID "64"^^xsd:int ;
+    sdm:hasStart sdm:edCare ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:forIn a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:hourofday a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_4cf71af45f ;
+    sdm:hasID "448"^^xsd:int ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:Expression_ebaf5ccd6f a sdm:Expression ;
+    sdm:hasStrExpression "1" ;
+    sdm:hasSymbol sdm:1 .
+
+sdm:delayforAreaorEDMO a sdm:Stock ;
+    sdm:hasID "29"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_ebaf5ccd6f ;
+    sdm:isNonNegative true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "lying or sitting in an ambulance bay, waiting room, or in a ED area waiting to be seen by an EDMO" .
+
+sdm:edCare4 a sdm:Stock ;
+    sdm:hasID "102"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_4e9e3870a3 ;
+    sdm:isNonNegative true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "can be split into special areas like paeds subacute psych and procedure rooms" .
+
+sdm:emu1 a sdm:Stock ;
+    sdm:hasID "38"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_ebaf5ccd6f ;
+    sdm:isNonNegative true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:preTriage a sdm:Stock ;
+    sdm:hasID "26"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_ebaf5ccd6f ;
+    sdm:isNonNegative true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:General a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:edDispLate a sdm:Stock ;
+    sdm:hasID "96"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_628e79cf79 ;
+    sdm:isNonNegative true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:edDisposition a sdm:Stock ;
+    sdm:hasID "68"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_ebaf5ccd6f ;
+    sdm:isNonNegative true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:emu a sdm:Stock ;
+    sdm:hasID "36"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_b485d77fdc ;
+    sdm:isNonNegative true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:ifElse a sdm:General,
+        sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:recentEDDischarge a sdm:Stock ;
+    sdm:hasID "62"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_628e79cf79 ;
+    sdm:isNonNegative false ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:Converter a owl:Class ;
+    rdf1:subClassOf sdm:Primitive,
+        sdm:Symbol .
+
+sdm:Symbol a owl:Class .
+
+sdm:edAdmit a sdm:Stock ;
+    sdm:hasID "63"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_628e79cf79 ;
+    sdm:isNonNegative false ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:edCare a sdm:Stock ;
+    sdm:hasID "33"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_8ac505aa61 ;
+    sdm:isNonNegative true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel ;
+    rdf1:comment "can be split into special areas like paeds subacute psych and procedure rooms" .
+
+sdm:Model a owl:Class .
+
+sdm:inpatientward a sdm:Stock ;
+    sdm:hasID "54"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_a92e842e46 ;
+    sdm:isNonNegative true ;
+    sdm:primitiveOf sdm:emergencyDepartmentModel .
+
+sdm:Primitive a owl:Class .
+
+sdm:Programming a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:BuiltInFunction a owl:Class ;
+    rdf1:subClassOf sdm:Function .
+
+sdm:String a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:Expression_628e79cf79 a sdm:Expression ;
+    sdm:hasStrExpression "0" ;
+    sdm:hasSymbol sdm:0 .
+
+sdm:RandomNumber a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:Time a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:Historical a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:StatisticalDistribution a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:Vector a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:Stock a owl:Class ;
+    rdf1:subClassOf sdm:Primitive,
+        sdm:Symbol .
+
+sdm:Mathematical a owl:Class ;
+    rdf1:subClassOf sdm:BuiltInFunction .
+
+sdm:Constant a owl:Class ;
+    rdf1:subClassOf sdm:Symbol .
+
+sdm:Flow a owl:Class ;
+    rdf1:subClassOf sdm:Primitive,
+        sdm:Symbol .
+
+sdm:Variable a owl:Class ;
+    rdf1:subClassOf sdm:Primitive,
+        sdm:Symbol .
+
+sdm:Expression a owl:Class .
+
+sdm:emergencyDepartmentModel a sdm:Model ;
+    sdm:hasPrimitive sdm:24hrs,
+        sdm:48hrs,
+        sdm:4hr,
+        sdm:acutecompletionrateperresource,
+        sdm:add,
+        sdm:adminEMU,
+        sdm:admit,
+        sdm:admitfraction,
+        sdm:admitfractionforlate,
+        sdm:admittedinED,
+        sdm:admittedinEDspaces,
+        sdm:alate,
+        sdm:ambulancefraction,
+        sdm:arrivalfraction,
+        sdm:arrive,
+        sdm:baseSpecialistsperhour,
+        sdm:basecompletionrate,
+        sdm:bedCapacity,
+        sdm:caretodisp,
+        sdm:cltodl,
+        sdm:cumBedCapacity,
+        sdm:cumDispOK,
+        sdm:cumEDDisp,
+        sdm:cumNEATPerformance,
+        sdm:cumOccRatio,
+        sdm:cumOccupancy,
+        sdm:dailyResources,
+        sdm:dailyarrivals,
+        sdm:delayforAreaorEDMO,
+        sdm:discharge,
+        sdm:dlate,
+        sdm:edAdmit,
+        sdm:edCare,
+        sdm:edCare4,
+        sdm:edDispLate,
+        sdm:edDisposition,
+        sdm:edSpaces,
+        sdm:edcompletionrate,
+        sdm:edtoIPW,
+        sdm:edwaittime,
+        sdm:emu,
+        sdm:emu1,
+        sdm:emuCapacity,
+        sdm:emudischarge,
+        sdm:emudischargelate,
+        sdm:emutowards,
+        sdm:emutowardslate,
+        sdm:failtotriage,
+        sdm:failuretosee,
+        sdm:flow,
+        sdm:hourofday,
+        sdm:hoursbeyondtarget,
+        sdm:incintarget,
+        sdm:inctot,
+        sdm:inpatientward,
+        sdm:neatLScaleHi,
+        sdm:neatLScaleLo,
+        sdm:neatPerfbyhour,
+        sdm:occupancyRatio,
+        sdm:occupancylevel,
+        sdm:plannedreview,
+        sdm:preTriage,
+        sdm:recentEDDischarge,
+        sdm:remove,
+        sdm:represent,
+        sdm:representtimewindow,
+        sdm:seeinED,
+        sdm:servicefraction,
+        sdm:specialisteffectoncare,
+        sdm:specialistsperSatWEDayShift,
+        sdm:specialistsperhour,
+        sdm:targettimeinED,
+        sdm:timeinED,
+        sdm:timeinEDCare,
+        sdm:timeinpreCare,
+        sdm:timeinpretriage,
+        sdm:timeleftforcare,
+        sdm:toEMU,
+        sdm:totalEDDisp,
+        sdm:triageandregister,
+        sdm:unoccupiedEDspaces,
+        sdm:unoccupiedEMUbeds,
+        sdm:unplannedrepresent,
+        sdm:wardnetdischarge,
+        sdm:workload ;
+    sdm:hasTimeLength 40.0 ;
+    sdm:hasTimeStart 8.0 ;
+    sdm:hasTimeStep 0.25 ;
+    sdm:hasTimeUnit sdm:hours ;
+    sdm:usesAlgorithm "Euler" .
+

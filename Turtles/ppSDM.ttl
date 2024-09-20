@@ -1,0 +1,751 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdm: <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm/> .
+@prefix sdm1: <http://www.semanticweb.org/loafo/ontologies/2024/3/sdm> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sdm1: a owl:Ontology ;
+    rdfs:comment "SDMOnto is an ontology describing the underlying structure of System Dynamics models available on the Insight Maker platform. Its goal is to improve the modularity and accessibility of these models."@en .
+
+sdm:CDFChiSquared a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CDFExponential a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CDFF a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CDFLognormal a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CDFNormal a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CDFPoisson a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CDFt a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:CustomFunction a owl:Class ;
+    rdfs:subClassOf sdm:Function .
+
+sdm:PDFChiSquared a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:PDFExponential a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:PDFF a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:PDFLognormal a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:PDFNormal a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:PDFt a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:PMFPoisson a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:abs a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:alert a sdm:UserInput,
+        owl:NamedIndividual .
+
+sdm:anonymousFunction a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:anonymousFunctionSingleLine a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:arcCos a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:arcSin a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:arcTan a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:beta a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:binary a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:binomial a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:confirm a sdm:UserInput,
+        owl:NamedIndividual .
+
+sdm:contains a sdm:String,
+        sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:correlation a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:cos a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:currentTime a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:custom a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:days a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:delay a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:delay1 a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:delay3 a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:delayN a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:difference a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:e a sdm:Constant,
+        sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:errorHandling a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:exp a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:expit a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:exponential a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:filter a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:fix a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:flatten a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:forIn a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:function a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:gamma a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:hasData a owl:DatatypeProperty ;
+    rdfs:domain sdm:Converter ;
+    rdfs:range rdfs:Literal .
+
+sdm:hasDataSource a owl:ObjectProperty ;
+    rdfs:domain sdm:Converter ;
+    rdfs:range sdm:DataSource .
+
+sdm:hasEnd a owl:ObjectProperty ;
+    rdfs:domain sdm:Flow ;
+    rdfs:range sdm:Stock ;
+    owl:inverseOf sdm:hasInflow .
+
+sdm:hasExpression a owl:ObjectProperty ;
+    rdfs:domain sdm:Variable ;
+    rdfs:range sdm:Expression .
+
+sdm:hasFlowrate a owl:ObjectProperty ;
+    rdfs:domain sdm:Flow ;
+    rdfs:range sdm:Expression .
+
+sdm:hasID a owl:DatatypeProperty ;
+    rdfs:domain sdm:Primitive ;
+    rdfs:range xsd:int .
+
+sdm:hasInitialValue a owl:ObjectProperty ;
+    rdfs:domain sdm:Stock ;
+    rdfs:range sdm:Expression .
+
+sdm:hasInputSource a owl:ObjectProperty ;
+    rdfs:domain sdm:Converter .
+
+sdm:hasName a owl:DatatypeProperty ;
+    rdfs:domain sdm:Primitive ;
+    rdfs:range rdfs:Literal .
+
+sdm:hasOutflow a owl:ObjectProperty ;
+    rdfs:domain sdm:Stock ;
+    rdfs:range sdm:Flow ;
+    owl:inverseOf sdm:hasStart .
+
+sdm:hasPrimitive a owl:ObjectProperty ;
+    rdfs:domain sdm:Model ;
+    rdfs:range sdm:Primitive ;
+    owl:inverseOf sdm:primitiveOf .
+
+sdm:hasSourceURL a owl:DatatypeProperty ;
+    rdfs:domain sdm:DataSource ;
+    rdfs:range rdfs:Literal .
+
+sdm:hasStrExpression a owl:DatatypeProperty ;
+    rdfs:domain sdm:Expression ;
+    rdfs:range rdfs:Literal .
+
+sdm:hasSymbol a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:domain sdm:Expression ;
+    rdfs:range sdm:Symbol .
+
+sdm:hasTimeLength a owl:DatatypeProperty ;
+    rdfs:domain sdm:Model ;
+    rdfs:range xsd:decimal .
+
+sdm:hasTimeStart a owl:DatatypeProperty ;
+    rdfs:domain sdm:Model ;
+    rdfs:range xsd:decimal .
+
+sdm:hasTimeStep a owl:DatatypeProperty ;
+    rdfs:domain sdm:Model ;
+    rdfs:range xsd:decimal .
+
+sdm:hasTimeUnit a owl:ObjectProperty ;
+    rdfs:domain sdm:Model ;
+    rdfs:range sdm:Unit .
+
+sdm:hasUnit a owl:ObjectProperty ;
+    rdfs:domain sdm:Primitive ;
+    rdfs:range sdm:Unit .
+
+sdm:hours a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:ifElse a sdm:General,
+        sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:indexOf a sdm:String,
+        sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:intersection a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:invChiSquared a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:invExponential a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:invF a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:invLognormal a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:invNormal a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:invt a sdm:StatisticalDistribution,
+        owl:NamedIndividual .
+
+sdm:isNonNegative a owl:DatatypeProperty ;
+    rdfs:domain sdm:Stock ;
+    rdfs:range xsd:boolean .
+
+sdm:isOnlyPositive a owl:DatatypeProperty ;
+    rdfs:domain sdm:Flow ;
+    rdfs:range xsd:boolean .
+
+sdm:join a sdm:String,
+        sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:keys a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:length a sdm:String,
+        sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:ln a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:log a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:logit a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:lognormal a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:lookup a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:lowercase a sdm:String,
+        owl:NamedIndividual .
+
+sdm:map a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:max a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:mean a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:median a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:min a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:minutes a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:mod a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:negativeBinomial a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:normal a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:parse a sdm:String,
+        owl:NamedIndividual .
+
+sdm:pastMax a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:pastMean a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:pastMedian a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:pastMin a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:pastStd a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:pastValues a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:pause a sdm:General,
+        owl:NamedIndividual .
+
+sdm:pi a sdm:Constant,
+        sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:poisson a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:product a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:prompt a sdm:UserInput,
+        owl:NamedIndividual .
+
+sdm:pulse a sdm:General,
+        owl:NamedIndividual .
+
+sdm:ramp a sdm:General,
+        owl:NamedIndividual .
+
+sdm:range a sdm:String,
+        sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:repeat a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:reverse a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:round a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:roundDown a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:roundUp a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:sample a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:seasonal a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:seconds a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:select a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:setRandSeed a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:sign a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:sin a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:smooth a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:smoothN a sdm:Historical,
+        owl:NamedIndividual .
+
+sdm:sort a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:split a sdm:String,
+        owl:NamedIndividual .
+
+sdm:sqrt a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:std a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:step a sdm:General,
+        owl:NamedIndividual .
+
+sdm:stop a sdm:General,
+        owl:NamedIndividual .
+
+sdm:sum a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:tan a sdm:Mathematical,
+        owl:NamedIndividual .
+
+sdm:throwError a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:timeEnd a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:timeLength a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:timeStart a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:timeStep a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:triangular a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:trim a sdm:String,
+        owl:NamedIndividual .
+
+sdm:uniform a sdm:RandomNumber,
+        owl:NamedIndividual .
+
+sdm:union a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:unique a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:uppercase a sdm:String,
+        owl:NamedIndividual .
+
+sdm:usesAlgorithm a owl:DatatypeProperty ;
+    rdfs:domain sdm:Model ;
+    rdfs:range rdfs:Literal .
+
+sdm:values a sdm:Vector,
+        owl:NamedIndividual .
+
+sdm:variable a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:weeks a sdm:Time,
+        owl:NamedIndividual .
+
+sdm:while a sdm:Programming,
+        owl:NamedIndividual .
+
+sdm:years a sdm:Time,
+        owl:NamedIndividual .
+
+owl:Thing rdfs:comment "IM maakt gebruik van Comments. -> Zou dit dan als rdfs:comment (annotation) worden verbonden aan een instance van de class Equation?"@en .
+
+sdm:0.1 a sdm:Constant .
+
+sdm:100 a sdm:Constant .
+
+sdm:12000 a sdm:Constant .
+
+sdm:Expression_35a7da8d72 a sdm:Expression ;
+    sdm:hasStrExpression "[Effects on Rabbits Births]" ;
+    sdm:hasSymbol sdm:effectsonRabbitsBirths .
+
+sdm:Expression_3ace84934c a sdm:Expression ;
+    sdm:hasStrExpression "0.001*[Foxes]" ;
+    sdm:hasSymbol sdm:foxes .
+
+sdm:Expression_69a0ff2c61 a sdm:Expression ;
+    sdm:hasStrExpression "[Rabbits]*[Rabbits Death Rate]" ;
+    sdm:hasSymbol sdm:rabbits,
+        sdm:rabbitsDeathRate .
+
+sdm:Expression_6e7add30e7 a sdm:Expression ;
+    sdm:hasStrExpression "[Rabbits Birth Rate]*[Rabbits]" ;
+    sdm:hasSymbol sdm:rabbits,
+        sdm:rabbitsBirthRate .
+
+sdm:Expression_8111de1e14 a sdm:Expression ;
+    sdm:hasStrExpression "12000" ;
+    sdm:hasSymbol sdm:12000 .
+
+sdm:Expression_92105922d8 a sdm:Expression ;
+    sdm:hasStrExpression "[Rabbits Density]/50" ;
+    sdm:hasSymbol sdm:rabbitsDensity .
+
+sdm:Expression_97421710f5 a sdm:Expression ;
+    sdm:hasStrExpression "[Foxes Death Rate]*[Foxes]" ;
+    sdm:hasSymbol sdm:foxes,
+        sdm:foxesDeathRate .
+
+sdm:Expression_9ef9fc6821 a sdm:Expression ;
+    sdm:hasStrExpression "[Rabbits Density]/25" ;
+    sdm:hasSymbol sdm:rabbitsDensity .
+
+sdm:Expression_d3d7d5129d a sdm:Expression ;
+    sdm:hasStrExpression "0.1" ;
+    sdm:hasSymbol sdm:0.1 .
+
+sdm:Expression_d6408ff4ce a sdm:Expression ;
+    sdm:hasStrExpression "[Effects on Foxes Deaths]" ;
+    sdm:hasSymbol sdm:effectsonFoxesDeaths .
+
+sdm:Expression_dc56de8f45 a sdm:Expression ;
+    sdm:hasStrExpression "100" ;
+    sdm:hasSymbol sdm:100 .
+
+sdm:Expression_dcce37c2b7 a sdm:Expression ;
+    sdm:hasStrExpression "[Foxes Birth Rate]*[Foxes]" ;
+    sdm:hasSymbol sdm:foxes,
+        sdm:foxesBirthRate .
+
+sdm:Expression_e7005ce9e9 a sdm:Expression ;
+    sdm:hasStrExpression "[Rabbits]/500" ;
+    sdm:hasSymbol sdm:rabbits .
+
+sdm:foxesBirths a sdm:Flow ;
+    sdm:hasEnd sdm:foxes ;
+    sdm:hasFlowrate sdm:Expression_dcce37c2b7 ;
+    sdm:hasID "28"^^xsd:int ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:predatorPreyModel .
+
+sdm:foxesDeaths a sdm:Flow ;
+    sdm:hasFlowrate sdm:Expression_97421710f5 ;
+    sdm:hasID "27"^^xsd:int ;
+    sdm:hasStart sdm:foxes ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:predatorPreyModel .
+
+sdm:hasInflow a owl:ObjectProperty ;
+    rdfs:domain sdm:Stock ;
+    rdfs:range sdm:Flow .
+
+sdm:hasStart a owl:ObjectProperty ;
+    rdfs:domain sdm:Flow ;
+    rdfs:range sdm:Stock .
+
+sdm:months a sdm:Time,
+        sdm:Unit,
+        owl:NamedIndividual .
+
+sdm:primitiveOf a owl:ObjectProperty ;
+    rdfs:domain sdm:Primitive ;
+    rdfs:range sdm:Model .
+
+sdm:rabbitsBirths a sdm:Flow ;
+    sdm:hasEnd sdm:rabbits ;
+    sdm:hasFlowrate sdm:Expression_6e7add30e7 ;
+    sdm:hasID "25"^^xsd:int ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:predatorPreyModel .
+
+sdm:rabbitsDeaths a sdm:Flow ;
+    sdm:hasFlowrate sdm:Expression_69a0ff2c61 ;
+    sdm:hasID "24"^^xsd:int ;
+    sdm:hasStart sdm:rabbits ;
+    sdm:isOnlyPositive true ;
+    sdm:primitiveOf sdm:predatorPreyModel .
+
+sdm:DataSource a owl:Class .
+
+sdm:Function a owl:Class ;
+    rdfs:subClassOf sdm:Symbol .
+
+sdm:effectsonFoxesDeaths a sdm:Converter ;
+    sdm:hasData "[{x:0,y:0.5},{x:1,y:0.2},{x:2,y:0.1},{x:3,y:0.05},{x:4,y:0.03},{x:5,y:0.01},{x:6,y:0},{x:7,y:0},{x:8,y:0}]" ;
+    sdm:hasID "41"^^xsd:int ;
+    sdm:hasInputSource sdm:rabbitsDensity25 ;
+    sdm:primitiveOf sdm:predatorPreyModel .
+
+sdm:effectsonRabbitsBirths a sdm:Converter ;
+    sdm:hasData "[{x:0,y:0.2},{x:1,y:0.1},{x:2,y:0},{x:3,y:0},{x:5,y:0},{x:6,y:0},{x:6,y:0},{x:7,y:0},{x:8,y:0},{x:9,y:0},{x:10,y:0},{x:11,y:0},{x:13,y:0}]" ;
+    sdm:hasID "50"^^xsd:int ;
+    sdm:hasInputSource sdm:rabbitsDensity50 ;
+    sdm:primitiveOf sdm:predatorPreyModel .
+
+sdm:foxesBirthRate a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_d3d7d5129d ;
+    sdm:hasID "30"^^xsd:int ;
+    sdm:primitiveOf sdm:predatorPreyModel .
+
+sdm:foxesDeathRate a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_d6408ff4ce ;
+    sdm:hasID "29"^^xsd:int ;
+    sdm:primitiveOf sdm:predatorPreyModel .
+
+sdm:rabbitsBirthRate a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_35a7da8d72 ;
+    sdm:hasID "32"^^xsd:int ;
+    sdm:primitiveOf sdm:predatorPreyModel .
+
+sdm:rabbitsDeathRate a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_3ace84934c ;
+    sdm:hasID "31"^^xsd:int ;
+    sdm:primitiveOf sdm:predatorPreyModel .
+
+sdm:rabbitsDensity25 a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_9ef9fc6821 ;
+    sdm:hasID "46"^^xsd:int ;
+    sdm:primitiveOf sdm:predatorPreyModel .
+
+sdm:rabbitsDensity50 a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_92105922d8 ;
+    sdm:hasID "53"^^xsd:int ;
+    sdm:primitiveOf sdm:predatorPreyModel .
+
+sdm:Unit a owl:Class .
+
+sdm:UserInput a owl:Class ;
+    rdfs:subClassOf sdm:BuiltInFunction .
+
+sdm:rabbitsDensity a sdm:Variable ;
+    sdm:hasExpression sdm:Expression_e7005ce9e9 ;
+    sdm:hasID "38"^^xsd:int ;
+    sdm:primitiveOf sdm:predatorPreyModel .
+
+sdm:Constant a owl:Class ;
+    rdfs:subClassOf sdm:Symbol .
+
+sdm:Converter a owl:Class ;
+    rdfs:subClassOf sdm:Primitive,
+        sdm:Symbol .
+
+sdm:General a owl:Class ;
+    rdfs:subClassOf sdm:BuiltInFunction .
+
+sdm:foxes a sdm:Stock ;
+    sdm:hasID "26"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_dc56de8f45 ;
+    sdm:isNonNegative true ;
+    sdm:primitiveOf sdm:predatorPreyModel .
+
+sdm:rabbits a sdm:Stock ;
+    sdm:hasID "23"^^xsd:int ;
+    sdm:hasInitialValue sdm:Expression_8111de1e14 ;
+    sdm:isNonNegative true ;
+    sdm:primitiveOf sdm:predatorPreyModel .
+
+sdm:Symbol a owl:Class .
+
+sdm:Model a owl:Class .
+
+sdm:Stock a owl:Class ;
+    rdfs:subClassOf sdm:Primitive,
+        sdm:Symbol .
+
+sdm:Variable a owl:Class ;
+    rdfs:subClassOf sdm:Primitive,
+        sdm:Symbol .
+
+sdm:Primitive a owl:Class .
+
+sdm:Programming a owl:Class ;
+    rdfs:subClassOf sdm:BuiltInFunction .
+
+sdm:BuiltInFunction a owl:Class ;
+    rdfs:subClassOf sdm:Function .
+
+sdm:Flow a owl:Class ;
+    rdfs:subClassOf sdm:Primitive,
+        sdm:Symbol .
+
+sdm:String a owl:Class ;
+    rdfs:subClassOf sdm:BuiltInFunction .
+
+sdm:RandomNumber a owl:Class ;
+    rdfs:subClassOf sdm:BuiltInFunction .
+
+sdm:Time a owl:Class ;
+    rdfs:subClassOf sdm:BuiltInFunction .
+
+sdm:Historical a owl:Class ;
+    rdfs:subClassOf sdm:BuiltInFunction .
+
+sdm:predatorPreyModel a sdm:Model ;
+    sdm:hasPrimitive sdm:effectsonFoxesDeaths,
+        sdm:effectsonRabbitsBirths,
+        sdm:foxes,
+        sdm:foxesBirthRate,
+        sdm:foxesBirths,
+        sdm:foxesDeathRate,
+        sdm:foxesDeaths,
+        sdm:rabbits,
+        sdm:rabbitsBirthRate,
+        sdm:rabbitsBirths,
+        sdm:rabbitsDeathRate,
+        sdm:rabbitsDeaths,
+        sdm:rabbitsDensity,
+        sdm:rabbitsDensity25,
+        sdm:rabbitsDensity50 ;
+    sdm:hasTimeLength 120.0 ;
+    sdm:hasTimeStart 0.0 ;
+    sdm:hasTimeStep 1.0 ;
+    sdm:hasTimeUnit sdm:months ;
+    sdm:usesAlgorithm "RK4" .
+
+sdm:Expression a owl:Class .
+
+sdm:StatisticalDistribution a owl:Class ;
+    rdfs:subClassOf sdm:BuiltInFunction .
+
+sdm:Vector a owl:Class ;
+    rdfs:subClassOf sdm:BuiltInFunction .
+
+sdm:Mathematical a owl:Class ;
+    rdfs:subClassOf sdm:BuiltInFunction .
+
